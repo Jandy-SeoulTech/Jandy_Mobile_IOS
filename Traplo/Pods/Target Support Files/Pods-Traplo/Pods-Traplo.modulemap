@@ -1,0 +1,6 @@
+framework module Pods_Traplo {
+  umbrella header "Pods-Traplo-umbrella.h"
+
+  export *
+  module * { export * }
+}

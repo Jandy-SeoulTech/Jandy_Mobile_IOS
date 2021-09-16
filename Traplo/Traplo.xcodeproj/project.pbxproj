@@ -1,0 +1,983 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		187FF3CC1DD02EAA210ADD0F /* Pods_Traplo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBE5F77A8850052FEFE89C3 /* Pods_Traplo.framework */; };
+		3F14D36026C112E600F27B1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F14D35F26C112E600F27B1E /* AppDelegate.swift */; };
+		3F14D36226C112E600F27B1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F14D36126C112E600F27B1E /* SceneDelegate.swift */; };
+		3F14D36426C112E600F27B1E /* LogInBackGroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F14D36326C112E600F27B1E /* LogInBackGroundViewController.swift */; };
+		3F14D36726C112E600F27B1E /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F14D36526C112E600F27B1E /* LogIn.storyboard */; };
+		3F14D36926C112E700F27B1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F14D36826C112E700F27B1E /* Assets.xcassets */; };
+		3F14D36C26C112E700F27B1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F14D36A26C112E700F27B1E /* LaunchScreen.storyboard */; };
+		3F14D37726C112E700F27B1E /* TraploTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F14D37626C112E700F27B1E /* TraploTests.swift */; };
+		3F14D38226C112E700F27B1E /* TraploUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F14D38126C112E700F27B1E /* TraploUITests.swift */; };
+		3F3689DA26DCF57A00EE8027 /* Group 11.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F3689D826DCF57A00EE8027 /* Group 11.png */; };
+		3F3689DB26DCF57A00EE8027 /* Group 10.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F3689D926DCF57A00EE8027 /* Group 10.png */; };
+		3F440C0226C8E02900B641F7 /* Activity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F440C0126C8E02900B641F7 /* Activity.storyboard */; };
+		3F440C0426C8E87900B641F7 /* RecommendActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F440C0326C8E87900B641F7 /* RecommendActivityViewController.swift */; };
+		3F440C0926C90A9300B641F7 /* MenuSideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F440C0826C90A9300B641F7 /* MenuSideBarViewController.swift */; };
+		3F440C0C26CAC95800B641F7 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F440C0B26CAC95800B641F7 /* user.png */; };
+		3F599A4226D384560049FFE3 /* EditReviewPopUpScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F599A4126D384560049FFE3 /* EditReviewPopUpScreenViewController.swift */; };
+		3F619D7A26C3D26D000410FE /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 3F619D7926C3D26D000410FE /* AppIcon.appiconset */; };
+		3F619D7C26C41545000410FE /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F619D7B26C41545000410FE /* LogInViewController.swift */; };
+		3F66718326CBA00900BA21D1 /* Reviews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F66718226CBA00900BA21D1 /* Reviews.storyboard */; };
+		3F66718526CBA03700BA21D1 /* ReviewDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F66718426CBA03700BA21D1 /* ReviewDetailsViewController.swift */; };
+		3F66718826CE7CD500BA21D1 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 3F66718726CE7CD500BA21D1 /* Cosmos */; };
+		3F66718A26D144B100BA21D1 /* Rectangle 58.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F66718926D144B100BA21D1 /* Rectangle 58.png */; };
+		3F66718C26D144B800BA21D1 /* Group 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F66718B26D144B800BA21D1 /* Group 8.png */; };
+		3F66718F26D22E0B00BA21D1 /* EditReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F66718E26D22E0B00BA21D1 /* EditReviewViewController.swift */; };
+		3FF1A71F26D62174001AD31F /* PloggingRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1A71E26D62174001AD31F /* PloggingRecordModel.swift */; };
+		3FF1A72126D62F9A001AD31F /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1A72026D62F9A001AD31F /* UserInfo.swift */; };
+		3FF1A72426D6767C001AD31F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3FF1A72326D6767C001AD31F /* Alamofire */; };
+		3FF1A72626DA12FC001AD31F /* TouristSpot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF1A72526DA12FC001AD31F /* TouristSpot.storyboard */; };
+		3FF1A72926DA13A8001AD31F /* MapSearchTouristSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1A72826DA13A8001AD31F /* MapSearchTouristSpotViewController.swift */; };
+		3FF1A72B26DA13C1001AD31F /* ListSearchTouristSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1A72A26DA13C1001AD31F /* ListSearchTouristSpotViewController.swift */; };
+		3FF1A72D26DA13E7001AD31F /* SelectTouristSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1A72C26DA13E7001AD31F /* SelectTouristSpotViewController.swift */; };
+		560A8F2AA54DFC9BFA0BAF0C /* Pods_Traplo_TraploUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA55E18A5AADDEEDC860EC4 /* Pods_Traplo_TraploUITests.framework */; };
+		E93A6339A6423BEF26C67141 /* Pods_TraploTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB29A4510F38CDE48402DD4 /* Pods_TraploTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3F14D37326C112E700F27B1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F14D35426C112E600F27B1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F14D35B26C112E600F27B1E;
+			remoteInfo = Traplo;
+		};
+		3F14D37E26C112E700F27B1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F14D35426C112E600F27B1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F14D35B26C112E600F27B1E;
+			remoteInfo = Traplo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A2A59D1BDDD34ACE87083BE /* Pods-TraploTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraploTests.debug.xcconfig"; path = "Target Support Files/Pods-TraploTests/Pods-TraploTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2AA55E18A5AADDEEDC860EC4 /* Pods_Traplo_TraploUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Traplo_TraploUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F14D35C26C112E600F27B1E /* Traplo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Traplo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F14D35F26C112E600F27B1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3F14D36126C112E600F27B1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3F14D36326C112E600F27B1E /* LogInBackGroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInBackGroundViewController.swift; sourceTree = "<group>"; };
+		3F14D36626C112E600F27B1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LogIn.storyboard; sourceTree = "<group>"; };
+		3F14D36826C112E700F27B1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F14D36B26C112E700F27B1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3F14D36D26C112E700F27B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F14D37226C112E700F27B1E /* TraploTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraploTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F14D37626C112E700F27B1E /* TraploTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraploTests.swift; sourceTree = "<group>"; };
+		3F14D37826C112E700F27B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F14D37D26C112E700F27B1E /* TraploUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraploUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F14D38126C112E700F27B1E /* TraploUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraploUITests.swift; sourceTree = "<group>"; };
+		3F14D38326C112E700F27B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F3689D826DCF57A00EE8027 /* Group 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 11.png"; sourceTree = "<group>"; };
+		3F3689D926DCF57A00EE8027 /* Group 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 10.png"; sourceTree = "<group>"; };
+		3F3689DD26DCF59600EE8027 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		3F440C0126C8E02900B641F7 /* Activity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Activity.storyboard; sourceTree = "<group>"; };
+		3F440C0326C8E87900B641F7 /* RecommendActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendActivityViewController.swift; sourceTree = "<group>"; };
+		3F440C0826C90A9300B641F7 /* MenuSideBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSideBarViewController.swift; sourceTree = "<group>"; };
+		3F440C0B26CAC95800B641F7 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		3F599A4126D384560049FFE3 /* EditReviewPopUpScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReviewPopUpScreenViewController.swift; sourceTree = "<group>"; };
+		3F619D7926C3D26D000410FE /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
+		3F619D7B26C41545000410FE /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		3F66718226CBA00900BA21D1 /* Reviews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reviews.storyboard; sourceTree = "<group>"; };
+		3F66718426CBA03700BA21D1 /* ReviewDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailsViewController.swift; sourceTree = "<group>"; };
+		3F66718926D144B100BA21D1 /* Rectangle 58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rectangle 58.png"; sourceTree = "<group>"; };
+		3F66718B26D144B800BA21D1 /* Group 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 8.png"; sourceTree = "<group>"; };
+		3F66718E26D22E0B00BA21D1 /* EditReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReviewViewController.swift; sourceTree = "<group>"; };
+		3FF1A71E26D62174001AD31F /* PloggingRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PloggingRecordModel.swift; sourceTree = "<group>"; };
+		3FF1A72026D62F9A001AD31F /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		3FF1A72526DA12FC001AD31F /* TouristSpot.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TouristSpot.storyboard; sourceTree = "<group>"; };
+		3FF1A72826DA13A8001AD31F /* MapSearchTouristSpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchTouristSpotViewController.swift; sourceTree = "<group>"; };
+		3FF1A72A26DA13C1001AD31F /* ListSearchTouristSpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSearchTouristSpotViewController.swift; sourceTree = "<group>"; };
+		3FF1A72C26DA13E7001AD31F /* SelectTouristSpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTouristSpotViewController.swift; sourceTree = "<group>"; };
+		4734760EF9F75B9406EC99C1 /* Pods-Traplo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traplo.release.xcconfig"; path = "Target Support Files/Pods-Traplo/Pods-Traplo.release.xcconfig"; sourceTree = "<group>"; };
+		79C038F6126298E0A9A3B49D /* Pods-Traplo-TraploUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traplo-TraploUITests.debug.xcconfig"; path = "Target Support Files/Pods-Traplo-TraploUITests/Pods-Traplo-TraploUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		90B3C4135A860B57AD5D74CE /* Pods-Traplo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traplo.debug.xcconfig"; path = "Target Support Files/Pods-Traplo/Pods-Traplo.debug.xcconfig"; sourceTree = "<group>"; };
+		A9F22910B5AC3C656B6B9630 /* Pods-TraploTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraploTests.release.xcconfig"; path = "Target Support Files/Pods-TraploTests/Pods-TraploTests.release.xcconfig"; sourceTree = "<group>"; };
+		CB1E6414871480C8A55A7416 /* Pods-Traplo-TraploUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traplo-TraploUITests.release.xcconfig"; path = "Target Support Files/Pods-Traplo-TraploUITests/Pods-Traplo-TraploUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DCBE5F77A8850052FEFE89C3 /* Pods_Traplo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Traplo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAB29A4510F38CDE48402DD4 /* Pods_TraploTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TraploTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F14D35926C112E600F27B1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FF1A72426D6767C001AD31F /* Alamofire in Frameworks */,
+				3F66718826CE7CD500BA21D1 /* Cosmos in Frameworks */,
+				187FF3CC1DD02EAA210ADD0F /* Pods_Traplo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F14D36F26C112E700F27B1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E93A6339A6423BEF26C67141 /* Pods_TraploTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F14D37A26C112E700F27B1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				560A8F2AA54DFC9BFA0BAF0C /* Pods_Traplo_TraploUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F14D35326C112E600F27B1E = {
+			isa = PBXGroup;
+			children = (
+				3F14D35E26C112E600F27B1E /* Traplo */,
+				3F14D37526C112E700F27B1E /* TraploTests */,
+				3F14D38026C112E700F27B1E /* TraploUITests */,
+				3F14D35D26C112E600F27B1E /* Products */,
+				703796A0449277157014CE35 /* Pods */,
+				56837C0F2FDAD0FBB24F13F1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3F14D35D26C112E600F27B1E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F14D35C26C112E600F27B1E /* Traplo.app */,
+				3F14D37226C112E700F27B1E /* TraploTests.xctest */,
+				3F14D37D26C112E700F27B1E /* TraploUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F14D35E26C112E600F27B1E /* Traplo */ = {
+			isa = PBXGroup;
+			children = (
+				3FF1A71D26D6214E001AD31F /* Models */,
+				3F440C0726C8FA1800B641F7 /* Views(Storyboard) */,
+				3F440C0626C8F9EB00B641F7 /* Controllers */,
+				3F440C0526C8F9BB00B641F7 /* Delegate */,
+				3F14D39126C2E12D00F27B1E /* resources */,
+				3F14D36D26C112E700F27B1E /* Info.plist */,
+			);
+			path = Traplo;
+			sourceTree = "<group>";
+		};
+		3F14D37526C112E700F27B1E /* TraploTests */ = {
+			isa = PBXGroup;
+			children = (
+				3F14D37626C112E700F27B1E /* TraploTests.swift */,
+				3F14D37826C112E700F27B1E /* Info.plist */,
+			);
+			path = TraploTests;
+			sourceTree = "<group>";
+		};
+		3F14D38026C112E700F27B1E /* TraploUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3F14D38126C112E700F27B1E /* TraploUITests.swift */,
+				3F14D38326C112E700F27B1E /* Info.plist */,
+			);
+			path = TraploUITests;
+			sourceTree = "<group>";
+		};
+		3F14D39126C2E12D00F27B1E /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F3689DC26DCF58A00EE8027 /* 사진 */,
+				3F619D7926C3D26D000410FE /* AppIcon.appiconset */,
+				3F14D36826C112E700F27B1E /* Assets.xcassets */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		3F3689DC26DCF58A00EE8027 /* 사진 */ = {
+			isa = PBXGroup;
+			children = (
+				3F3689D926DCF57A00EE8027 /* Group 10.png */,
+				3F3689D826DCF57A00EE8027 /* Group 11.png */,
+				3F3689DD26DCF59600EE8027 /* background.png */,
+				3F440C0B26CAC95800B641F7 /* user.png */,
+				3F66718B26D144B800BA21D1 /* Group 8.png */,
+				3F66718926D144B100BA21D1 /* Rectangle 58.png */,
+			);
+			name = "사진";
+			path = "사진";
+			sourceTree = "<group>";
+		};
+		3F440C0526C8F9BB00B641F7 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				3F14D35F26C112E600F27B1E /* AppDelegate.swift */,
+				3F14D36126C112E600F27B1E /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		3F440C0626C8F9EB00B641F7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3FF1A72726DA1382001AD31F /* TouristSpot */,
+				3F66718D26D22DE600BA21D1 /* Reviews */,
+				3F440C0A26CA4C4800B641F7 /* LogIn */,
+				3F440C0326C8E87900B641F7 /* RecommendActivityViewController.swift */,
+				3F440C0826C90A9300B641F7 /* MenuSideBarViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3F440C0726C8FA1800B641F7 /* Views(Storyboard) */ = {
+			isa = PBXGroup;
+			children = (
+				3F14D36A26C112E700F27B1E /* LaunchScreen.storyboard */,
+				3F14D36526C112E600F27B1E /* LogIn.storyboard */,
+				3F440C0126C8E02900B641F7 /* Activity.storyboard */,
+				3F66718226CBA00900BA21D1 /* Reviews.storyboard */,
+				3FF1A72526DA12FC001AD31F /* TouristSpot.storyboard */,
+			);
+			path = "Views(Storyboard)";
+			sourceTree = "<group>";
+		};
+		3F440C0A26CA4C4800B641F7 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				3F14D36326C112E600F27B1E /* LogInBackGroundViewController.swift */,
+				3F619D7B26C41545000410FE /* LogInViewController.swift */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		3F66718D26D22DE600BA21D1 /* Reviews */ = {
+			isa = PBXGroup;
+			children = (
+				3F66718426CBA03700BA21D1 /* ReviewDetailsViewController.swift */,
+				3F66718E26D22E0B00BA21D1 /* EditReviewViewController.swift */,
+				3F599A4126D384560049FFE3 /* EditReviewPopUpScreenViewController.swift */,
+			);
+			path = Reviews;
+			sourceTree = "<group>";
+		};
+		3FF1A71D26D6214E001AD31F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3FF1A71E26D62174001AD31F /* PloggingRecordModel.swift */,
+				3FF1A72026D62F9A001AD31F /* UserInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3FF1A72726DA1382001AD31F /* TouristSpot */ = {
+			isa = PBXGroup;
+			children = (
+				3FF1A72826DA13A8001AD31F /* MapSearchTouristSpotViewController.swift */,
+				3FF1A72A26DA13C1001AD31F /* ListSearchTouristSpotViewController.swift */,
+				3FF1A72C26DA13E7001AD31F /* SelectTouristSpotViewController.swift */,
+			);
+			path = TouristSpot;
+			sourceTree = "<group>";
+		};
+		56837C0F2FDAD0FBB24F13F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCBE5F77A8850052FEFE89C3 /* Pods_Traplo.framework */,
+				2AA55E18A5AADDEEDC860EC4 /* Pods_Traplo_TraploUITests.framework */,
+				EAB29A4510F38CDE48402DD4 /* Pods_TraploTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		703796A0449277157014CE35 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90B3C4135A860B57AD5D74CE /* Pods-Traplo.debug.xcconfig */,
+				4734760EF9F75B9406EC99C1 /* Pods-Traplo.release.xcconfig */,
+				79C038F6126298E0A9A3B49D /* Pods-Traplo-TraploUITests.debug.xcconfig */,
+				CB1E6414871480C8A55A7416 /* Pods-Traplo-TraploUITests.release.xcconfig */,
+				1A2A59D1BDDD34ACE87083BE /* Pods-TraploTests.debug.xcconfig */,
+				A9F22910B5AC3C656B6B9630 /* Pods-TraploTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F14D35B26C112E600F27B1E /* Traplo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F14D38626C112E700F27B1E /* Build configuration list for PBXNativeTarget "Traplo" */;
+			buildPhases = (
+				47CC88F1C7FD89016D922F53 /* [CP] Check Pods Manifest.lock */,
+				3F14D35826C112E600F27B1E /* Sources */,
+				3F14D35926C112E600F27B1E /* Frameworks */,
+				3F14D35A26C112E600F27B1E /* Resources */,
+				949EA8EEA85FADF9AC39A0A5 /* [CP] Embed Pods Frameworks */,
+				53590B08B822C8FEC59DF9E8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Traplo;
+			packageProductDependencies = (
+				3F66718726CE7CD500BA21D1 /* Cosmos */,
+				3FF1A72326D6767C001AD31F /* Alamofire */,
+			);
+			productName = Traplo;
+			productReference = 3F14D35C26C112E600F27B1E /* Traplo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3F14D37126C112E700F27B1E /* TraploTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F14D38926C112E700F27B1E /* Build configuration list for PBXNativeTarget "TraploTests" */;
+			buildPhases = (
+				18535EE28E81C2A454AE07E4 /* [CP] Check Pods Manifest.lock */,
+				3F14D36E26C112E700F27B1E /* Sources */,
+				3F14D36F26C112E700F27B1E /* Frameworks */,
+				3F14D37026C112E700F27B1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F14D37426C112E700F27B1E /* PBXTargetDependency */,
+			);
+			name = TraploTests;
+			productName = TraploTests;
+			productReference = 3F14D37226C112E700F27B1E /* TraploTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3F14D37C26C112E700F27B1E /* TraploUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F14D38C26C112E700F27B1E /* Build configuration list for PBXNativeTarget "TraploUITests" */;
+			buildPhases = (
+				A77D6FBE976AB3212843E942 /* [CP] Check Pods Manifest.lock */,
+				3F14D37926C112E700F27B1E /* Sources */,
+				3F14D37A26C112E700F27B1E /* Frameworks */,
+				3F14D37B26C112E700F27B1E /* Resources */,
+				AE0F8F1861C4B576160017BC /* [CP] Embed Pods Frameworks */,
+				8804513978E6203A1DFA25B8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F14D37F26C112E700F27B1E /* PBXTargetDependency */,
+			);
+			name = TraploUITests;
+			productName = TraploUITests;
+			productReference = 3F14D37D26C112E700F27B1E /* TraploUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F14D35426C112E600F27B1E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					3F14D35B26C112E600F27B1E = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					3F14D37126C112E700F27B1E = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 3F14D35B26C112E600F27B1E;
+					};
+					3F14D37C26C112E700F27B1E = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 3F14D35B26C112E600F27B1E;
+					};
+				};
+			};
+			buildConfigurationList = 3F14D35726C112E600F27B1E /* Build configuration list for PBXProject "Traplo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3F14D35326C112E600F27B1E;
+			packageReferences = (
+				3F66718626CE7CD500BA21D1 /* XCRemoteSwiftPackageReference "Cosmos" */,
+				3FF1A72226D6767C001AD31F /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = 3F14D35D26C112E600F27B1E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F14D35B26C112E600F27B1E /* Traplo */,
+				3F14D37126C112E700F27B1E /* TraploTests */,
+				3F14D37C26C112E700F27B1E /* TraploUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F14D35A26C112E600F27B1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F14D36C26C112E700F27B1E /* LaunchScreen.storyboard in Resources */,
+				3F440C0226C8E02900B641F7 /* Activity.storyboard in Resources */,
+				3F66718C26D144B800BA21D1 /* Group 8.png in Resources */,
+				3F3689DB26DCF57A00EE8027 /* Group 10.png in Resources */,
+				3F14D36926C112E700F27B1E /* Assets.xcassets in Resources */,
+				3F440C0C26CAC95800B641F7 /* user.png in Resources */,
+				3FF1A72626DA12FC001AD31F /* TouristSpot.storyboard in Resources */,
+				3F3689DA26DCF57A00EE8027 /* Group 11.png in Resources */,
+				3F619D7A26C3D26D000410FE /* AppIcon.appiconset in Resources */,
+				3F66718A26D144B100BA21D1 /* Rectangle 58.png in Resources */,
+				3F66718326CBA00900BA21D1 /* Reviews.storyboard in Resources */,
+				3F14D36726C112E600F27B1E /* LogIn.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F14D37026C112E700F27B1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F14D37B26C112E700F27B1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18535EE28E81C2A454AE07E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TraploTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47CC88F1C7FD89016D922F53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Traplo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53590B08B822C8FEC59DF9E8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Traplo/Pods-Traplo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Traplo/Pods-Traplo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Traplo/Pods-Traplo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8804513978E6203A1DFA25B8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Traplo-TraploUITests/Pods-Traplo-TraploUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Traplo-TraploUITests/Pods-Traplo-TraploUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Traplo-TraploUITests/Pods-Traplo-TraploUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		949EA8EEA85FADF9AC39A0A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Traplo/Pods-Traplo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Traplo/Pods-Traplo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Traplo/Pods-Traplo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A77D6FBE976AB3212843E942 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Traplo-TraploUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE0F8F1861C4B576160017BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Traplo-TraploUITests/Pods-Traplo-TraploUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Traplo-TraploUITests/Pods-Traplo-TraploUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Traplo-TraploUITests/Pods-Traplo-TraploUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F14D35826C112E600F27B1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F66718F26D22E0B00BA21D1 /* EditReviewViewController.swift in Sources */,
+				3FF1A72D26DA13E7001AD31F /* SelectTouristSpotViewController.swift in Sources */,
+				3FF1A72B26DA13C1001AD31F /* ListSearchTouristSpotViewController.swift in Sources */,
+				3F440C0926C90A9300B641F7 /* MenuSideBarViewController.swift in Sources */,
+				3F440C0426C8E87900B641F7 /* RecommendActivityViewController.swift in Sources */,
+				3FF1A71F26D62174001AD31F /* PloggingRecordModel.swift in Sources */,
+				3F619D7C26C41545000410FE /* LogInViewController.swift in Sources */,
+				3F66718526CBA03700BA21D1 /* ReviewDetailsViewController.swift in Sources */,
+				3F14D36426C112E600F27B1E /* LogInBackGroundViewController.swift in Sources */,
+				3F14D36026C112E600F27B1E /* AppDelegate.swift in Sources */,
+				3F599A4226D384560049FFE3 /* EditReviewPopUpScreenViewController.swift in Sources */,
+				3FF1A72126D62F9A001AD31F /* UserInfo.swift in Sources */,
+				3FF1A72926DA13A8001AD31F /* MapSearchTouristSpotViewController.swift in Sources */,
+				3F14D36226C112E600F27B1E /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F14D36E26C112E700F27B1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F14D37726C112E700F27B1E /* TraploTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F14D37926C112E700F27B1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F14D38226C112E700F27B1E /* TraploUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3F14D37426C112E700F27B1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F14D35B26C112E600F27B1E /* Traplo */;
+			targetProxy = 3F14D37326C112E700F27B1E /* PBXContainerItemProxy */;
+		};
+		3F14D37F26C112E700F27B1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F14D35B26C112E600F27B1E /* Traplo */;
+			targetProxy = 3F14D37E26C112E700F27B1E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3F14D36526C112E600F27B1E /* LogIn.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F14D36626C112E600F27B1E /* Base */,
+			);
+			name = LogIn.storyboard;
+			sourceTree = "<group>";
+		};
+		3F14D36A26C112E700F27B1E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F14D36B26C112E700F27B1E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3F14D38426C112E700F27B1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3F14D38526C112E700F27B1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F14D38726C112E700F27B1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90B3C4135A860B57AD5D74CE /* Pods-Traplo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZNH7978JJQ;
+				INFOPLIST_FILE = Traplo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "---------.Traplo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3F14D38826C112E700F27B1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4734760EF9F75B9406EC99C1 /* Pods-Traplo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZNH7978JJQ;
+				INFOPLIST_FILE = Traplo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "---------.Traplo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3F14D38A26C112E700F27B1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A2A59D1BDDD34ACE87083BE /* Pods-TraploTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TraploTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "---------.TraploTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Traplo.app/Traplo";
+			};
+			name = Debug;
+		};
+		3F14D38B26C112E700F27B1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9F22910B5AC3C656B6B9630 /* Pods-TraploTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TraploTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "---------.TraploTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Traplo.app/Traplo";
+			};
+			name = Release;
+		};
+		3F14D38D26C112E700F27B1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79C038F6126298E0A9A3B49D /* Pods-Traplo-TraploUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TraploUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "---------.TraploUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Traplo;
+			};
+			name = Debug;
+		};
+		3F14D38E26C112E700F27B1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB1E6414871480C8A55A7416 /* Pods-Traplo-TraploUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TraploUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "---------.TraploUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Traplo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F14D35726C112E600F27B1E /* Build configuration list for PBXProject "Traplo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F14D38426C112E700F27B1E /* Debug */,
+				3F14D38526C112E700F27B1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F14D38626C112E700F27B1E /* Build configuration list for PBXNativeTarget "Traplo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F14D38726C112E700F27B1E /* Debug */,
+				3F14D38826C112E700F27B1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F14D38926C112E700F27B1E /* Build configuration list for PBXNativeTarget "TraploTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F14D38A26C112E700F27B1E /* Debug */,
+				3F14D38B26C112E700F27B1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F14D38C26C112E700F27B1E /* Build configuration list for PBXNativeTarget "TraploUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F14D38D26C112E700F27B1E /* Debug */,
+				3F14D38E26C112E700F27B1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3F66718626CE7CD500BA21D1 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 23.0.0;
+			};
+		};
+		3FF1A72226D6767C001AD31F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3F66718726CE7CD500BA21D1 /* Cosmos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F66718626CE7CD500BA21D1 /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
+		};
+		3FF1A72326D6767C001AD31F /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FF1A72226D6767C001AD31F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3F14D35426C112E600F27B1E /* Project object */;
+}
