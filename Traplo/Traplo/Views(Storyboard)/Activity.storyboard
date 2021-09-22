@@ -132,7 +132,7 @@
                                 <rect key="frame" x="121.5" y="627" width="171" height="30"/>
                                 <state key="normal" title="기록하기화면이동(임시 버튼)"/>
                                 <connections>
-                                    <action selector="present기록하기:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zQR-AW-1Hh"/>
+                                    <action selector="presentTouristSpot:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="QqT-Gr-ei5"/>
                                 </connections>
                             </button>
                         </subviews>

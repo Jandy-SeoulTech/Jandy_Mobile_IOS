@@ -55,8 +55,14 @@ class RecommendActivityViewController : UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     
-    @IBAction func present기록하기(_ sender: Any) {
+    @IBAction func presentTouristSpot(_ sender: Any) {
         
+        let st = UIStoryboard.init(name: "TouristSpot", bundle: nil)
+           let vc = st.instantiateViewController(withIdentifier: "MapSearchTouristSpotViewController")
+           vc.modalPresentationStyle = .overFullScreen
+           vc.modalPresentationStyle = .overCurrentContext
+           self.present(vc, animated: true, completion: nil)
+           
     }
     
 }

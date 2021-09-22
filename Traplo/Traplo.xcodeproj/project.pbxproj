@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		187FF3CC1DD02EAA210ADD0F /* Pods_Traplo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBE5F77A8850052FEFE89C3 /* Pods_Traplo.framework */; };
+		3F0013EE26FB5BDC00F3C5BB /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0013ED26FB5BDB00F3C5BB /* background.png */; };
 		3F14D36026C112E600F27B1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F14D35F26C112E600F27B1E /* AppDelegate.swift */; };
 		3F14D36226C112E600F27B1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F14D36126C112E600F27B1E /* SceneDelegate.swift */; };
 		3F14D36426C112E600F27B1E /* LogInBackGroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F14D36326C112E600F27B1E /* LogInBackGroundViewController.swift */; };
@@ -62,6 +63,7 @@
 /* Begin PBXFileReference section */
 		1A2A59D1BDDD34ACE87083BE /* Pods-TraploTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraploTests.debug.xcconfig"; path = "Target Support Files/Pods-TraploTests/Pods-TraploTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2AA55E18A5AADDEEDC860EC4 /* Pods_Traplo_TraploUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Traplo_TraploUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F0013ED26FB5BDB00F3C5BB /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		3F14D35C26C112E600F27B1E /* Traplo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Traplo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F14D35F26C112E600F27B1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F14D36126C112E600F27B1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +80,6 @@
 		3F14D38326C112E700F27B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F3689D826DCF57A00EE8027 /* Group 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 11.png"; sourceTree = "<group>"; };
 		3F3689D926DCF57A00EE8027 /* Group 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 10.png"; sourceTree = "<group>"; };
-		3F3689DD26DCF59600EE8027 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		3F440C0126C8E02900B641F7 /* Activity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Activity.storyboard; sourceTree = "<group>"; };
 		3F440C0326C8E87900B641F7 /* RecommendActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendActivityViewController.swift; sourceTree = "<group>"; };
 		3F440C0826C90A9300B641F7 /* MenuSideBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSideBarViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +137,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F0013EA26FB586700F3C5BB /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				3F440C0326C8E87900B641F7 /* RecommendActivityViewController.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
 		3F14D35326C112E600F27B1E = {
 			isa = PBXGroup;
 			children = (
@@ -202,9 +211,9 @@
 		3F3689DC26DCF58A00EE8027 /* 사진 */ = {
 			isa = PBXGroup;
 			children = (
+				3F0013ED26FB5BDB00F3C5BB /* background.png */,
 				3F3689D926DCF57A00EE8027 /* Group 10.png */,
 				3F3689D826DCF57A00EE8027 /* Group 11.png */,
-				3F3689DD26DCF59600EE8027 /* background.png */,
 				3F440C0B26CAC95800B641F7 /* user.png */,
 				3F66718B26D144B800BA21D1 /* Group 8.png */,
 				3F66718926D144B100BA21D1 /* Rectangle 58.png */,
@@ -225,10 +234,10 @@
 		3F440C0626C8F9EB00B641F7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3F0013EA26FB586700F3C5BB /* Activity */,
 				3FF1A72726DA1382001AD31F /* TouristSpot */,
 				3F66718D26D22DE600BA21D1 /* Reviews */,
 				3F440C0A26CA4C4800B641F7 /* LogIn */,
-				3F440C0326C8E87900B641F7 /* RecommendActivityViewController.swift */,
 				3F440C0826C90A9300B641F7 /* MenuSideBarViewController.swift */,
 			);
 			path = Controllers;
@@ -427,6 +436,7 @@
 			files = (
 				3F14D36C26C112E700F27B1E /* LaunchScreen.storyboard in Resources */,
 				3F440C0226C8E02900B641F7 /* Activity.storyboard in Resources */,
+				3F0013EE26FB5BDC00F3C5BB /* background.png in Resources */,
 				3F66718C26D144B800BA21D1 /* Group 8.png in Resources */,
 				3F3689DB26DCF57A00EE8027 /* Group 10.png in Resources */,
 				3F14D36926C112E700F27B1E /* Assets.xcassets in Resources */,
