@@ -35,9 +35,16 @@ class MapSearchTouristSpotViewController: UIViewController {
     }
     
     @IBAction func onToggleBtnClicked(_ sender: Any) {
+        
+        // 클릭 시 이동 화면 list search tourist spot view controller 로 설정
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "ListSearchTouristSpotViewController")
         vc?.modalPresentationStyle = .overFullScreen
         self.present(vc!, animated: false, completion: nil)
+        
+        // 클릭 시 이동 화면 select tourist spot view controller 로 설정
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SelectTouristSpotViewController")
+//        vc?.modalPresentationStyle = .overFullScreen
+//        self.present(vc!, animated: false, completion: nil)
     }
     
     
