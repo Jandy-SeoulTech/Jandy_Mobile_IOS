@@ -10,29 +10,22 @@ import UIKit
 
 class RecommendActivityViewController : UIViewController {
     
+    //#imageLiteral(resourceName: "")
+    var images = [#imageLiteral(resourceName: "R1280x0")]
+    var imageViews = [UIImageView]()
+    
+    
     @IBOutlet weak var topDesignView: UIView!
     @IBOutlet weak var topDesignLayoutView: UIView!
     
-    // var gradientLayer: CAGradientLayer!
+    @IBOutlet weak var pageControlScrollView: UIScrollView!
+    @IBOutlet weak var pageControl: UIPageControl!
     
     let topDesignColor1 = UIColor(named: "Color2")?.cgColor
     let topDesignColor2 = UIColor(named: "Color1")?.cgColor
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // layout
-//        searchBar.heightAnchor.constraint(equalToConstant: 44).isActive = true
-        
-//        // 상단 그라데이션 디자인
-//        self.gradientLayer = CAGradientLayer()
-//        self.gradientLayer.frame = topDesignView.bounds
-//        self.gradientLayer.colors = [topDesignColor1 as Any,topDesignColor2 as Any]
-//        self.gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
-//        self.gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
-//        self.topDesignView.layer.addSublayer(self.gradientLayer)
-//
-//        self.topDesignView.bringSubviewToFront(topDesignLayoutView)
         
         setUI()
     }
@@ -42,7 +35,7 @@ class RecommendActivityViewController : UIViewController {
     }
     
     func setUI() {
-        
+        setPageControlScrollView()
     }
     
     @IBAction func presentReviews(_ sender: Any) {
@@ -61,5 +54,41 @@ class RecommendActivityViewController : UIViewController {
            self.present(vc, animated: true, completion: nil)
            
     }
+    
+}
+extension RecommendActivityViewController : UIScrollViewDelegate{
+    
+    func setPageControlScrollView(){
+        pageControlScrollView.delegate = self
+        addContentScrollView()
+        setPageControl()
+    }
+    
+    private func addContentScrollView() {
+            
+            for i in 0..<images.count {
+                let imageView = UIImageView()
+                let xPos = self.view.frame.width * CGFloat(i)
+                imageView.frame = CGRect(x: xPos, y: 0, width: pageControlScrollView.bounds.width, height: pageControlScrollView.bounds.height)
+                imageView.image = images[i]
+                pageControlScrollView.addSubview(imageView)
+                pageControlScrollView.contentSize.width = imageView.frame.width * CGFloat(i + 1)
+            }
+            
+        }
+        
+        private func setPageControl() {
+            pageControl.numberOfPages = images.count
+            
+        }
+        
+        private func setPageControlSelectedPage(currentPage:Int) {
+            pageControl.currentPage = currentPage
+        }
+        
+        func scrollViewDidScroll(_ scrollView: UIScrollView) {
+            let value = scrollView.contentOffset.x/scrollView.frame.size.width
+            setPageControlSelectedPage(currentPage: Int(round(value)))
+        }
     
 }

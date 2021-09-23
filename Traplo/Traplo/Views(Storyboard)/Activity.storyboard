@@ -97,10 +97,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAG-4f-oZH">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1031"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tep-xO-kD8">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="258"/>
-                                            </imageView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tvx-2N-4IO">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tvx-2N-4IO">
                                                 <rect key="frame" x="20.5" y="150.5" width="248.5" height="81.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 주변 플로깅 하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wq-OV-zpH">
@@ -110,7 +107,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5b5-iq-H65">
-                                                        <rect key="frame" x="0.0" y="61" width="248.5" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="61" width="41.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -142,22 +139,26 @@
                                                     <constraint firstItem="eTL-sU-8ya" firstAttribute="leading" secondItem="Eju-b3-aBC" secondAttribute="trailing" constant="5" id="slg-Gt-4VF"/>
                                                 </constraints>
                                             </view>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VFe-4z-iAN">
-                                                <rect key="frame" x="72" y="331" width="240" height="128"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VFe-4z-iAN">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="232"/>
+                                                <subviews>
+                                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="9av-5w-cfc">
+                                                        <rect key="frame" x="146" y="196" width="122" height="28"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </pageControl>
+                                                </subviews>
                                                 <viewLayoutGuide key="contentLayoutGuide" id="keE-DZ-8JO"/>
                                                 <viewLayoutGuide key="frameLayoutGuide" id="frI-k9-cz8"/>
                                             </scrollView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="tvx-2N-4IO" firstAttribute="width" secondItem="Tep-xO-kD8" secondAttribute="width" multiplier="0.6" id="2gn-iE-l9d"/>
-                                            <constraint firstItem="tvx-2N-4IO" firstAttribute="leading" secondItem="Tep-xO-kD8" secondAttribute="centerX" multiplier="0.1" id="I5r-dt-lj4"/>
-                                            <constraint firstItem="Tep-xO-kD8" firstAttribute="top" secondItem="UAG-4f-oZH" secondAttribute="top" id="c9p-5x-GDz"/>
-                                            <constraint firstAttribute="trailing" secondItem="Tep-xO-kD8" secondAttribute="trailing" id="dMl-3m-gNW"/>
-                                            <constraint firstItem="Tep-xO-kD8" firstAttribute="leading" secondItem="UAG-4f-oZH" secondAttribute="leading" id="ii6-yG-5qm"/>
-                                            <constraint firstItem="tvx-2N-4IO" firstAttribute="bottom" secondItem="Tep-xO-kD8" secondAttribute="centerY" multiplier="1.8" id="vIM-Ay-UZT"/>
-                                            <constraint firstItem="Tep-xO-kD8" firstAttribute="height" secondItem="UAG-4f-oZH" secondAttribute="height" multiplier="0.25" id="yn2-SN-JXf"/>
+                                            <constraint firstItem="VFe-4z-iAN" firstAttribute="top" secondItem="UAG-4f-oZH" secondAttribute="top" id="0Rz-dZ-Drg"/>
+                                            <constraint firstItem="tvx-2N-4IO" firstAttribute="leading" secondItem="keE-DZ-8JO" secondAttribute="centerX" multiplier="0.1" id="70I-2a-CfT"/>
+                                            <constraint firstAttribute="trailing" secondItem="VFe-4z-iAN" secondAttribute="trailing" id="Ets-z2-cOA"/>
+                                            <constraint firstItem="VFe-4z-iAN" firstAttribute="leading" secondItem="UAG-4f-oZH" secondAttribute="leading" id="JDT-yk-v1d"/>
+                                            <constraint firstItem="tvx-2N-4IO" firstAttribute="bottom" secondItem="keE-DZ-8JO" secondAttribute="centerY" multiplier="1.8" id="MJv-2H-HcM"/>
+                                            <constraint firstItem="VFe-4z-iAN" firstAttribute="height" secondItem="UAG-4f-oZH" secondAttribute="height" multiplier="0.25" id="xd8-ea-Mg2"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -193,6 +194,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="pageControl" destination="9av-5w-cfc" id="KTf-0r-V73"/>
+                        <outlet property="pageControlScrollView" destination="VFe-4z-iAN" id="5LB-tH-y7j"/>
                         <outlet property="topDesignLayoutView" destination="Krl-Se-plN" id="u5F-pc-DC1"/>
                         <outlet property="topDesignView" destination="Fa7-lD-2aL" id="6MC-EM-z4d"/>
                     </connections>
