@@ -33,18 +33,15 @@ class RecommendActivityViewController : UIViewController {
 //        self.topDesignView.layer.addSublayer(self.gradientLayer)
 //
 //        self.topDesignView.bringSubviewToFront(topDesignLayoutView)
+        
+        setUI()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         print(UserInfo.shared.name+UserInfo.shared.email)
     }
     
-    @IBAction func onMenuBtnTouched(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SearchCourseUnderBoxViewController")
-        vc?.modalPresentationStyle = .overFullScreen
-        vc?.modalPresentationStyle = .overCurrentContext
-        vc?.modalTransitionStyle = .crossDissolve
-        self.present(vc!, animated: true, completion: nil)
+    func setUI() {
         
     }
     

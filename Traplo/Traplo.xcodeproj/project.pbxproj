@@ -21,7 +21,6 @@
 		3F3689DB26DCF57A00EE8027 /* Group 10.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F3689D926DCF57A00EE8027 /* Group 10.png */; };
 		3F440C0226C8E02900B641F7 /* Activity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F440C0126C8E02900B641F7 /* Activity.storyboard */; };
 		3F440C0426C8E87900B641F7 /* RecommendActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F440C0326C8E87900B641F7 /* RecommendActivityViewController.swift */; };
-		3F440C0926C90A9300B641F7 /* MenuSideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F440C0826C90A9300B641F7 /* MenuSideBarViewController.swift */; };
 		3F440C0C26CAC95800B641F7 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F440C0B26CAC95800B641F7 /* user.png */; };
 		3F599A4226D384560049FFE3 /* EditReviewPopUpScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F599A4126D384560049FFE3 /* EditReviewPopUpScreenViewController.swift */; };
 		3F619D7A26C3D26D000410FE /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 3F619D7926C3D26D000410FE /* AppIcon.appiconset */; };
@@ -82,7 +81,6 @@
 		3F3689D926DCF57A00EE8027 /* Group 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 10.png"; sourceTree = "<group>"; };
 		3F440C0126C8E02900B641F7 /* Activity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Activity.storyboard; sourceTree = "<group>"; };
 		3F440C0326C8E87900B641F7 /* RecommendActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendActivityViewController.swift; sourceTree = "<group>"; };
-		3F440C0826C90A9300B641F7 /* MenuSideBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSideBarViewController.swift; sourceTree = "<group>"; };
 		3F440C0B26CAC95800B641F7 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		3F599A4126D384560049FFE3 /* EditReviewPopUpScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReviewPopUpScreenViewController.swift; sourceTree = "<group>"; };
 		3F619D7926C3D26D000410FE /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
@@ -238,7 +236,6 @@
 				3FF1A72726DA1382001AD31F /* TouristSpot */,
 				3F66718D26D22DE600BA21D1 /* Reviews */,
 				3F440C0A26CA4C4800B641F7 /* LogIn */,
-				3F440C0826C90A9300B641F7 /* MenuSideBarViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -611,7 +608,6 @@
 				3F66718F26D22E0B00BA21D1 /* EditReviewViewController.swift in Sources */,
 				3FF1A72D26DA13E7001AD31F /* SelectTouristSpotViewController.swift in Sources */,
 				3FF1A72B26DA13C1001AD31F /* ListSearchTouristSpotViewController.swift in Sources */,
-				3F440C0926C90A9300B641F7 /* MenuSideBarViewController.swift in Sources */,
 				3F440C0426C8E87900B641F7 /* RecommendActivityViewController.swift in Sources */,
 				3FF1A71F26D62174001AD31F /* PloggingRecordModel.swift in Sources */,
 				3F619D7C26C41545000410FE /* LogInViewController.swift in Sources */,
