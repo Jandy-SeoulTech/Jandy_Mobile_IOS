@@ -21,7 +21,7 @@ class RecommendActivityViewController : UIViewController {
     let topDesignColor1 = UIColor(named: "Color2")?.cgColor
     let topDesignColor2 = UIColor(named: "Color1")?.cgColor
     
-    var images = [#imageLiteral(resourceName: "R1280x0"),#imageLiteral(resourceName: "R1280x0"),#imageLiteral(resourceName: "R1280x0")]
+    var images = [#imageLiteral(resourceName: "경춘선숲길.png"),#imageLiteral(resourceName: "노들섬.png")]
     var imageViews = [UIImageView]()
     
     override func viewDidLoad() {

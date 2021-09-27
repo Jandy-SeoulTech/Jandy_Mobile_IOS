@@ -38,6 +38,11 @@
 		3FF1A72926DA13A8001AD31F /* MapSearchTouristSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1A72826DA13A8001AD31F /* MapSearchTouristSpotViewController.swift */; };
 		3FF1A72B26DA13C1001AD31F /* ListSearchTouristSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1A72A26DA13C1001AD31F /* ListSearchTouristSpotViewController.swift */; };
 		3FF1A72D26DA13E7001AD31F /* SelectTouristSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1A72C26DA13E7001AD31F /* SelectTouristSpotViewController.swift */; };
+		3FF78D4527009595002F7DE6 /* 경춘선숲길.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF78D4027009595002F7DE6 /* 경춘선숲길.png */; };
+		3FF78D4627009595002F7DE6 /* Rectangle 39.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF78D4127009595002F7DE6 /* Rectangle 39.png */; };
+		3FF78D4727009595002F7DE6 /* 삼성미술관리움.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF78D4227009595002F7DE6 /* 삼성미술관리움.png */; };
+		3FF78D4827009595002F7DE6 /* 노들섬.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF78D4327009595002F7DE6 /* 노들섬.png */; };
+		3FF78D4927009595002F7DE6 /* 플로깅.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF78D4427009595002F7DE6 /* 플로깅.png */; };
 		560A8F2AA54DFC9BFA0BAF0C /* Pods_Traplo_TraploUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA55E18A5AADDEEDC860EC4 /* Pods_Traplo_TraploUITests.framework */; };
 		E93A6339A6423BEF26C67141 /* Pods_TraploTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB29A4510F38CDE48402DD4 /* Pods_TraploTests.framework */; };
 /* End PBXBuildFile section */
@@ -96,6 +101,11 @@
 		3FF1A72826DA13A8001AD31F /* MapSearchTouristSpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchTouristSpotViewController.swift; sourceTree = "<group>"; };
 		3FF1A72A26DA13C1001AD31F /* ListSearchTouristSpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSearchTouristSpotViewController.swift; sourceTree = "<group>"; };
 		3FF1A72C26DA13E7001AD31F /* SelectTouristSpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTouristSpotViewController.swift; sourceTree = "<group>"; };
+		3FF78D4027009595002F7DE6 /* 경춘선숲길.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "경춘선숲길.png"; sourceTree = "<group>"; };
+		3FF78D4127009595002F7DE6 /* Rectangle 39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rectangle 39.png"; sourceTree = "<group>"; };
+		3FF78D4227009595002F7DE6 /* 삼성미술관리움.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "삼성미술관리움.png"; sourceTree = "<group>"; };
+		3FF78D4327009595002F7DE6 /* 노들섬.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "노들섬.png"; sourceTree = "<group>"; };
+		3FF78D4427009595002F7DE6 /* 플로깅.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "플로깅.png"; sourceTree = "<group>"; };
 		4734760EF9F75B9406EC99C1 /* Pods-Traplo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traplo.release.xcconfig"; path = "Target Support Files/Pods-Traplo/Pods-Traplo.release.xcconfig"; sourceTree = "<group>"; };
 		79C038F6126298E0A9A3B49D /* Pods-Traplo-TraploUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traplo-TraploUITests.debug.xcconfig"; path = "Target Support Files/Pods-Traplo-TraploUITests/Pods-Traplo-TraploUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		90B3C4135A860B57AD5D74CE /* Pods-Traplo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traplo.debug.xcconfig"; path = "Target Support Files/Pods-Traplo/Pods-Traplo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -215,6 +225,11 @@
 				3F440C0B26CAC95800B641F7 /* user.png */,
 				3F66718B26D144B800BA21D1 /* Group 8.png */,
 				3F66718926D144B100BA21D1 /* Rectangle 58.png */,
+				3FF78D4027009595002F7DE6 /* 경춘선숲길.png */,
+				3FF78D4327009595002F7DE6 /* 노들섬.png */,
+				3FF78D4227009595002F7DE6 /* 삼성미술관리움.png */,
+				3FF78D4427009595002F7DE6 /* 플로깅.png */,
+				3FF78D4127009595002F7DE6 /* Rectangle 39.png */,
 			);
 			name = "사진";
 			path = "사진";
@@ -436,14 +451,19 @@
 				3F0013EE26FB5BDC00F3C5BB /* background.png in Resources */,
 				3F66718C26D144B800BA21D1 /* Group 8.png in Resources */,
 				3F3689DB26DCF57A00EE8027 /* Group 10.png in Resources */,
+				3FF78D4727009595002F7DE6 /* 삼성미술관리움.png in Resources */,
+				3FF78D4527009595002F7DE6 /* 경춘선숲길.png in Resources */,
+				3FF78D4627009595002F7DE6 /* Rectangle 39.png in Resources */,
 				3F14D36926C112E700F27B1E /* Assets.xcassets in Resources */,
 				3F440C0C26CAC95800B641F7 /* user.png in Resources */,
 				3FF1A72626DA12FC001AD31F /* TouristSpot.storyboard in Resources */,
 				3F3689DA26DCF57A00EE8027 /* Group 11.png in Resources */,
 				3F619D7A26C3D26D000410FE /* AppIcon.appiconset in Resources */,
+				3FF78D4827009595002F7DE6 /* 노들섬.png in Resources */,
 				3F66718A26D144B100BA21D1 /* Rectangle 58.png in Resources */,
 				3F66718326CBA00900BA21D1 /* Reviews.storyboard in Resources */,
 				3F14D36726C112E600F27B1E /* LogIn.storyboard in Resources */,
+				3FF78D4927009595002F7DE6 /* 플로깅.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
