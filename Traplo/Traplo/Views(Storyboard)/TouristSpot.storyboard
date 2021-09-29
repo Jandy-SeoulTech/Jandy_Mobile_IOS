@@ -436,8 +436,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BX3-UI-Z1Y">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1344"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.tip" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sgV-2d-fKz">
-                                                <rect key="frame" x="0.0" y="1" width="414" height="356.5"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="삼성미술관리움.png" translatesAutoresizingMaskIntoConstraints="NO" id="sgV-2d-fKz">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="358.5"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3fB-dJ-HHC">
                                                 <rect key="frame" x="20.5" y="358.5" width="373" height="76"/>
@@ -726,8 +726,8 @@
         <image name="clock" catalog="system" width="128" height="121"/>
         <image name="globe" catalog="system" width="128" height="121"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
-        <image name="pencil.tip" catalog="system" width="99" height="128"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
+        <image name="삼성미술관리움.png" width="375" height="386"/>
         <namedColor name="Color1">
             <color red="0.54500001668930054" green="0.875" blue="0.86699998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

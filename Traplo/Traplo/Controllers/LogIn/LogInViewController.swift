@@ -20,9 +20,7 @@ import Alamofire
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var backGroundBtn: UIButton!
-    @IBOutlet weak var btnKakaoLogIn: UIButton!
-    @IBOutlet weak var btnGoogleLogIn: UIButton!
-    @IBOutlet weak var btnNaverLogIn: UIButton!
+    @IBOutlet weak var btnGoogleLogIn: GIDSignInButton!
     
     // 구글
     let signInConfig = GIDConfiguration.init(clientID: "1087611763983-rm0g3b1ensfk4b34hejfjrdoq4gjcqtk.apps.googleusercontent.com")
@@ -43,20 +41,21 @@ class LoginViewController: UIViewController {
     }
     
     func setUI(){
-        
             backGroundBtn.layer.cornerRadius = 40
-            
-            btnKakaoLogIn.layer.borderColor = UIColor.white.cgColor
-            btnKakaoLogIn.layer.borderWidth = 2
-            btnKakaoLogIn.layer.cornerRadius = 20
-            
-            btnGoogleLogIn.layer.borderColor = UIColor.white.cgColor
-            btnGoogleLogIn.layer.borderWidth = 2
-            btnGoogleLogIn.layer.cornerRadius = 20
-            
-            btnNaverLogIn.layer.borderColor = UIColor.white.cgColor
-            btnNaverLogIn.layer.borderWidth = 2
-            btnNaverLogIn.layer.cornerRadius = 20
+        btnGoogleLogIn.style = .wide
+        
+       
+//            btnKakaoLogIn.layer.borderColor = UIColor.white.cgColor
+//            btnKakaoLogIn.layer.borderWidth = 2
+//            btnKakaoLogIn.layer.cornerRadius = 20
+//
+//            btnGoogleLogIn.layer.borderColor = UIColor.white.cgColor
+//            btnGoogleLogIn.layer.borderWidth = 2
+//            btnGoogleLogIn.layer.cornerRadius = 20
+//
+//            btnNaverLogIn.layer.borderColor = UIColor.white.cgColor
+//            btnNaverLogIn.layer.borderWidth = 2
+//            btnNaverLogIn.layer.cornerRadius = 20
         
     }
     
@@ -71,7 +70,7 @@ class LoginViewController: UIViewController {
     }
 
     // 구글로 이용하기 버튼 함수
-    @IBAction func signIn(sender: Any) {
+    @IBAction func signIn(_ sender: Any) {
         GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
         guard error == nil else { return }
         guard let user = user else { return }
@@ -104,7 +103,7 @@ class LoginViewController: UIViewController {
                 }
                 else {
                     //토큰 유효성 체크 성공(필요 시 토큰 갱신됨)
-                    AuthApi.shared.refreshAccessToken(completion: {(oauthToken,erro) in
+                    AuthApi.shared.refreshAccessToken(completion: {(oauthToken,error) in
                         if let error = error{
                             print(error)
                         }
