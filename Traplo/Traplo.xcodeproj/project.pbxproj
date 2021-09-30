@@ -31,7 +31,6 @@
 		3F66718A26D144B100BA21D1 /* Rectangle 58.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F66718926D144B100BA21D1 /* Rectangle 58.png */; };
 		3F66718C26D144B800BA21D1 /* Group 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F66718B26D144B800BA21D1 /* Group 8.png */; };
 		3F66718F26D22E0B00BA21D1 /* EditReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F66718E26D22E0B00BA21D1 /* EditReviewViewController.swift */; };
-		3F73E7F12705B51E00E2CAD6 /* kakaolink_btn_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F73E7F02705B51E00E2CAD6 /* kakaolink_btn_small.png */; };
 		3F73E7F32705BC1000E2CAD6 /* kakaosymbol.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F73E7F22705BC1000E2CAD6 /* kakaosymbol.png */; };
 		3F73E7F52705C45A00E2CAD6 /* Google-Symbol.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F73E7F42705C45A00E2CAD6 /* Google-Symbol.png */; };
 		3FC6FAF527046FCE0088C358 /* btnG_아이콘사각.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC6FAF427046FCE0088C358 /* btnG_아이콘사각.png */; };
@@ -47,8 +46,6 @@
 		3FF78D4727009595002F7DE6 /* 삼성미술관리움.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF78D4227009595002F7DE6 /* 삼성미술관리움.png */; };
 		3FF78D4827009595002F7DE6 /* 노들섬.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF78D4327009595002F7DE6 /* 노들섬.png */; };
 		3FF78D4927009595002F7DE6 /* 플로깅.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF78D4427009595002F7DE6 /* 플로깅.png */; };
-		3FFFFDA72704425200CBFDE7 /* kakao_login_large_wide.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FFFFDA62704425200CBFDE7 /* kakao_login_large_wide.png */; };
-		3FFFFDA9270447CB00CBFDE7 /* btnG_완성형.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FFFFDA8270447CB00CBFDE7 /* btnG_완성형.png */; };
 		560A8F2AA54DFC9BFA0BAF0C /* Pods_Traplo_TraploUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA55E18A5AADDEEDC860EC4 /* Pods_Traplo_TraploUITests.framework */; };
 		E93A6339A6423BEF26C67141 /* Pods_TraploTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB29A4510F38CDE48402DD4 /* Pods_TraploTests.framework */; };
 /* End PBXBuildFile section */
@@ -101,7 +98,6 @@
 		3F66718926D144B100BA21D1 /* Rectangle 58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rectangle 58.png"; sourceTree = "<group>"; };
 		3F66718B26D144B800BA21D1 /* Group 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 8.png"; sourceTree = "<group>"; };
 		3F66718E26D22E0B00BA21D1 /* EditReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReviewViewController.swift; sourceTree = "<group>"; };
-		3F73E7F02705B51E00E2CAD6 /* kakaolink_btn_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kakaolink_btn_small.png; sourceTree = "<group>"; };
 		3F73E7F22705BC1000E2CAD6 /* kakaosymbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kakaosymbol.png; path = "../../../../../../../Downloads/kakao_login-2/ko/kakaosymbol.png"; sourceTree = "<group>"; };
 		3F73E7F42705C45A00E2CAD6 /* Google-Symbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google-Symbol.png"; sourceTree = "<group>"; };
 		3FC6FAF427046FCE0088C358 /* btnG_아이콘사각.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btnG_아이콘사각.png"; sourceTree = "<group>"; };
@@ -116,8 +112,6 @@
 		3FF78D4227009595002F7DE6 /* 삼성미술관리움.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "삼성미술관리움.png"; sourceTree = "<group>"; };
 		3FF78D4327009595002F7DE6 /* 노들섬.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "노들섬.png"; sourceTree = "<group>"; };
 		3FF78D4427009595002F7DE6 /* 플로깅.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "플로깅.png"; sourceTree = "<group>"; };
-		3FFFFDA62704425200CBFDE7 /* kakao_login_large_wide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kakao_login_large_wide.png; sourceTree = "<group>"; };
-		3FFFFDA8270447CB00CBFDE7 /* btnG_완성형.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btnG_완성형.png"; sourceTree = "<group>"; };
 		4734760EF9F75B9406EC99C1 /* Pods-Traplo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traplo.release.xcconfig"; path = "Target Support Files/Pods-Traplo/Pods-Traplo.release.xcconfig"; sourceTree = "<group>"; };
 		79C038F6126298E0A9A3B49D /* Pods-Traplo-TraploUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traplo-TraploUITests.debug.xcconfig"; path = "Target Support Files/Pods-Traplo-TraploUITests/Pods-Traplo-TraploUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		90B3C4135A860B57AD5D74CE /* Pods-Traplo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traplo.debug.xcconfig"; path = "Target Support Files/Pods-Traplo/Pods-Traplo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -233,10 +227,7 @@
 			children = (
 				3F73E7F42705C45A00E2CAD6 /* Google-Symbol.png */,
 				3F73E7F22705BC1000E2CAD6 /* kakaosymbol.png */,
-				3F73E7F02705B51E00E2CAD6 /* kakaolink_btn_small.png */,
 				3FC6FAF427046FCE0088C358 /* btnG_아이콘사각.png */,
-				3FFFFDA8270447CB00CBFDE7 /* btnG_완성형.png */,
-				3FFFFDA62704425200CBFDE7 /* kakao_login_large_wide.png */,
 				3F0013ED26FB5BDB00F3C5BB /* background.png */,
 				3F3689D926DCF57A00EE8027 /* Group 10.png */,
 				3F3689D826DCF57A00EE8027 /* Group 11.png */,
@@ -465,8 +456,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F14D36C26C112E700F27B1E /* LaunchScreen.storyboard in Resources */,
-				3FFFFDA72704425200CBFDE7 /* kakao_login_large_wide.png in Resources */,
-				3FFFFDA9270447CB00CBFDE7 /* btnG_완성형.png in Resources */,
 				3F440C0226C8E02900B641F7 /* Activity.storyboard in Resources */,
 				3F0013EE26FB5BDC00F3C5BB /* background.png in Resources */,
 				3F66718C26D144B800BA21D1 /* Group 8.png in Resources */,
@@ -481,7 +470,6 @@
 				3FF1A72626DA12FC001AD31F /* TouristSpot.storyboard in Resources */,
 				3F3689DA26DCF57A00EE8027 /* Group 11.png in Resources */,
 				3F619D7A26C3D26D000410FE /* AppIcon.appiconset in Resources */,
-				3F73E7F12705B51E00E2CAD6 /* kakaolink_btn_small.png in Resources */,
 				3FF78D4827009595002F7DE6 /* 노들섬.png in Resources */,
 				3F66718A26D144B100BA21D1 /* Rectangle 58.png in Resources */,
 				3F66718326CBA00900BA21D1 /* Reviews.storyboard in Resources */,
