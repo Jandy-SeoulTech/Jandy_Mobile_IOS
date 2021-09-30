@@ -54,69 +54,124 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="60"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카카오 로그인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpM-Ie-lNl">
+                                <rect key="frame" x="163.5" y="701.5" width="87" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kakaosymbol.png" translatesAutoresizingMaskIntoConstraints="NO" id="DE3-P1-9F3">
+                                <rect key="frame" x="77" y="696" width="30.5" height="30.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DE3-P1-9F3" secondAttribute="height" multiplier="1:1" id="JQT-dM-AcK"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNk-Z5-Ki8">
                                 <rect key="frame" x="66" y="687.5" width="282" height="47"/>
+                                <color key="backgroundColor" red="0.99607843137254903" green="0.89803921568627454" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bNk-Z5-Ki8" secondAttribute="height" multiplier="6:1" id="7pm-Aa-bX8"/>
                                 </constraints>
-                                <state key="normal" image="kakao_login_large_wide.png"/>
                                 <connections>
                                     <action selector="onKakaoLoginByAppTouched:" destination="DZz-M8-PZX" eventType="touchUpInside" id="V1p-Ug-Kc1"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0E-a7-ulV" customClass="GIDSignInButton">
-                                <rect key="frame" x="62" y="812" width="290" height="48.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="m0E-a7-ulV" secondAttribute="height" multiplier="6:1" id="koJ-t0-X6e"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="signIn:" destination="DZz-M8-PZX" eventType="touchUpInside" id="Zsb-N3-USc"/>
-                                </connections>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kz7-Ql-wB0">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kz7-Ql-wB0" customClass="UIButton">
                                 <rect key="frame" x="66" y="750" width="282" height="47"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btnG_아이콘사각.png" translatesAutoresizingMaskIntoConstraints="NO" id="dsT-Iz-uGk">
-                                        <rect key="frame" x="14.5" y="5.5" width="35" height="35.5"/>
+                                        <rect key="frame" x="7.5" y="4.5" width="37.5" height="37.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="dsT-Iz-uGk" secondAttribute="height" multiplier="1:1" id="PID-NV-Xy0"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="네이버 로그인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmK-i1-GnE">
+                                        <rect key="frame" x="97.5" y="13.5" width="87" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.011764705882352941" green="0.7803921568627451" blue="0.3529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.011764705882352941" green="0.74509803921568629" blue="0.3529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="dsT-Iz-uGk" firstAttribute="height" secondItem="kz7-Ql-wB0" secondAttribute="height" multiplier="0.75" id="9Ti-1Y-05R"/>
+                                    <constraint firstItem="dsT-Iz-uGk" firstAttribute="height" secondItem="kz7-Ql-wB0" secondAttribute="height" multiplier="0.8" id="9Ti-1Y-05R"/>
+                                    <constraint firstItem="mmK-i1-GnE" firstAttribute="centerX" secondItem="kz7-Ql-wB0" secondAttribute="centerX" id="Knt-iZ-ORe"/>
                                     <constraint firstItem="dsT-Iz-uGk" firstAttribute="centerY" secondItem="kz7-Ql-wB0" secondAttribute="centerY" id="YdA-c6-Psy"/>
                                     <constraint firstAttribute="width" secondItem="kz7-Ql-wB0" secondAttribute="height" multiplier="6:1" id="eab-fz-vvs"/>
-                                    <constraint firstItem="dsT-Iz-uGk" firstAttribute="leading" secondItem="kz7-Ql-wB0" secondAttribute="centerX" multiplier="0.1" id="nCY-9b-LNe"/>
+                                    <constraint firstItem="dsT-Iz-uGk" firstAttribute="leading" secondItem="kz7-Ql-wB0" secondAttribute="centerX" multiplier="0.05" id="nCY-9b-LNe"/>
+                                    <constraint firstItem="mmK-i1-GnE" firstAttribute="centerY" secondItem="kz7-Ql-wB0" secondAttribute="centerY" id="wEl-Mp-oFz"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="onNaverLoginByAppTouched:" destination="DZz-M8-PZX" eventType="touchUpInside" id="7s7-sp-CbH"/>
+                                </connections>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="구글 로그인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epQ-rV-KOR">
+                                <rect key="frame" x="170.5" y="825.5" width="73.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <color key="textColor" red="0.46274509803921571" green="0.46274509803921571" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="io9-5h-Mrg">
+                                <rect key="frame" x="66" y="812" width="282" height="47"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="io9-5h-Mrg" secondAttribute="height" multiplier="6:1" id="DV6-Gk-jST"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="signIn:" destination="DZz-M8-PZX" eventType="touchUpInside" id="5tL-mn-wBw"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Google-Symbol.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZeR-3C-J6Z">
+                                <rect key="frame" x="74.5" y="818" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZeR-3C-J6Z" secondAttribute="height" multiplier="1:1" id="Aaj-sr-EFc"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AmF-M5-0eR"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="m0E-a7-ulV" firstAttribute="centerX" secondItem="b0D-DC-Iua" secondAttribute="centerX" id="3Dh-Ze-F0H"/>
-                            <constraint firstItem="m0E-a7-ulV" firstAttribute="width" secondItem="b0D-DC-Iua" secondAttribute="width" multiplier="0.7" id="5R8-aj-68b"/>
+                            <constraint firstItem="DE3-P1-9F3" firstAttribute="centerY" secondItem="bNk-Z5-Ki8" secondAttribute="centerY" id="ApH-Sx-1Wc"/>
+                            <constraint firstItem="ZeR-3C-J6Z" firstAttribute="height" secondItem="io9-5h-Mrg" secondAttribute="height" multiplier="0.75" id="BDx-JR-B6y"/>
+                            <constraint firstItem="io9-5h-Mrg" firstAttribute="centerX" secondItem="kz7-Ql-wB0" secondAttribute="centerX" id="DP5-LB-Gh6"/>
                             <constraint firstItem="b0D-DC-Iua" firstAttribute="leading" secondItem="AmF-M5-0eR" secondAttribute="leading" id="L24-Kw-tbl"/>
+                            <constraint firstItem="epQ-rV-KOR" firstAttribute="centerY" secondItem="io9-5h-Mrg" secondAttribute="centerY" id="OEc-Wm-MgF"/>
+                            <constraint firstItem="epQ-rV-KOR" firstAttribute="centerX" secondItem="io9-5h-Mrg" secondAttribute="centerX" id="Taj-B0-Xbd"/>
                             <constraint firstItem="cTd-BP-M81" firstAttribute="top" secondItem="b0D-DC-Iua" secondAttribute="top" id="TlG-li-dGc"/>
                             <constraint firstItem="cTd-BP-M81" firstAttribute="trailing" secondItem="b0D-DC-Iua" secondAttribute="trailing" id="Ucz-uO-aAX"/>
                             <constraint firstItem="AmF-M5-0eR" firstAttribute="trailing" secondItem="b0D-DC-Iua" secondAttribute="trailing" id="VY6-vi-2a9"/>
                             <constraint firstItem="kz7-Ql-wB0" firstAttribute="centerY" secondItem="b0D-DC-Iua" secondAttribute="centerY" id="Vuw-GV-9f1"/>
+                            <constraint firstItem="jpM-Ie-lNl" firstAttribute="centerY" secondItem="bNk-Z5-Ki8" secondAttribute="centerY" id="W6J-Q9-C84"/>
+                            <constraint firstItem="io9-5h-Mrg" firstAttribute="top" secondItem="kz7-Ql-wB0" secondAttribute="centerY" multiplier="1.05" id="Wbd-JT-suv"/>
                             <constraint firstItem="cTd-BP-M81" firstAttribute="leading" secondItem="b0D-DC-Iua" secondAttribute="leading" id="Z1x-Ai-H0f"/>
+                            <constraint firstItem="ZeR-3C-J6Z" firstAttribute="centerX" secondItem="dsT-Iz-uGk" secondAttribute="centerX" id="ZF9-bB-Pmw"/>
+                            <constraint firstItem="DE3-P1-9F3" firstAttribute="height" secondItem="bNk-Z5-Ki8" secondAttribute="height" multiplier="0.65" id="a3B-Xe-bhr"/>
+                            <constraint firstItem="jpM-Ie-lNl" firstAttribute="centerX" secondItem="bNk-Z5-Ki8" secondAttribute="centerX" id="cBS-oF-elw"/>
+                            <constraint firstItem="DE3-P1-9F3" firstAttribute="centerX" secondItem="dsT-Iz-uGk" secondAttribute="centerX" id="k4Y-Px-Vqs"/>
                             <constraint firstItem="kz7-Ql-wB0" firstAttribute="width" secondItem="b0D-DC-Iua" secondAttribute="width" multiplier="0.68" id="kQ5-cV-ied"/>
-                            <constraint firstItem="m0E-a7-ulV" firstAttribute="top" secondItem="kz7-Ql-wB0" secondAttribute="centerY" multiplier="1.05" id="mCl-or-5gI"/>
+                            <constraint firstItem="io9-5h-Mrg" firstAttribute="width" secondItem="b0D-DC-Iua" secondAttribute="width" multiplier="0.68" id="mXC-Vb-fQs"/>
                             <constraint firstItem="kz7-Ql-wB0" firstAttribute="centerX" secondItem="b0D-DC-Iua" secondAttribute="centerX" id="n3N-iW-iXZ"/>
                             <constraint firstItem="bNk-Z5-Ki8" firstAttribute="bottom" secondItem="kz7-Ql-wB0" secondAttribute="centerY" multiplier="0.95" id="nMI-TI-06T"/>
                             <constraint firstItem="bNk-Z5-Ki8" firstAttribute="centerX" secondItem="b0D-DC-Iua" secondAttribute="centerX" id="oe0-eC-LOc"/>
                             <constraint firstItem="b0D-DC-Iua" firstAttribute="height" secondItem="AmF-M5-0eR" secondAttribute="height" multiplier="0.3" id="okF-v2-ztb"/>
                             <constraint firstAttribute="bottom" secondItem="b0D-DC-Iua" secondAttribute="bottom" id="sb9-r0-rzu"/>
+                            <constraint firstItem="ZeR-3C-J6Z" firstAttribute="centerY" secondItem="io9-5h-Mrg" secondAttribute="centerY" id="vvM-WE-GvP"/>
                             <constraint firstItem="bNk-Z5-Ki8" firstAttribute="width" secondItem="b0D-DC-Iua" secondAttribute="width" multiplier="0.68" id="xYP-hh-aiH"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backGroundBtn" destination="b0D-DC-Iua" id="lKu-ub-nsg"/>
-                        <outlet property="btnGoogleLogIn" destination="m0E-a7-ulV" id="Y3O-G8-Kmn"/>
+                        <outlet property="btnGoogleLogIn" destination="io9-5h-Mrg" id="V4g-hL-0J4"/>
+                        <outlet property="btnKakaoLogIn" destination="bNk-Z5-Ki8" id="qt6-Pr-dBx"/>
+                        <outlet property="btnNaverLogIn" destination="kz7-Ql-wB0" id="p9a-S4-eEn"/>
+                        <outlet property="googleLabel" destination="epQ-rV-KOR" id="q51-Mb-rgL"/>
+                        <outlet property="kakaoLabel" destination="jpM-Ie-lNl" id="U1a-xB-Wub"/>
+                        <outlet property="kakaoSymbol" destination="DE3-P1-9F3" id="boS-5J-dBv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wTn-nI-9d5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -125,13 +180,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Google-Symbol.png" width="3840" height="2400"/>
         <image name="background.png" width="375" height="812"/>
         <image name="btnG_아이콘사각.png" width="200" height="200"/>
-        <image name="kakao_login_large_wide.png" width="600" height="90"/>
+        <image name="kakaosymbol.png" width="49" height="49"/>
         <image name="minus" catalog="system" width="128" height="24"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

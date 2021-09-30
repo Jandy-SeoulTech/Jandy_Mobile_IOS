@@ -20,7 +20,12 @@ import Alamofire
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var backGroundBtn: UIButton!
-    @IBOutlet weak var btnGoogleLogIn: GIDSignInButton!
+    @IBOutlet weak var btnGoogleLogIn: UIView!
+    @IBOutlet weak var googleLabel: UILabel!
+    @IBOutlet weak var btnNaverLogIn: UIButton!
+    @IBOutlet weak var kakaoSymbol: UIImageView!
+    @IBOutlet weak var kakaoLabel: UILabel!
+    @IBOutlet weak var btnKakaoLogIn: UIButton!
     
     // 구글
     let signInConfig = GIDConfiguration.init(clientID: "1087611763983-rm0g3b1ensfk4b34hejfjrdoq4gjcqtk.apps.googleusercontent.com")
@@ -41,8 +46,14 @@ class LoginViewController: UIViewController {
     }
     
     func setUI(){
-            backGroundBtn.layer.cornerRadius = 40
-        btnGoogleLogIn.style = .wide
+        backGroundBtn.layer.cornerRadius = 40
+        btnNaverLogIn.layer.cornerRadius = 12
+        btnKakaoLogIn.layer.cornerRadius = 12
+        btnGoogleLogIn.layer.cornerRadius = 12
+        googleLabel.layer.zPosition = 5
+        kakaoSymbol.layer.zPosition = 5
+        kakaoLabel.layer.zPosition = 5
+        
         
        
 //            btnKakaoLogIn.layer.borderColor = UIColor.white.cgColor
@@ -152,7 +163,7 @@ class LoginViewController: UIViewController {
     }
 
     // 네이버로 이용하기 버튼 함수
-    @IBAction func onNaverLoginByAppTouched(_ sender: UIButton) {
+    @IBAction func onNaverLoginByAppTouched(_ sender: Any) {
       NaverLoginInstance?.delegate = self
       NaverLoginInstance?.requestThirdPartyLogin()
     }

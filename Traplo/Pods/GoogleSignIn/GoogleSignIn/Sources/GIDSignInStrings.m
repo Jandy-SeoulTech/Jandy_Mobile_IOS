@@ -25,7 +25,7 @@ static NSString * const kStringsTableName = @"GoogleSignIn";
 
 // Button texts used as both keys in localized strings files and default values.
 static NSString *const kStandardButtonText = @"Sign in";
-static NSString *const kWideButtonText = @"Sign in with Google";
+static NSString *const kWideButtonText = @"구글 로그인";
 
 @implementation GIDSignInStrings
 
