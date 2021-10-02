@@ -11,8 +11,27 @@ import Cosmos
 // 관광지 검색한 후 -list 페이지
 class ListSearchTouristSpotViewController: UIViewController {
     
-    let array = ["  문화 역사  ","  이색거리  ","  식당  ","  자연  ","  둘레길  "]
-
+    let array = ["  관광명소  ","  숙박  ","  음식점  ","  카페  ","  지하철역  ","  문화시설  ","  대형마트  ","  편의점  ","  학교  ","  공공기관  ","  병원  ","  약국  "]
+    let dic = ["  관광명소  ":"AT4", "  숙박  ":"AD5"
+               ,"  음식점  ":"FD6", "  카페  ":"CE7",
+               "  지하철역  ":"SW8", "  문화시설  ":"CT1",
+               "  대형마트  ":"MT1", "  편의점  ":"CS2",
+               "  학교  ":"SC4", "  공공기관  ":"PO3",
+               "  병원  ":"HP8", "  약국  ":"PM9"]
+/*
+     AT4    관광명소
+     AD5    숙박
+     FD6    음식점
+     CE7    카페
+     SW8    지하철역
+     CT1    문화시설
+    MT1    대형마트
+    CS2    편의점
+    SC4    학교
+    PO3    공공기관
+    HP8    병원
+    PM9    약국
+*/
     //gradient
     var gradientLayer: CAGradientLayer!
     
@@ -65,7 +84,7 @@ extension ListSearchTouristSpotViewController:UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView.isEqual(keyWordCollectionView){
-            return 5
+            return array.count
         }else {
         return 10
         }
@@ -109,7 +128,7 @@ extension ListSearchTouristSpotViewController:UICollectionViewDelegateFlowLayout
             else {
                 let width = view.bounds.width
                 let height = collectionView.bounds.height
-                return CGSize(width: (width/10)*9, height: height/6)
+                return CGSize(width: width, height: height/6)
             }
         }
     
@@ -130,12 +149,16 @@ class tourSpotContentCollectionViewCell: UICollectionViewCell {
         ratings.rating = 3
         describeTextView.text = "ddddd"
         
+        setBorder()
         // 상위 뷰 흘러넘치는 그림자 허용 설정
-        self.layer.masksToBounds = false
-        self.contentView.layer.masksToBounds = false
+        //self.layer.masksToBounds = false
+        //self.contentView.layer.masksToBounds = false
         // 그림자 설정
-        shadowBorderView.setBorderShadow(borderWidth: 0.5, cornerRadius: 5, useShadowEffect: true, shadowRadius: 2)
+        //shadowBorderView.setBorderShadow(borderWidth: 0.5, cornerRadius: 5, useShadowEffect: true, shadowRadius: 2)
         
+    }
+    func setBorder() {
+        self.layer.addBorder([.bottom], color: UIColor.systemGray, width: 0.3)
     }
    
 }

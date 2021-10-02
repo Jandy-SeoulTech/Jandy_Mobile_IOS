@@ -63,7 +63,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="qD2-dZ-Bxa" secondAttribute="height" multiplier="70:33" id="fHy-Z2-t2U"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="Group 10.png"/>
+                                                <state key="normal" backgroundImage="Group 11.png"/>
                                                 <connections>
                                                     <action selector="onToggleBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dBx-gt-DGp"/>
                                                 </connections>
@@ -80,7 +80,7 @@
                                             <constraint firstItem="qD2-dZ-Bxa" firstAttribute="height" secondItem="qqN-yV-qhB" secondAttribute="height" multiplier="0.75" id="os5-Bk-BJO"/>
                                         </constraints>
                                     </view>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="L9S-5y-IvU">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="L9S-5y-IvU">
                                         <rect key="frame" x="0.0" y="64" width="414" height="70.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cki-Zx-ZAX">
@@ -222,7 +222,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="c2C-u3-fep" secondAttribute="height" multiplier="70:33" id="h6V-83-Ff8"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="Group 11.png"/>
+                                                <state key="normal" backgroundImage="Group 10.png"/>
                                                 <connections>
                                                     <action selector="onToggleBtnClicked:" destination="stK-SL-vdJ" eventType="touchUpInside" id="BrY-cO-RAh"/>
                                                 </connections>
@@ -239,7 +239,7 @@
                                             <constraint firstItem="c2C-u3-fep" firstAttribute="height" secondItem="hwu-57-m4W" secondAttribute="height" multiplier="0.75" id="ytz-RZ-oy7"/>
                                         </constraints>
                                     </view>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="g6l-6p-LKi">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="g6l-6p-LKi">
                                         <rect key="frame" x="0.0" y="64" width="414" height="70.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lOw-CX-cLO">
@@ -296,15 +296,15 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ViB-iU-G3U">
                                 <rect key="frame" x="0.0" y="220.5" width="414" height="641.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="D1p-2d-sFe">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="D1p-2d-sFe">
                                     <size key="itemSize" width="414" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tourSpotContent" id="ZtI-CY-nid" customClass="tourSpotContentCollectionViewCell" customModule="Traplo" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="20" width="394" height="128"/>
+                                        <rect key="frame" x="10" y="1" width="394" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fl9-pc-4YV">
                                             <rect key="frame" x="0.0" y="0.0" width="394" height="128"/>
@@ -313,23 +313,23 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbH-zH-nRo">
                                                     <rect key="frame" x="0.0" y="0.0" width="394" height="128"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="R1280x0" translatesAutoresizingMaskIntoConstraints="NO" id="8Zk-9S-eRR">
-                                                            <rect key="frame" x="10" y="6.5" width="115" height="115"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kakaosymbol.png" translatesAutoresizingMaskIntoConstraints="NO" id="8Zk-9S-eRR">
+                                                            <rect key="frame" x="19.5" y="6.5" width="115.5" height="115"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="8Zk-9S-eRR" secondAttribute="height" multiplier="1:1" id="6w0-Gj-bJi"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mc1-cc-vi7">
-                                                            <rect key="frame" x="125" y="6.5" width="269" height="115"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="mc1-cc-vi7">
+                                                            <rect key="frame" x="148.5" y="13" width="245.5" height="115"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BD-Y3-ipy">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="269" height="20.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="245.5" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" id="0nz-Ny-hwR" customClass="CosmosView" customModule="Cosmos">
-                                                                    <rect key="frame" x="0.0" y="20.5" width="269" height="94.5"/>
+                                                                    <rect key="frame" x="0.0" y="23.5" width="245.5" height="89"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                     <userDefinedRuntimeAttributes>
@@ -348,7 +348,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hPa-a6-fOd">
-                                                                    <rect key="frame" x="0.0" y="115" width="269" height="0.0"/>
+                                                                    <rect key="frame" x="0.0" y="115" width="245.5" height="0.0"/>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                     <color key="textColor" systemColor="labelColor"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -360,12 +360,12 @@
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="mc1-cc-vi7" firstAttribute="height" secondItem="8Zk-9S-eRR" secondAttribute="height" id="6E2-2A-Ssi"/>
-                                                        <constraint firstItem="mc1-cc-vi7" firstAttribute="centerY" secondItem="lbH-zH-nRo" secondAttribute="centerY" id="AyY-2b-iYG"/>
+                                                        <constraint firstItem="mc1-cc-vi7" firstAttribute="centerY" secondItem="lbH-zH-nRo" secondAttribute="centerY" multiplier="1.1" id="AyY-2b-iYG"/>
                                                         <constraint firstItem="8Zk-9S-eRR" firstAttribute="centerY" secondItem="lbH-zH-nRo" secondAttribute="centerY" id="CVf-o0-LSA"/>
-                                                        <constraint firstItem="8Zk-9S-eRR" firstAttribute="leading" secondItem="lbH-zH-nRo" secondAttribute="leading" constant="10" id="JI2-v2-rVd"/>
-                                                        <constraint firstItem="mc1-cc-vi7" firstAttribute="leading" secondItem="8Zk-9S-eRR" secondAttribute="trailing" id="PEZ-CU-PBG"/>
+                                                        <constraint firstItem="mc1-cc-vi7" firstAttribute="leading" secondItem="8Zk-9S-eRR" secondAttribute="trailing" multiplier="1.1" id="PEZ-CU-PBG"/>
                                                         <constraint firstItem="8Zk-9S-eRR" firstAttribute="height" secondItem="lbH-zH-nRo" secondAttribute="height" multiplier="0.9" id="be9-EX-6gp"/>
                                                         <constraint firstAttribute="trailing" secondItem="mc1-cc-vi7" secondAttribute="trailing" id="kYR-Jb-cJT"/>
+                                                        <constraint firstItem="8Zk-9S-eRR" firstAttribute="leading" secondItem="lbH-zH-nRo" secondAttribute="centerX" multiplier="0.1" id="pCz-sv-Odw"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -722,9 +722,9 @@
     <resources>
         <image name="Group 10.png" width="70" height="33"/>
         <image name="Group 11.png" width="70" height="33"/>
-        <image name="R1280x0" width="1280" height="976"/>
         <image name="clock" catalog="system" width="128" height="121"/>
         <image name="globe" catalog="system" width="128" height="121"/>
+        <image name="kakaosymbol.png" width="49" height="49"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
         <image name="삼성미술관리움.png" width="375" height="386"/>

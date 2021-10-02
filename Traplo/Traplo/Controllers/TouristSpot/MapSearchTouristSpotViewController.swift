@@ -10,7 +10,13 @@ import UIKit
 // 관광지 검색한 후 -map 페이지
 class MapSearchTouristSpotViewController: UIViewController {
 
-    let array = ["  문화 역사  ","  이색거리  ","  식당  ","  자연  ","  둘레길  "]
+    let array = ["  관광명소  ","  숙박  ","  음식점  ","  카페  ","  지하철역  ","  문화시설  ","  대형마트  ","  편의점  ","  학교  ","  공공기관  ","  병원  ","  약국  "]
+    let dic = ["  관광명소  ":"AT4", "  숙박  ":"AD5"
+               ,"  음식점  ":"FD6", "  카페  ":"CE7",
+               "  지하철역  ":"SW8", "  문화시설  ":"CT1",
+               "  대형마트  ":"MT1", "  편의점  ":"CS2",
+               "  학교  ":"SC4", "  공공기관  ":"PO3",
+               "  병원  ":"HP8", "  약국  ":"PM9"]
     
     //gradient
     var gradientLayer: CAGradientLayer!
@@ -74,7 +80,7 @@ extension MapSearchTouristSpotViewController:UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
      
-        return 5
+        return array.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
