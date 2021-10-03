@@ -11,7 +11,7 @@ import Cosmos
 // 관광지 검색한 후 -list 페이지
 class ListSearchTouristSpotViewController: UIViewController {
     
-    let array = ["  관광명소  ","  숙박  ","  음식점  ","  카페  ","  지하철역  ","  문화시설  ","  대형마트  ","  편의점  ","  학교  ","  공공기관  ","  병원  ","  약국  "]
+    let keyWordArray = ["  관광명소  ","  숙박  ","  음식점  ","  카페  ","  지하철역  ","  문화시설  ","  대형마트  ","  편의점  ","  학교  ","  공공기관  ","  병원  ","  약국  "]
     let dic = ["  관광명소  ":"AT4", "  숙박  ":"AD5"
                ,"  음식점  ":"FD6", "  카페  ":"CE7",
                "  지하철역  ":"SW8", "  문화시설  ":"CT1",
@@ -84,7 +84,7 @@ extension ListSearchTouristSpotViewController:UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView.isEqual(keyWordCollectionView){
-            return array.count
+            return keyWordArray.count
         }else {
         return 10
         }
@@ -96,7 +96,7 @@ extension ListSearchTouristSpotViewController:UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "searchKeyWord", for: indexPath) as? searchKeyWordCollectionViewCell else {
             return UICollectionViewCell()}
       
-        cell.setUI(title: array[indexPath.row])
+        cell.setUI(title: keyWordArray[indexPath.row])
         
         return cell
         }else {
@@ -120,7 +120,7 @@ extension ListSearchTouristSpotViewController:UICollectionViewDelegateFlowLayout
             let maxSize = CGSize(width: 250, height: 250)
             let heightOnFont = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
             //width
-            let collectionViewCellWidth = NSString(string: array[indexPath.row]).boundingRect(with: maxSize, options: heightOnFont, attributes: [.font: UIFont.systemFont(ofSize: 17)], context: nil)
+            let collectionViewCellWidth = NSString(string: keyWordArray[indexPath.row]).boundingRect(with: maxSize, options: heightOnFont, attributes: [.font: UIFont.systemFont(ofSize: 17)], context: nil)
             //height
             let collectionViewCellHeight = collectionView.bounds.height
             return CGSize(width: collectionViewCellWidth.width, height: collectionViewCellHeight)

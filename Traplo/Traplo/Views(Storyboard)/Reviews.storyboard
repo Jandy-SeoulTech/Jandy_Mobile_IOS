@@ -202,8 +202,8 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="리뷰 글 입력" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="boG-TL-X0j">
-                                                        <rect key="frame" x="20" y="386" width="374" height="304"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="리뷰 글 입력" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boG-TL-X0j">
+                                                        <rect key="frame" x="20.5" y="386" width="373" height="304"/>
                                                         <color key="textColor" systemColor="labelColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -219,12 +219,10 @@
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="LaO-Ox-aRK" secondAttribute="trailing" constant="30" id="LBZ-m8-Hyw"/>
-                                                    <constraint firstItem="boG-TL-X0j" firstAttribute="leading" secondItem="yIY-g8-1AL" secondAttribute="leading" constant="20" id="Ul8-Ey-lY3"/>
                                                     <constraint firstItem="LaO-Ox-aRK" firstAttribute="leading" secondItem="yIY-g8-1AL" secondAttribute="leading" constant="30" id="VO7-b4-uft"/>
                                                     <constraint firstAttribute="bottom" secondItem="boG-TL-X0j" secondAttribute="bottom" constant="10" id="WNF-J1-9eR"/>
                                                     <constraint firstItem="pSW-O6-2Ri" firstAttribute="top" secondItem="yIY-g8-1AL" secondAttribute="top" constant="120" id="XPQ-aa-Oxz"/>
                                                     <constraint firstItem="fY3-EO-9m7" firstAttribute="top" secondItem="LaO-Ox-aRK" secondAttribute="bottom" constant="15" id="Zel-wq-9qM"/>
-                                                    <constraint firstAttribute="trailing" secondItem="boG-TL-X0j" secondAttribute="trailing" constant="20" id="Zxu-nB-muz"/>
                                                     <constraint firstItem="boG-TL-X0j" firstAttribute="centerX" secondItem="fY3-EO-9m7" secondAttribute="centerX" id="bnR-pO-aWJ"/>
                                                     <constraint firstItem="boG-TL-X0j" firstAttribute="top" secondItem="fY3-EO-9m7" secondAttribute="bottom" constant="10" id="fNs-Sa-hY1"/>
                                                     <constraint firstItem="pSW-O6-2Ri" firstAttribute="leading" secondItem="yIY-g8-1AL" secondAttribute="leading" constant="10" id="iMi-w5-oDR"/>
@@ -287,6 +285,9 @@
                                                 </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="xmark" catalog="system"/>
+                                                <connections>
+                                                    <action selector="onXBtnTouched:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VOZ-oK-bwW"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -312,6 +313,7 @@
                             <constraint firstAttribute="top" secondItem="kyW-wT-jHK" secondAttribute="top" id="5g9-x2-5g6"/>
                             <constraint firstItem="Seu-iw-us7" firstAttribute="top" secondItem="kyW-wT-jHK" secondAttribute="bottom" id="CML-Fp-YX4"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="top" secondItem="Lpd-Yr-MwZ" secondAttribute="top" id="DlO-E7-Ggu"/>
+                            <constraint firstItem="boG-TL-X0j" firstAttribute="width" secondItem="vDu-zF-Fre" secondAttribute="width" multiplier="0.9" id="IlR-wR-6iG"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="kyW-wT-jHK" secondAttribute="trailing" id="NWP-yb-fm7"/>
                             <constraint firstItem="kyW-wT-jHK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fgd-Gf-tH0"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Seu-iw-us7" secondAttribute="trailing" id="jlB-H7-gnH"/>
@@ -343,6 +345,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="51" y="100"/>
+        </scene>
+        <!--Review Detail Image View Controller-->
+        <scene sceneID="2B9-GY-6K3">
+            <objects>
+                <viewController storyboardIdentifier="reviewDetailImageViewController" id="0Fn-CP-sIH" customClass="reviewDetailImageViewController" customModule="Traplo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wUu-rV-QAP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="삼성미술관리움.png" translatesAutoresizingMaskIntoConstraints="NO" id="SUd-3N-YKC">
+                                <rect key="frame" x="0.0" y="246" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SUd-3N-YKC" secondAttribute="height" multiplier="1:1" id="NVL-mI-ccP"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHh-pS-yv6">
+                                <rect key="frame" x="357" y="76" width="31" height="29"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="xmark" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
+                                </state>
+                                <connections>
+                                    <action selector="onXBtnTouched:" destination="0Fn-CP-sIH" eventType="touchUpInside" id="1zg-tZ-zWD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Grx-YP-sYt"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SUd-3N-YKC" firstAttribute="leading" secondItem="Grx-YP-sYt" secondAttribute="leading" id="5K2-zw-oq6"/>
+                            <constraint firstItem="SUd-3N-YKC" firstAttribute="centerY" secondItem="Grx-YP-sYt" secondAttribute="centerY" id="EaO-Uw-ERU"/>
+                            <constraint firstItem="iHh-pS-yv6" firstAttribute="centerX" secondItem="Grx-YP-sYt" secondAttribute="centerX" multiplier="1.8" id="F4y-ig-ZOS"/>
+                            <constraint firstItem="iHh-pS-yv6" firstAttribute="centerY" secondItem="Grx-YP-sYt" secondAttribute="centerY" multiplier="0.2" id="Vs6-Fz-lW4"/>
+                            <constraint firstItem="SUd-3N-YKC" firstAttribute="trailing" secondItem="Grx-YP-sYt" secondAttribute="trailing" id="kWc-o2-DzO"/>
+                            <constraint firstItem="SUd-3N-YKC" firstAttribute="centerX" secondItem="Grx-YP-sYt" secondAttribute="centerX" id="pJ1-1y-bVc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="SUd-3N-YKC" id="kPP-B6-qWs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q5L-ZS-93K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57" y="831"/>
         </scene>
         <!--Edit Review View Controller-->
         <scene sceneID="CLf-BR-NcW">
@@ -560,10 +606,10 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="리뷰 글 입력" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yE5-Pz-rso">
-                                                        <rect key="frame" x="20" y="386" width="374" height="304"/>
-                                                        <color key="textColor" systemColor="labelColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="yE5-Pz-rso">
+                                                        <rect key="frame" x="20.5" y="386" width="373" height="304"/>
+                                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQs-Sl-amQ">
@@ -581,10 +627,8 @@
                                                     <constraint firstItem="yE5-Pz-rso" firstAttribute="centerX" secondItem="n5s-mb-sSZ" secondAttribute="centerX" id="C5Q-v9-5Xn"/>
                                                     <constraint firstItem="mMH-TM-Sxu" firstAttribute="top" secondItem="weX-0W-Lsm" secondAttribute="top" constant="120" id="C8M-cm-pgQ"/>
                                                     <constraint firstItem="QQs-Sl-amQ" firstAttribute="leading" secondItem="weX-0W-Lsm" secondAttribute="leading" constant="30" id="Cva-lm-qPM"/>
-                                                    <constraint firstAttribute="trailing" secondItem="yE5-Pz-rso" secondAttribute="trailing" constant="20" id="Hsf-ZR-ga8"/>
                                                     <constraint firstAttribute="bottom" secondItem="yE5-Pz-rso" secondAttribute="bottom" constant="10" id="SOW-OI-fTm"/>
                                                     <constraint firstAttribute="top" secondItem="mMH-TM-Sxu" secondAttribute="bottom" constant="-300" id="Zh2-Ri-1bk"/>
-                                                    <constraint firstItem="yE5-Pz-rso" firstAttribute="leading" secondItem="weX-0W-Lsm" secondAttribute="leading" constant="20" id="cXU-OT-TFH"/>
                                                     <constraint firstAttribute="trailing" secondItem="mMH-TM-Sxu" secondAttribute="trailing" constant="10" id="hnF-7V-AW7"/>
                                                     <constraint firstAttribute="trailing" secondItem="QQs-Sl-amQ" secondAttribute="trailing" constant="30" id="jHK-rJ-mB6"/>
                                                     <constraint firstItem="mMH-TM-Sxu" firstAttribute="leading" secondItem="weX-0W-Lsm" secondAttribute="leading" constant="10" id="kUc-ru-1du"/>
@@ -646,7 +690,7 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="xmark" catalog="system"/>
                                                 <connections>
-                                                    <action selector="onClickedXBtn:" destination="uT8-l0-sMw" eventType="touchUpInside" id="bgm-4H-Ai8"/>
+                                                    <action selector="onXBtnTouched:" destination="uT8-l0-sMw" eventType="touchUpInside" id="bgm-4H-Ai8"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -674,6 +718,7 @@
                             <constraint firstItem="QqD-Qf-Sdb" firstAttribute="trailing" secondItem="wod-QJ-cOP" secondAttribute="trailing" id="86P-qQ-EcK"/>
                             <constraint firstItem="pN8-N1-m3g" firstAttribute="top" secondItem="Nu2-Vb-FGx" secondAttribute="top" id="DoR-Tx-19d"/>
                             <constraint firstItem="QqD-Qf-Sdb" firstAttribute="trailing" secondItem="pN8-N1-m3g" secondAttribute="trailing" id="Edr-dm-5XB"/>
+                            <constraint firstItem="yE5-Pz-rso" firstAttribute="width" secondItem="QqD-Qf-Sdb" secondAttribute="width" multiplier="0.9" id="GLO-8w-hV3"/>
                             <constraint firstItem="wod-QJ-cOP" firstAttribute="leading" secondItem="QqD-Qf-Sdb" secondAttribute="leading" id="Guo-LK-w5B"/>
                             <constraint firstAttribute="top" secondItem="pN8-N1-m3g" secondAttribute="bottom" constant="-80" id="ZME-r0-z3h"/>
                             <constraint firstItem="QqD-Qf-Sdb" firstAttribute="top" secondItem="Epn-g9-u1B" secondAttribute="top" id="Zxx-rN-7dW"/>
@@ -696,6 +741,7 @@
                         <outlet property="ploggingConsoleTimeLabelConstraint" destination="iNq-dV-pzb" id="3Uj-6Q-jZk"/>
                         <outlet property="ploggingConsoleUnderConstraint" destination="RfU-T1-5zV" id="9tP-fu-bD1"/>
                         <outlet property="ploggingConsoleUpperConstraint" destination="3dO-GA-kQd" id="02g-Wr-KdH"/>
+                        <outlet property="reviewTextView" destination="yE5-Pz-rso" id="Lfb-en-R4M"/>
                         <outlet property="topDesignLayoutView" destination="Epn-g9-u1B" id="73b-HT-WbD"/>
                         <outlet property="topDesignView" destination="pN8-N1-m3g" id="etH-yd-Yv4"/>
                         <outlet property="topDesignViewHeightConstraint" destination="ZME-r0-z3h" id="k5b-7f-cMK"/>
@@ -886,7 +932,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IyM-0p-h3m"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="UvO-SP-Uai" firstAttribute="top" secondItem="rxl-th-AOO" secondAttribute="bottom" id="94a-Ko-4rl"/>
                             <constraint firstItem="UvO-SP-Uai" firstAttribute="bottom" secondItem="8bw-9C-MTd" secondAttribute="bottom" id="C7B-Ka-wAs"/>
@@ -916,6 +962,7 @@
         <image name="multiply" catalog="system" width="128" height="111"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
+        <image name="삼성미술관리움.png" width="375" height="386"/>
         <namedColor name="Color1">
             <color red="0.54500001668930054" green="0.875" blue="0.86699998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

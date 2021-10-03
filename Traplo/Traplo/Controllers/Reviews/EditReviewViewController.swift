@@ -18,6 +18,7 @@ class EditReviewViewController: UIViewController {
     @IBOutlet weak var ploggingConsole: UIView!
     @IBOutlet weak var cosmosView: CosmosView!
     @IBOutlet weak var bottomDesignView: UIView!
+    @IBOutlet weak var reviewTextView: UITextView!
     
     //constraints
     @IBOutlet weak var topDesignViewHeightConstraint: NSLayoutConstraint!
@@ -53,8 +54,9 @@ class EditReviewViewController: UIViewController {
         //setGoogleMaps() // setUI() 로 옮기면 안됨!! <layout배열 꼬임>
     }
 
-    @IBAction func onClickedXBtn(_ sender: Any) {
-        dismiss(animated: false, completion: nil)
+    // 상단 X 버튼 터치 시
+    @IBAction func onXBtnTouched(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     func setUI() {
@@ -75,6 +77,7 @@ class EditReviewViewController: UIViewController {
         
         setPloggingConsole()
         setCosmosRate()
+        setPlaceHolder()
 
     }
     
@@ -140,6 +143,7 @@ class EditReviewViewController: UIViewController {
     
 }
 
+// ---extension 영역---
 // 셀 어떻게 보여줘?
 extension EditReviewViewController : UICollectionViewDataSource {
     
@@ -173,6 +177,31 @@ extension EditReviewViewController : UICollectionViewDelegateFlowLayout {
 
         
         return CGSize(width: collectionRectCellSize, height: collectionRectCellSize)
+    }
+}
+
+extension EditReviewViewController : UITextViewDelegate {
+    func setPlaceHolder() {
+        reviewTextView.delegate = self // txtvReview가 유저가 선언한 outlet
+        reviewTextView.text = "리뷰를 입력해주세요."
+        reviewTextView.textColor = UIColor.systemGray
+        
+    }
+    
+    // TextView Place Holder
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.systemGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+        
+    }
+    // TextView Place Holder
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "리뷰를 입력해주세요."
+            textView.textColor = UIColor.systemGray
+        }
     }
 }
 

@@ -117,6 +117,12 @@ class ReviewDetailsViewController: UIViewController {
         cosmosView.settings.updateOnTouch = false
         
     }
+    
+    // 상단 X 버튼 터치 시
+    @IBAction func onXBtnTouched(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 
 }
 
@@ -155,9 +161,21 @@ extension ReviewDetailsViewController : UICollectionViewDelegateFlowLayout {
         return CGSize(width: collectionRectCellSize, height: collectionRectCellSize)
     }
 }
+
 // 셀 터치시
 extension ReviewDetailsViewController : UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? addImageCollectionViewCell else {
+                  return
+               }
+        
+        let vcName = self.storyboard?.instantiateViewController(withIdentifier: "reviewDetailImageViewController")
+        vcName?.modalPresentationStyle = .overFullScreen
+        vcName?.modalPresentationStyle = .overCurrentContext
+        vcName?.modalTransitionStyle = .crossDissolve
+        self.present(vcName!, animated: true, completion: nil)
+        
+    }
 }
 
 class addImageCollectionViewCell : UICollectionViewCell {

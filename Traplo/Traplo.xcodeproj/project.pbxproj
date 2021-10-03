@@ -33,6 +33,7 @@
 		3F66718F26D22E0B00BA21D1 /* EditReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F66718E26D22E0B00BA21D1 /* EditReviewViewController.swift */; };
 		3F73E7F32705BC1000E2CAD6 /* kakaosymbol.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F73E7F22705BC1000E2CAD6 /* kakaosymbol.png */; };
 		3F73E7F52705C45A00E2CAD6 /* Google-Symbol.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F73E7F42705C45A00E2CAD6 /* Google-Symbol.png */; };
+		3F75BDEA2709C463000D2AA6 /* reviewDetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75BDE92709C463000D2AA6 /* reviewDetailImageViewController.swift */; };
 		3FC6FAF527046FCE0088C358 /* btnG_아이콘사각.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC6FAF427046FCE0088C358 /* btnG_아이콘사각.png */; };
 		3FF1A71F26D62174001AD31F /* PloggingRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1A71E26D62174001AD31F /* PloggingRecordModel.swift */; };
 		3FF1A72126D62F9A001AD31F /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1A72026D62F9A001AD31F /* UserInfo.swift */; };
@@ -100,6 +101,7 @@
 		3F66718E26D22E0B00BA21D1 /* EditReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReviewViewController.swift; sourceTree = "<group>"; };
 		3F73E7F22705BC1000E2CAD6 /* kakaosymbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kakaosymbol.png; path = "../../../../../../../Downloads/kakao_login-2/ko/kakaosymbol.png"; sourceTree = "<group>"; };
 		3F73E7F42705C45A00E2CAD6 /* Google-Symbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google-Symbol.png"; sourceTree = "<group>"; };
+		3F75BDE92709C463000D2AA6 /* reviewDetailImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewDetailImageViewController.swift; sourceTree = "<group>"; };
 		3FC6FAF427046FCE0088C358 /* btnG_아이콘사각.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btnG_아이콘사각.png"; sourceTree = "<group>"; };
 		3FF1A71E26D62174001AD31F /* PloggingRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PloggingRecordModel.swift; sourceTree = "<group>"; };
 		3FF1A72026D62F9A001AD31F /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 				3F66718426CBA03700BA21D1 /* ReviewDetailsViewController.swift */,
 				3F66718E26D22E0B00BA21D1 /* EditReviewViewController.swift */,
 				3F599A4126D384560049FFE3 /* EditReviewPopUpScreenViewController.swift */,
+				3F75BDE92709C463000D2AA6 /* reviewDetailImageViewController.swift */,
 			);
 			path = Reviews;
 			sourceTree = "<group>";
@@ -644,6 +647,7 @@
 				3FF1A71F26D62174001AD31F /* PloggingRecordModel.swift in Sources */,
 				3F619D7C26C41545000410FE /* LogInViewController.swift in Sources */,
 				3F66718526CBA03700BA21D1 /* ReviewDetailsViewController.swift in Sources */,
+				3F75BDEA2709C463000D2AA6 /* reviewDetailImageViewController.swift in Sources */,
 				3F14D36426C112E600F27B1E /* LogInBackGroundViewController.swift in Sources */,
 				3F14D36026C112E600F27B1E /* AppDelegate.swift in Sources */,
 				3F599A4226D384560049FFE3 /* EditReviewPopUpScreenViewController.swift in Sources */,
