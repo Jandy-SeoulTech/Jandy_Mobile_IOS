@@ -174,6 +174,124 @@
             </objects>
             <point key="canvasLocation" x="-23.188405797101453" y="69.642857142857139"/>
         </scene>
+        <!--Book Mark View Controller-->
+        <scene sceneID="NId-Qc-C20">
+            <objects>
+                <viewController id="kel-Jm-lhL" customClass="BookMarkViewController" customModule="Traplo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wuv-G9-ATC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ga1-pR-sGy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXl-iW-RdT">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="41"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sh3-pO-Khm">
+                                                <rect key="frame" x="175" y="4" width="64" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="TRAPLO">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnTraplo:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zfz-N1-njD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Sh3-pO-Khm" firstAttribute="centerY" secondItem="KXl-iW-RdT" secondAttribute="centerY" id="HYB-um-Unb"/>
+                                            <constraint firstItem="Sh3-pO-Khm" firstAttribute="centerX" secondItem="KXl-iW-RdT" secondAttribute="centerX" id="mP6-cd-yMC"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="KXl-iW-RdT" secondAttribute="bottom" id="7XG-nc-cuG"/>
+                                    <constraint firstAttribute="trailing" secondItem="KXl-iW-RdT" secondAttribute="trailing" id="Pcr-gN-blh"/>
+                                    <constraint firstItem="KXl-iW-RdT" firstAttribute="leading" secondItem="Ga1-pR-sGy" secondAttribute="leading" id="mrL-WY-308"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Kiu-vz-SHG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Kiu-vz-SHG" firstAttribute="trailing" secondItem="Ga1-pR-sGy" secondAttribute="trailing" id="DGy-DS-4aN"/>
+                            <constraint firstItem="KXl-iW-RdT" firstAttribute="top" secondItem="Kiu-vz-SHG" secondAttribute="top" id="Fon-bh-x87"/>
+                            <constraint firstItem="Kiu-vz-SHG" firstAttribute="leading" secondItem="Ga1-pR-sGy" secondAttribute="leading" id="JV4-qL-wwD"/>
+                            <constraint firstItem="Ga1-pR-sGy" firstAttribute="top" secondItem="wuv-G9-ATC" secondAttribute="top" id="R6q-aI-HSd"/>
+                            <constraint firstItem="Ga1-pR-sGy" firstAttribute="height" secondItem="wuv-G9-ATC" secondAttribute="height" multiplier="0.095" id="XdY-ux-lTX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="topDesignLayoutView" destination="KXl-iW-RdT" id="vVm-uo-gMF"/>
+                        <outlet property="topDesignView" destination="Ga1-pR-sGy" id="BSa-DN-apt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cgw-ga-J4t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="798"/>
+        </scene>
+        <!--Book Mark Edit View Controller-->
+        <scene sceneID="OQR-ll-3NL">
+            <objects>
+                <viewController id="vOE-cK-P9T" customClass="BookMarkEditViewController" customModule="Traplo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iFT-tw-7oq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ArL-Gr-VYe">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s2e-yY-QMF">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="41"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJa-Jp-zyx">
+                                                <rect key="frame" x="175" y="4" width="64" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="TRAPLO">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnTraplo:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="W6Y-ZB-PbB"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="sJa-Jp-zyx" firstAttribute="centerY" secondItem="s2e-yY-QMF" secondAttribute="centerY" id="aRU-Co-6GR"/>
+                                            <constraint firstItem="sJa-Jp-zyx" firstAttribute="centerX" secondItem="s2e-yY-QMF" secondAttribute="centerX" id="f8m-WA-ieS"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="s2e-yY-QMF" secondAttribute="trailing" id="Xfh-CL-OPo"/>
+                                    <constraint firstAttribute="bottom" secondItem="s2e-yY-QMF" secondAttribute="bottom" id="cQ4-8E-h8Q"/>
+                                    <constraint firstItem="s2e-yY-QMF" firstAttribute="leading" secondItem="ArL-Gr-VYe" secondAttribute="leading" id="dEB-qw-gkN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="k0H-lm-9J6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="s2e-yY-QMF" firstAttribute="top" secondItem="k0H-lm-9J6" secondAttribute="top" id="CXF-0L-qIL"/>
+                            <constraint firstItem="ArL-Gr-VYe" firstAttribute="height" secondItem="iFT-tw-7oq" secondAttribute="height" multiplier="0.095" id="PEz-BD-gtH"/>
+                            <constraint firstAttribute="top" secondItem="ArL-Gr-VYe" secondAttribute="top" id="RKf-yW-eqN"/>
+                            <constraint firstItem="ArL-Gr-VYe" firstAttribute="leading" secondItem="k0H-lm-9J6" secondAttribute="leading" id="RtR-MY-6td"/>
+                            <constraint firstItem="ArL-Gr-VYe" firstAttribute="trailing" secondItem="k0H-lm-9J6" secondAttribute="trailing" id="fyV-eC-R0U"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="topDesignLayoutView" destination="s2e-yY-QMF" id="SFE-Oy-Zwu"/>
+                        <outlet property="topDesignView" destination="ArL-Gr-VYe" id="fKT-uf-Ekj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LJp-Z7-wDn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="988" y="771"/>
+        </scene>
         <!--List Search Tourist Spot View Controller-->
         <scene sceneID="Doy-Pg-ef3">
             <objects>

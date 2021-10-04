@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		187FF3CC1DD02EAA210ADD0F /* Pods_Traplo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBE5F77A8850052FEFE89C3 /* Pods_Traplo.framework */; };
 		3F0013EE26FB5BDC00F3C5BB /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0013ED26FB5BDB00F3C5BB /* background.png */; };
+		3F086C84270B540000734CBB /* BookMarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F086C83270B540000734CBB /* BookMarkViewController.swift */; };
+		3F086C86270B576D00734CBB /* BookMarkEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F086C85270B576D00734CBB /* BookMarkEditViewController.swift */; };
 		3F14D36026C112E600F27B1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F14D35F26C112E600F27B1E /* AppDelegate.swift */; };
 		3F14D36226C112E600F27B1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F14D36126C112E600F27B1E /* SceneDelegate.swift */; };
 		3F14D36426C112E600F27B1E /* LogInBackGroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F14D36326C112E600F27B1E /* LogInBackGroundViewController.swift */; };
@@ -72,6 +74,8 @@
 		1A2A59D1BDDD34ACE87083BE /* Pods-TraploTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraploTests.debug.xcconfig"; path = "Target Support Files/Pods-TraploTests/Pods-TraploTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2AA55E18A5AADDEEDC860EC4 /* Pods_Traplo_TraploUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Traplo_TraploUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F0013ED26FB5BDB00F3C5BB /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		3F086C83270B540000734CBB /* BookMarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkViewController.swift; sourceTree = "<group>"; };
+		3F086C85270B576D00734CBB /* BookMarkEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkEditViewController.swift; sourceTree = "<group>"; };
 		3F14D35C26C112E600F27B1E /* Traplo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Traplo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F14D35F26C112E600F27B1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F14D36126C112E600F27B1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -313,6 +317,8 @@
 				3FF1A72826DA13A8001AD31F /* MapSearchTouristSpotViewController.swift */,
 				3FF1A72A26DA13C1001AD31F /* ListSearchTouristSpotViewController.swift */,
 				3FF1A72C26DA13E7001AD31F /* SelectTouristSpotViewController.swift */,
+				3F086C83270B540000734CBB /* BookMarkViewController.swift */,
+				3F086C85270B576D00734CBB /* BookMarkEditViewController.swift */,
 			);
 			path = TouristSpot;
 			sourceTree = "<group>";
@@ -652,7 +658,9 @@
 				3F14D36026C112E600F27B1E /* AppDelegate.swift in Sources */,
 				3F599A4226D384560049FFE3 /* EditReviewPopUpScreenViewController.swift in Sources */,
 				3FF1A72126D62F9A001AD31F /* UserInfo.swift in Sources */,
+				3F086C86270B576D00734CBB /* BookMarkEditViewController.swift in Sources */,
 				3FF1A72926DA13A8001AD31F /* MapSearchTouristSpotViewController.swift in Sources */,
+				3F086C84270B540000734CBB /* BookMarkViewController.swift in Sources */,
 				3F14D36226C112E600F27B1E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
