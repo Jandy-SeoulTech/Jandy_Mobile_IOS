@@ -30,6 +30,9 @@
                                                 <state key="normal" title="TRAPLO">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btnTraplo:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="pka-M1-uNs"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -163,9 +166,11 @@
                         <outlet property="topDesignLayoutView" destination="U3t-Hy-6De" id="rsm-YW-kMy"/>
                         <outlet property="topDesignView" destination="AXO-Kd-Mkm" id="MoU-hg-45G"/>
                         <outlet property="검색창리스트버튼있는뷰" destination="etw-Tv-R0t" id="A6b-jo-SVn"/>
+                        <segue destination="8mY-uX-FsN" kind="unwind" identifier="unwindRecommendActivityVC" unwindAction="unwindRecommendActivityVCWithSegue:" id="gpU-QP-t5n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="8mY-uX-FsN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-23.188405797101453" y="69.642857142857139"/>
         </scene>
@@ -189,6 +194,9 @@
                                                 <state key="normal" title="TRAPLO">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btnTraplo:" destination="stK-SL-vdJ" eventType="touchUpInside" id="0rA-pp-WhA"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -416,9 +424,11 @@
                         <outlet property="topDesignLayoutView" destination="tYk-J1-I9B" id="eNm-dE-fdl"/>
                         <outlet property="topDesignView" destination="jA2-Ia-fBG" id="x2v-YR-EHO"/>
                         <outlet property="검색창맵있는뷰" destination="SnS-an-cXP" id="xze-aJ-sjb"/>
+                        <segue destination="46y-qL-dk3" kind="unwind" identifier="unwindRecommendActivityVC" unwindAction="unwindRecommendActivityVCWithSegue:" id="T12-7d-chY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yw0-yt-4YB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="46y-qL-dk3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="647.82608695652175" y="69.642857142857139"/>
         </scene>

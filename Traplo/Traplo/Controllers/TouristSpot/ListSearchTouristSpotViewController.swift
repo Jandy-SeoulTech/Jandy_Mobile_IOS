@@ -53,12 +53,18 @@ class ListSearchTouristSpotViewController: UIViewController {
         setUI()
 
     }
+    
+    // Btn 영역
     @IBAction func onToggleBtnClicked(_ sender: Any) {
 //        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MapSearchTouristSpotViewController")
 //        vc?.modalPresentationStyle = .overFullScreen
 //        self.present(vc!, animated: false, completion: nil)
         dismiss(animated: false, completion: nil)
     }
+    @IBAction func btnTraplo(_ sender: UIButton) {
+    performSegue(withIdentifier: "unwindRecommendActivityVC", sender: self)
+    }
+    
     
     
     func setUI() {

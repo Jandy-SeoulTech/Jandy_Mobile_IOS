@@ -24,6 +24,8 @@ class RecommendActivityViewController : UIViewController {
     var images = [#imageLiteral(resourceName: "경춘선숲길.png"),#imageLiteral(resourceName: "노들섬.png")]
     var imageViews = [UIImageView]()
     
+    @IBAction func unwindRecommendActivityVC (segue : UIStoryboardSegue) {}
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

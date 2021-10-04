@@ -32,7 +32,6 @@ class MapSearchTouristSpotViewController: UIViewController {
     @IBOutlet weak var keyWordCollectionView: UICollectionView!
     @IBOutlet weak var 검색창리스트버튼있는뷰: UIView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,6 +39,7 @@ class MapSearchTouristSpotViewController: UIViewController {
 
     }
     
+    // Btn 영역
     @IBAction func onToggleBtnClicked(_ sender: Any) {
         
         // 클릭 시 이동 화면 list search tourist spot view controller 로 설정
@@ -52,6 +52,11 @@ class MapSearchTouristSpotViewController: UIViewController {
 //        vc?.modalPresentationStyle = .overFullScreen
 //        self.present(vc!, animated: false, completion: nil)
     }
+  
+    @IBAction func btnTraplo(_ sender: UIButton) {
+    performSegue(withIdentifier: "unwindRecommendActivityVC", sender: self)
+    }
+    
     
     
     func setUI() {
