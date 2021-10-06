@@ -36,6 +36,8 @@
 		3F73E7F32705BC1000E2CAD6 /* kakaosymbol.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F73E7F22705BC1000E2CAD6 /* kakaosymbol.png */; };
 		3F73E7F52705C45A00E2CAD6 /* Google-Symbol.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F73E7F42705C45A00E2CAD6 /* Google-Symbol.png */; };
 		3F75BDEA2709C463000D2AA6 /* reviewDetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75BDE92709C463000D2AA6 /* reviewDetailImageViewController.swift */; };
+		3F7977A3270D96370066A444 /* 찜목록.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F7977A2270D96370066A444 /* 찜목록.png */; };
+		3F7977A9270DA86A0066A444 /* 편집.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F7977A8270DA86A0066A444 /* 편집.png */; };
 		3FC6FAF527046FCE0088C358 /* btnG_아이콘사각.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC6FAF427046FCE0088C358 /* btnG_아이콘사각.png */; };
 		3FF1A71F26D62174001AD31F /* PloggingRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1A71E26D62174001AD31F /* PloggingRecordModel.swift */; };
 		3FF1A72126D62F9A001AD31F /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1A72026D62F9A001AD31F /* UserInfo.swift */; };
@@ -106,6 +108,8 @@
 		3F73E7F22705BC1000E2CAD6 /* kakaosymbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kakaosymbol.png; path = "../../../../../../../Downloads/kakao_login-2/ko/kakaosymbol.png"; sourceTree = "<group>"; };
 		3F73E7F42705C45A00E2CAD6 /* Google-Symbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google-Symbol.png"; sourceTree = "<group>"; };
 		3F75BDE92709C463000D2AA6 /* reviewDetailImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewDetailImageViewController.swift; sourceTree = "<group>"; };
+		3F7977A2270D96370066A444 /* 찜목록.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "찜목록.png"; sourceTree = "<group>"; };
+		3F7977A8270DA86A0066A444 /* 편집.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "편집.png"; sourceTree = "<group>"; };
 		3FC6FAF427046FCE0088C358 /* btnG_아이콘사각.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btnG_아이콘사각.png"; sourceTree = "<group>"; };
 		3FF1A71E26D62174001AD31F /* PloggingRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PloggingRecordModel.swift; sourceTree = "<group>"; };
 		3FF1A72026D62F9A001AD31F /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
@@ -231,6 +235,8 @@
 		3F3689DC26DCF58A00EE8027 /* 사진 */ = {
 			isa = PBXGroup;
 			children = (
+				3F7977A8270DA86A0066A444 /* 편집.png */,
+				3F7977A2270D96370066A444 /* 찜목록.png */,
 				3F73E7F42705C45A00E2CAD6 /* Google-Symbol.png */,
 				3F73E7F22705BC1000E2CAD6 /* kakaosymbol.png */,
 				3FC6FAF427046FCE0088C358 /* btnG_아이콘사각.png */,
@@ -478,9 +484,11 @@
 				3F440C0C26CAC95800B641F7 /* user.png in Resources */,
 				3FF1A72626DA12FC001AD31F /* TouristSpot.storyboard in Resources */,
 				3F3689DA26DCF57A00EE8027 /* Group 11.png in Resources */,
+				3F7977A3270D96370066A444 /* 찜목록.png in Resources */,
 				3F619D7A26C3D26D000410FE /* AppIcon.appiconset in Resources */,
 				3FF78D4827009595002F7DE6 /* 노들섬.png in Resources */,
 				3F66718A26D144B100BA21D1 /* Rectangle 58.png in Resources */,
+				3F7977A9270DA86A0066A444 /* 편집.png in Resources */,
 				3F66718326CBA00900BA21D1 /* Reviews.storyboard in Resources */,
 				3F73E7F32705BC1000E2CAD6 /* kakaosymbol.png in Resources */,
 				3F14D36726C112E600F27B1E /* LogIn.storyboard in Resources */,

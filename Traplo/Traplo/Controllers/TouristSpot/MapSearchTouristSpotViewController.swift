@@ -57,6 +57,14 @@ class MapSearchTouristSpotViewController: UIViewController {
     performSegue(withIdentifier: "unwindRecommendActivityVC", sender: self)
     }
     
+    @IBAction func btn찜목록(_ sender: UIButton) {
+        let vc = self.storyboard?.instantiateViewController(identifier: "BookMarkViewController")
+        vc?.modalPresentationStyle = .overFullScreen
+        vc?.modalTransitionStyle = .coverVertical
+        self.present(vc!, animated: true, completion: nil)
+        
+        
+    }
     
     
     func setUI() {

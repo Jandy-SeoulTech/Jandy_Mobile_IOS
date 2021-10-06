@@ -65,7 +65,14 @@ class ListSearchTouristSpotViewController: UIViewController {
     performSegue(withIdentifier: "unwindRecommendActivityVC", sender: self)
     }
     
-    
+    @IBAction func btn찜목록(_ sender: UIButton) {
+        let vc = self.storyboard?.instantiateViewController(identifier: "BookMarkViewController")
+        vc?.modalPresentationStyle = .overFullScreen
+        vc?.modalTransitionStyle = .coverVertical
+        self.present(vc!, animated: true, completion: nil)
+        
+        
+    }
     
     func setUI() {
         검색창맵있는뷰.setBorderShadow(borderWidth: 0, cornerRadius: 0, useShadowEffect: true, shadowRadius: 3.0)
