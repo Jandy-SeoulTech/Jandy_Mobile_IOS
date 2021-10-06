@@ -128,6 +128,7 @@ extension ListSearchTouristSpotViewController:UICollectionViewDelegateFlowLayout
     
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
+            // 키워드 셀 설정
             if collectionView.isEqual(keyWordCollectionView){
             //width 세팅에 사용됨
             let maxSize = CGSize(width: 250, height: 250)
@@ -138,8 +139,9 @@ extension ListSearchTouristSpotViewController:UICollectionViewDelegateFlowLayout
             let collectionViewCellHeight = collectionView.bounds.height
             return CGSize(width: collectionViewCellWidth.width, height: collectionViewCellHeight)
             }
+            // 메인 셀 설정
             else {
-                let width = view.bounds.width
+                let width = collectionView.bounds.width
                 let height = collectionView.bounds.height
                 return CGSize(width: width, height: height/6)
             }

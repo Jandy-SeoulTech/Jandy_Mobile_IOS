@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Cosmos
 
 class BookMarkEditViewController: UIViewController {
 
@@ -37,6 +38,9 @@ class BookMarkEditViewController: UIViewController {
     func setUI() {
        
         setTopGradationDesign()
+        setEditBtnBorder()
+        setMidView()
+        
     }
     
     // 상단 그라데이션 디자인
@@ -64,4 +68,63 @@ class BookMarkEditViewController: UIViewController {
         midView.layer.addBorder([.bottom], color: UIColor.darkGray, width: 0.3)
     }
 
+}
+
+
+
+
+
+
+
+
+extension BookMarkEditViewController: UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 15
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookMarkEditContent", for: indexPath) as? BookMarkEditContentCollectionViewCell else {
+            return UICollectionViewCell()}
+        
+        cell.setUI()
+        
+        return cell
+        
+    }
+    
+    
+}
+
+extension BookMarkEditViewController: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+ 
+            let width = collectionView.bounds.width
+            let height = collectionView.bounds.height
+            return CGSize(width: width, height: height/7)
+        }
+    
+}
+
+class BookMarkEditContentCollectionViewCell:UICollectionViewCell{
+    
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var ratings: CosmosView!
+    @IBOutlet weak var describeTextView: UITextView!
+    
+    func setUI(){
+        // 테스트용 내용. 설정 필요!
+        titleLabel.text = "dd"
+        ratings.rating = 3
+        describeTextView.text = "d"
+        
+        setBorder()
+        
+    }
+    func setBorder() {
+        self.layer.addBorder([.bottom], color: UIColor.systemGray, width: 0.3)
+    }
+   
 }
