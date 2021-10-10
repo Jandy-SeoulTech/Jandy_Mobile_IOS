@@ -10,13 +10,13 @@ import UIKit
 // 관광지 검색한 후 -map 페이지
 class MapSearchTouristSpotViewController: UIViewController {
 
-    let keyWordArray = ["  관광명소  ","  숙박  ","  음식점  ","  카페  ","  지하철역  ","  문화시설  ","  대형마트  ","  편의점  ","  학교  ","  공공기관  ","  병원  ","  약국  "]
-    let dic = ["  관광명소  ":"AT4", "  숙박  ":"AD5",
-               "  음식점  ":"FD6", "  카페  ":"CE7",
-               "  지하철역  ":"SW8", "  문화시설  ":"CT1",
-               "  대형마트  ":"MT1", "  편의점  ":"CS2",
-               "  학교  ":"SC4", "  공공기관  ":"PO3",
-               "  병원  ":"HP8", "  약국  ":"PM9"]
+    let keyWordArray = ["   관광명소   ","   숙박   ","   음식점   ","   카페   ","   지하철역   ","   문화시설   ","   대형마트   ","   편의점   ","   학교   ","   공공기관   ","   병원   ","   약국   "]
+    let dic = ["   관광명소   ":"AT4", "   숙박   ":"AD5",
+               "   음식점   ":"FD6", "   카페   ":"CE7",
+               "   지하철역   ":"SW8", "   문화시설   ":"CT1",
+               "   대형마트   ":"MT1", "   편의점   ":"CS2",
+               "   학교   ":"SC4", "   공공기관   ":"PO3",
+               "   병원   ":"HP8", "   약국   ":"PM9"]
     
     //gradient
     var gradientLayer: CAGradientLayer!
@@ -24,7 +24,7 @@ class MapSearchTouristSpotViewController: UIViewController {
     //UIColor
     let topDesignColor1 = UIColor(named: "Color2")?.cgColor
     let topDesignColor2 = UIColor(named: "Color1")?.cgColor
-    
+   
     //reference
     @IBOutlet weak var topDesignView: UIView!
     @IBOutlet weak var topDesignLayoutView: UIView!
@@ -118,7 +118,7 @@ extension MapSearchTouristSpotViewController:UICollectionViewDelegateFlowLayout{
             let maxSize = CGSize(width: 250, height: 250)
             let heightOnFont = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
             //width
-            let collectionViewCellWidth = NSString(string: keyWordArray[indexPath.row]).boundingRect(with: maxSize, options: heightOnFont, attributes: [.font: UIFont.systemFont(ofSize: 17)], context: nil)
+            let collectionViewCellWidth = NSString(string: keyWordArray[indexPath.row]).boundingRect(with: maxSize, options: heightOnFont, attributes: [.font: UIFont.systemFont(ofSize: 13)], context: nil)
             //height
             let collectionViewCellHeight = collectionView.bounds.height
             return CGSize(width: collectionViewCellWidth.width, height: collectionViewCellHeight)
@@ -127,11 +127,42 @@ extension MapSearchTouristSpotViewController:UICollectionViewDelegateFlowLayout{
 }
 
 class searchKeyWordCollectionViewCell : UICollectionViewCell {
-    @IBOutlet weak var keyword: UIButton!
+    
+    // UIColor
+    let keyWordSelectedBackGroundColor = UIColor(named: "7D7D7D")
+    let keyWordSelectedTextColor = UIColor.white
+    
+    let keyWordDefaultBackGroundColor = UIColor(named: "C4C4C4")
+    let keyWordDefaultTextColor = UIColor(named: "515151")
+    
+
+    @IBOutlet weak var keywordLabel: UILabel!
     
     func setUI(title : String){
-        keyword.layer.cornerRadius = 12.5
-        keyword.setTitle(title, for: UIControl.State.normal)
+        
+        keywordLabel.clipsToBounds = true
+        keywordLabel.layer.cornerRadius = 12.5
+        keywordLabel.text = title
+    
+    }
+    
+    
+    
+   override var isSelected: Bool {
+    didSet {
+        if isSelected {
+           
+            keywordLabel.textColor = keyWordSelectedTextColor
+            keywordLabel.backgroundColor = keyWordSelectedBackGroundColor
+            
+        } else {
+            
+            keywordLabel.textColor = keyWordDefaultTextColor
+            keywordLabel.backgroundColor = keyWordDefaultBackGroundColor
+
+        
+      }
     }
 
+}
 }

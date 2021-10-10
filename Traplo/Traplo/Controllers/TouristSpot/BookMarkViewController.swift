@@ -21,6 +21,7 @@ class BookMarkViewController: UIViewController {
     @IBOutlet weak var topDesignView: UIView!
     @IBOutlet weak var topDesignLayoutView: UIView!
     @IBOutlet weak var editBtn: UIButton!
+    @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var midView: UIView!
     @IBOutlet weak var numLabel: NSLayoutConstraint!
     
@@ -32,14 +33,14 @@ class BookMarkViewController: UIViewController {
     
     func setUI() {
        
-        setTopGradationDesign()
+        setTopDesign()
         setEditBtnBorder()
         setMidView()
         
     }
     
-    // 상단 그라데이션 디자인
-    func setTopGradationDesign() {
+    // 상단 디자인 설정
+    func setTopDesign() {
         
         self.gradientLayer = CAGradientLayer()
         self.gradientLayer.frame = topDesignView.bounds
@@ -49,6 +50,9 @@ class BookMarkViewController: UIViewController {
         self.topDesignView.layer.addSublayer(self.gradientLayer)
 
         self.topDesignView.bringSubviewToFront(topDesignLayoutView)
+        
+        editBtn.layer.zPosition = 5
+
     }
     
     // 편집 버튼 테두리 설정
@@ -63,12 +67,19 @@ class BookMarkViewController: UIViewController {
         midView.layer.addBorder([.bottom], color: UIColor.darkGray, width: 0.3)
     }
     
+    
+    // Btn 영역
     @IBAction func editBtn(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(identifier: "BookMarkEditViewController")
         vc?.modalPresentationStyle = .overFullScreen
         present(vc!, animated: false, completion: nil)
     
     }
+    
+    @IBAction func backBtn(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
 }
 
@@ -120,10 +131,14 @@ class BookMarkContentCollectionViewCell:UICollectionViewCell{
         describeTextView.text = "ddddd"
         
         setBorder()
+        setImageView()
         
     }
     func setBorder() {
         self.layer.addBorder([.bottom], color: UIColor.systemGray, width: 0.3)
+    }
+    func setImageView() {
+        imageView.layer.cornerRadius = 5
     }
    
 }

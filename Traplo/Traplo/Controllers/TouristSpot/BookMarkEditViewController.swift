@@ -20,13 +20,11 @@ class BookMarkEditViewController: UIViewController {
     //reference
     @IBOutlet weak var topDesignView: UIView!
     @IBOutlet weak var topDesignLayoutView: UIView!
-    @IBOutlet weak var editBtn: UIButton!
     @IBOutlet weak var midView: UIView!
     @IBOutlet weak var numLabel: UILabel!
-    
-    
-    
-    
+    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var 삭제Btn: UIButton!
+    @IBOutlet weak var 완료Btn: UIButton!
     
     
     override func viewDidLoad() {
@@ -38,8 +36,8 @@ class BookMarkEditViewController: UIViewController {
     func setUI() {
        
         setTopGradationDesign()
-        setEditBtnBorder()
         setMidView()
+        setBottomView()
         
     }
     
@@ -56,16 +54,16 @@ class BookMarkEditViewController: UIViewController {
         self.topDesignView.bringSubviewToFront(topDesignLayoutView)
     }
    
-    // 편집 버튼 테두리 설정
-    func setEditBtnBorder() {
-        editBtn.layer.borderWidth = 0.3
-        editBtn.layer.borderColor = UIColor.systemGray.cgColor
-        editBtn.layer.cornerRadius = 8
-    }
    
     // 중단 뷰 테두리 설정
     func setMidView(){
         midView.layer.addBorder([.bottom], color: UIColor.darkGray, width: 0.3)
+    }
+    
+    func setBottomView(){
+        bottomView.layer.addBorder([.top], color: UIColor.darkGray, width: 0.3)
+        완료Btn.layer.cornerRadius = 10
+        삭제Btn.layer.cornerRadius = 10
     }
 
 }
@@ -73,11 +71,8 @@ class BookMarkEditViewController: UIViewController {
 
 
 
-
-
-
-
 extension BookMarkEditViewController: UICollectionViewDataSource{
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 15
     }
@@ -101,7 +96,7 @@ extension BookMarkEditViewController: UICollectionViewDelegateFlowLayout{
  
             let width = collectionView.bounds.width
             let height = collectionView.bounds.height
-            return CGSize(width: width, height: height/7)
+        return CGSize(width: width, height: height/6.5)
         }
     
 }
@@ -113,18 +108,37 @@ class BookMarkEditContentCollectionViewCell:UICollectionViewCell{
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var ratings: CosmosView!
     @IBOutlet weak var describeTextView: UITextView!
+    @IBOutlet weak var selectBtn: UIButton!
     
     func setUI(){
         // 테스트용 내용. 설정 필요!
         titleLabel.text = "dd"
         ratings.rating = 3
-        describeTextView.text = "d"
+        describeTextView.text = "ddddddkdkdkdkdkdkdkdkkddkkddkkdkdkdkdkdkdkdkdkdkdkdkdkdkdk"
         
         setBorder()
+        setImageView()
         
     }
     func setBorder() {
         self.layer.addBorder([.bottom], color: UIColor.systemGray, width: 0.3)
     }
-   
+    func setImageView() {
+        imageView.layer.cornerRadius = 5
+    }
+    
+    override var isSelected: Bool {
+      didSet {
+        if isSelected {
+            
+            if selectBtn.isSelected == false{
+                selectBtn.isSelected = true}
+            else if selectBtn.isSelected == true{
+                selectBtn.isSelected = false}
+            
+        } else {
+           
+        }
+      }
+    }
 }

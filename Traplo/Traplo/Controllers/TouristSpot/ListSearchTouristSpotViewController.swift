@@ -11,13 +11,13 @@ import Cosmos
 // 관광지 검색한 후 -list 페이지
 class ListSearchTouristSpotViewController: UIViewController {
     
-    let keyWordArray = ["  관광명소  ","  숙박  ","  음식점  ","  카페  ","  지하철역  ","  문화시설  ","  대형마트  ","  편의점  ","  학교  ","  공공기관  ","  병원  ","  약국  "]
-    let dic = ["  관광명소  ":"AT4", "  숙박  ":"AD5"
-               ,"  음식점  ":"FD6", "  카페  ":"CE7",
-               "  지하철역  ":"SW8", "  문화시설  ":"CT1",
-               "  대형마트  ":"MT1", "  편의점  ":"CS2",
-               "  학교  ":"SC4", "  공공기관  ":"PO3",
-               "  병원  ":"HP8", "  약국  ":"PM9"]
+    let keyWordArray = ["   관광명소   ","   숙박   ","   음식점   ","   카페   ","   지하철역   ","   문화시설   ","   대형마트   ","   편의점   ","   학교   ","   공공기관   ","   병원   ","   약국   "]
+    let dic = ["   관광명소   ":"AT4", "   숙박   ":"AD5",
+               "   음식점   ":"FD6", "   카페   ":"CE7",
+               "   지하철역   ":"SW8", "   문화시설   ":"CT1",
+               "   대형마트   ":"MT1", "   편의점   ":"CS2",
+               "   학교   ":"SC4", "   공공기관   ":"PO3",
+               "   병원   ":"HP8", "   약국   ":"PM9"]
 /*
      AT4    관광명소
      AD5    숙박
@@ -77,10 +77,10 @@ class ListSearchTouristSpotViewController: UIViewController {
     func setUI() {
         검색창맵있는뷰.setBorderShadow(borderWidth: 0, cornerRadius: 0, useShadowEffect: true, shadowRadius: 3.0)
        
-        setTopGradationDesign()
+        setTopDesign()
     }
-    // 상단 그라데이션 디자인
-    func setTopGradationDesign() {
+    // 상단 디자인
+    func setTopDesign() {
         
         self.gradientLayer = CAGradientLayer()
         self.gradientLayer.frame = topDesignView.bounds
@@ -134,7 +134,7 @@ extension ListSearchTouristSpotViewController:UICollectionViewDelegateFlowLayout
             let maxSize = CGSize(width: 250, height: 250)
             let heightOnFont = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
             //width
-            let collectionViewCellWidth = NSString(string: keyWordArray[indexPath.row]).boundingRect(with: maxSize, options: heightOnFont, attributes: [.font: UIFont.systemFont(ofSize: 17)], context: nil)
+            let collectionViewCellWidth = NSString(string: keyWordArray[indexPath.row]).boundingRect(with: maxSize, options: heightOnFont, attributes: [.font: UIFont.systemFont(ofSize: 13)], context: nil)
             //height
             let collectionViewCellHeight = collectionView.bounds.height
             return CGSize(width: collectionViewCellWidth.width, height: collectionViewCellHeight)
@@ -165,15 +165,14 @@ class tourSpotContentCollectionViewCell: UICollectionViewCell {
         describeTextView.text = "ddddd"
         
         setBorder()
-        // 상위 뷰 흘러넘치는 그림자 허용 설정
-        //self.layer.masksToBounds = false
-        //self.contentView.layer.masksToBounds = false
-        // 그림자 설정
-        //shadowBorderView.setBorderShadow(borderWidth: 0.5, cornerRadius: 5, useShadowEffect: true, shadowRadius: 2)
+        setImageView()
         
     }
     func setBorder() {
         self.layer.addBorder([.bottom], color: UIColor.systemGray, width: 0.3)
+    }
+    func setImageView() {
+        imageView.layer.cornerRadius = 5
     }
    
 }
