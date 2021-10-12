@@ -96,7 +96,7 @@ extension BookMarkEditViewController: UICollectionViewDelegateFlowLayout{
  
             let width = collectionView.bounds.width
             let height = collectionView.bounds.height
-        return CGSize(width: width, height: height/6.5)
+        return CGSize(width: width, height: round(height/6.5))
         }
     
 }
@@ -108,7 +108,7 @@ class BookMarkEditContentCollectionViewCell:UICollectionViewCell{
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var ratings: CosmosView!
     @IBOutlet weak var describeTextView: UITextView!
-    @IBOutlet weak var selectBtn: UIButton!
+    @IBOutlet weak var checkMark: UIImageView!
     
     func setUI(){
         // 테스트용 내용. 설정 필요!
@@ -131,13 +131,10 @@ class BookMarkEditContentCollectionViewCell:UICollectionViewCell{
       didSet {
         if isSelected {
             
-            if selectBtn.isSelected == false{
-                selectBtn.isSelected = true}
-            else if selectBtn.isSelected == true{
-                selectBtn.isSelected = false}
-            
+            checkMark.image = UIImage.init(systemName: "checkmark.circle.fill")
+          
         } else {
-           
+            checkMark.image = UIImage.init(systemName: "circle")
         }
       }
     }

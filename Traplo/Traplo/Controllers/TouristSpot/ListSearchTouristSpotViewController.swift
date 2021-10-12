@@ -143,7 +143,7 @@ extension ListSearchTouristSpotViewController:UICollectionViewDelegateFlowLayout
             else {
                 let width = collectionView.bounds.width
                 let height = collectionView.bounds.height
-                return CGSize(width: width, height: height/6)
+                return CGSize(width: width, height: round(height/6))
             }
         }
     
@@ -163,6 +163,8 @@ class tourSpotContentCollectionViewCell: UICollectionViewCell {
         titleLabel.text = "dd"
         ratings.rating = 3
         describeTextView.text = "ddddd"
+        
+        self.clipsToBounds = true
         
         setBorder()
         setImageView()

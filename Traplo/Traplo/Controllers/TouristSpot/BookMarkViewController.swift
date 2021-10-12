@@ -111,7 +111,7 @@ extension BookMarkViewController: UICollectionViewDelegateFlowLayout{
  
             let width = collectionView.bounds.width
             let height = collectionView.bounds.height
-            return CGSize(width: width, height: height/7)
+        return CGSize(width: width, height: round(height/6.5))
         }
     
 }

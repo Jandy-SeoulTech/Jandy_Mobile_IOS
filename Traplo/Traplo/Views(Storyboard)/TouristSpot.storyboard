@@ -543,15 +543,22 @@
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17"/>
                                                             </state>
                                                         </button>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pBJ-Ru-qFz">
+                                                            <rect key="frame" x="371.5" y="13.5" width="20" height="19"/>
+                                                            <color key="tintColor" name="Color2"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17"/>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="Qmp-qd-qgN" firstAttribute="centerY" secondItem="OK5-Bw-kCe" secondAttribute="centerY" id="4YS-d5-fGN"/>
+                                                        <constraint firstItem="pBJ-Ru-qFz" firstAttribute="top" secondItem="ETR-Rc-t9O" secondAttribute="top" id="4l8-4z-x93"/>
                                                         <constraint firstItem="GbB-M4-HOl" firstAttribute="leading" secondItem="Qmp-qd-qgN" secondAttribute="trailing" multiplier="1.05" id="FVI-l5-vwn"/>
                                                         <constraint firstItem="ETR-Rc-t9O" firstAttribute="leading" secondItem="Qmp-qd-qgN" secondAttribute="trailing" multiplier="1.1" id="HS6-d8-fVO"/>
                                                         <constraint firstItem="ETR-Rc-t9O" firstAttribute="bottom" secondItem="Qmp-qd-qgN" secondAttribute="centerY" multiplier="1.1" id="N6H-Pd-FHG"/>
                                                         <constraint firstItem="uYv-VJ-8Xj" firstAttribute="top" secondItem="ETR-Rc-t9O" secondAttribute="top" id="Wcu-kb-Yym"/>
                                                         <constraint firstItem="ETR-Rc-t9O" firstAttribute="trailing" secondItem="OK5-Bw-kCe" secondAttribute="centerX" multiplier="1.9" id="aTl-pZ-Rso"/>
+                                                        <constraint firstItem="pBJ-Ru-qFz" firstAttribute="trailing" secondItem="ETR-Rc-t9O" secondAttribute="trailing" id="bpf-8X-7IW"/>
                                                         <constraint firstAttribute="trailing" secondItem="GbB-M4-HOl" secondAttribute="trailing" constant="10" id="cz6-XV-P8r"/>
                                                         <constraint firstItem="uYv-VJ-8Xj" firstAttribute="trailing" secondItem="ETR-Rc-t9O" secondAttribute="trailing" id="i8v-27-soH"/>
                                                         <constraint firstItem="Qmp-qd-qgN" firstAttribute="height" secondItem="OK5-Bw-kCe" secondAttribute="height" multiplier="0.9" id="keY-VI-FnW"/>
@@ -570,10 +577,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
+                                            <outlet property="checkMark" destination="pBJ-Ru-qFz" id="hlv-Dz-A46"/>
                                             <outlet property="describeTextView" destination="GbB-M4-HOl" id="rng-mc-r30"/>
                                             <outlet property="imageView" destination="Qmp-qd-qgN" id="4Uh-Tv-bZ8"/>
                                             <outlet property="ratings" destination="pYD-95-uLV" id="ECB-c0-Sv1"/>
-                                            <outlet property="selectBtn" destination="uYv-VJ-8Xj" id="PUS-4M-SFW"/>
                                             <outlet property="titleLabel" destination="eMl-cv-dyr" id="s2D-Fd-TjS"/>
                                         </connections>
                                     </collectionViewCell>
@@ -849,7 +856,7 @@
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="mc1-cc-vi7" firstAttribute="height" secondItem="8Zk-9S-eRR" secondAttribute="height" multiplier="0.5" id="6E2-2A-Ssi"/>
                                                         <constraint firstItem="mc1-cc-vi7" firstAttribute="bottom" secondItem="8Zk-9S-eRR" secondAttribute="centerY" multiplier="1.1" id="AyY-2b-iYG"/>
@@ -1231,10 +1238,10 @@
         <image name="삼성미술관리움.png" width="375" height="386"/>
         <image name="찜목록.png" width="30" height="36"/>
         <namedColor name="515151">
-            <color red="0.31764705882352939" green="0.31764705882352939" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.31799998879432678" green="0.31799998879432678" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="C4C4C4">
-            <color red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.76899999380111694" green="0.76899999380111694" blue="0.76899999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Color1">
             <color red="0.54500001668930054" green="0.875" blue="0.86699998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
