@@ -21,6 +21,7 @@
 		3F14D38226C112E700F27B1E /* TraploUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F14D38126C112E700F27B1E /* TraploUITests.swift */; };
 		3F3689DA26DCF57A00EE8027 /* Group 11.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F3689D826DCF57A00EE8027 /* Group 11.png */; };
 		3F3689DB26DCF57A00EE8027 /* Group 10.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F3689D926DCF57A00EE8027 /* Group 10.png */; };
+		3F39046127194177003C5CD8 /* alertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39046027194177003C5CD8 /* alertViewController.swift */; };
 		3F440C0226C8E02900B641F7 /* Activity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F440C0126C8E02900B641F7 /* Activity.storyboard */; };
 		3F440C0426C8E87900B641F7 /* RecommendActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F440C0326C8E87900B641F7 /* RecommendActivityViewController.swift */; };
 		3F440C0C26CAC95800B641F7 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F440C0B26CAC95800B641F7 /* user.png */; };
@@ -94,6 +95,7 @@
 		3F14D38326C112E700F27B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F3689D826DCF57A00EE8027 /* Group 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 11.png"; sourceTree = "<group>"; };
 		3F3689D926DCF57A00EE8027 /* Group 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 10.png"; sourceTree = "<group>"; };
+		3F39046027194177003C5CD8 /* alertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alertViewController.swift; sourceTree = "<group>"; };
 		3F440C0126C8E02900B641F7 /* Activity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Activity.storyboard; sourceTree = "<group>"; };
 		3F440C0326C8E87900B641F7 /* RecommendActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendActivityViewController.swift; sourceTree = "<group>"; };
 		3F440C0B26CAC95800B641F7 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 				3F66718E26D22E0B00BA21D1 /* EditReviewViewController.swift */,
 				3F599A4126D384560049FFE3 /* EditReviewPopUpScreenViewController.swift */,
 				3F75BDE92709C463000D2AA6 /* reviewDetailImageViewController.swift */,
+				3F39046027194177003C5CD8 /* alertViewController.swift */,
 			);
 			path = Reviews;
 			sourceTree = "<group>";
@@ -669,6 +672,7 @@
 				3F086C86270B576D00734CBB /* BookMarkEditViewController.swift in Sources */,
 				3FF1A72926DA13A8001AD31F /* MapSearchTouristSpotViewController.swift in Sources */,
 				3F086C84270B540000734CBB /* BookMarkViewController.swift in Sources */,
+				3F39046127194177003C5CD8 /* alertViewController.swift in Sources */,
 				3F14D36226C112E600F27B1E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

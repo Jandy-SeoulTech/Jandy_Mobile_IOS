@@ -372,7 +372,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Grx-YP-sYt"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="SUd-3N-YKC" firstAttribute="leading" secondItem="Grx-YP-sYt" secondAttribute="leading" id="5K2-zw-oq6"/>
                             <constraint firstItem="SUd-3N-YKC" firstAttribute="centerY" secondItem="Grx-YP-sYt" secondAttribute="centerY" id="EaO-Uw-ERU"/>
@@ -389,6 +389,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q5L-ZS-93K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="57" y="831"/>
+        </scene>
+        <!--Alert View Controller-->
+        <scene sceneID="cfj-tp-1oL">
+            <objects>
+                <viewController storyboardIdentifier="alertViewController" id="f1c-RF-qTE" customClass="alertViewController" customModule="Traplo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q0V-ow-BzN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPA-er-81Z">
+                                <rect key="frame" x="41.5" y="273" width="331" height="179"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="플로깅 리뷰가 저장되었습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvE-Wb-AJR">
+                                        <rect key="frame" x="63" y="53.5" width="205" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8v-ix-hJG">
+                                        <rect key="frame" x="148" y="118" width="35" height="34"/>
+                                        <color key="tintColor" name="Color2"/>
+                                        <state key="normal" image="checkmark.circle.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onBtnTouched:" destination="f1c-RF-qTE" eventType="touchUpInside" id="HtV-gu-uw3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="cvE-Wb-AJR" firstAttribute="centerX" secondItem="dPA-er-81Z" secondAttribute="centerX" id="278-wS-iF5"/>
+                                    <constraint firstItem="cvE-Wb-AJR" firstAttribute="top" secondItem="dPA-er-81Z" secondAttribute="centerY" multiplier="0.6" id="HBs-Hu-NgY"/>
+                                    <constraint firstItem="h8v-ix-hJG" firstAttribute="centerX" secondItem="dPA-er-81Z" secondAttribute="centerX" id="O8B-Pk-EOs"/>
+                                    <constraint firstItem="h8v-ix-hJG" firstAttribute="bottom" secondItem="dPA-er-81Z" secondAttribute="centerY" multiplier="1.7" id="y0E-dO-GYC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UgF-BX-hZ8"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dPA-er-81Z" firstAttribute="centerX" secondItem="UgF-BX-hZ8" secondAttribute="centerX" id="5YE-cN-14b"/>
+                            <constraint firstItem="dPA-er-81Z" firstAttribute="height" secondItem="q0V-ow-BzN" secondAttribute="height" multiplier="0.2" id="ECt-Ha-D2H"/>
+                            <constraint firstItem="dPA-er-81Z" firstAttribute="width" secondItem="q0V-ow-BzN" secondAttribute="width" multiplier="0.8" id="bpS-mb-PKc"/>
+                            <constraint firstItem="dPA-er-81Z" firstAttribute="centerY" secondItem="UgF-BX-hZ8" secondAttribute="centerY" multiplier="0.8" id="liB-hW-PBf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btn" destination="h8v-ix-hJG" id="3jF-eY-IOr"/>
+                        <outlet property="view1" destination="dPA-er-81Z" id="9c9-4i-HKy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kob-8l-e8I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="830"/>
         </scene>
         <!--Edit Review View Controller-->
         <scene sceneID="CLf-BR-NcW">
@@ -607,7 +662,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="yE5-Pz-rso">
-                                                        <rect key="frame" x="20.5" y="386" width="373" height="304"/>
+                                                        <rect key="frame" x="20.5" y="386" width="373" height="264"/>
                                                         <color key="textColor" systemColor="systemGrayColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -620,14 +675,27 @@
                                                             <constraint firstAttribute="height" constant="1" id="hjZ-jq-8Os"/>
                                                         </constraints>
                                                     </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCn-Yg-MaA">
+                                                        <rect key="frame" x="183.5" y="650" width="47" height="45"/>
+                                                        <color key="tintColor" name="Color2"/>
+                                                        <state key="normal" image="checkmark.circle" catalog="system">
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
+                                                        </state>
+                                                        <state key="selected" image="checkmark.circle.fill" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="onClickedCheckMark:" destination="uT8-l0-sMw" eventType="touchUpInside" id="sgW-iS-C7G"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="KCn-Yg-MaA" secondAttribute="bottom" constant="5" id="0i0-tb-HRP"/>
                                                     <constraint firstItem="n5s-mb-sSZ" firstAttribute="top" secondItem="QQs-Sl-amQ" secondAttribute="bottom" constant="15" id="0ke-hF-xnz"/>
                                                     <constraint firstItem="yE5-Pz-rso" firstAttribute="top" secondItem="n5s-mb-sSZ" secondAttribute="bottom" constant="10" id="AZA-lJ-XL3"/>
                                                     <constraint firstItem="yE5-Pz-rso" firstAttribute="centerX" secondItem="n5s-mb-sSZ" secondAttribute="centerX" id="C5Q-v9-5Xn"/>
                                                     <constraint firstItem="mMH-TM-Sxu" firstAttribute="top" secondItem="weX-0W-Lsm" secondAttribute="top" constant="120" id="C8M-cm-pgQ"/>
                                                     <constraint firstItem="QQs-Sl-amQ" firstAttribute="leading" secondItem="weX-0W-Lsm" secondAttribute="leading" constant="30" id="Cva-lm-qPM"/>
-                                                    <constraint firstAttribute="bottom" secondItem="yE5-Pz-rso" secondAttribute="bottom" constant="10" id="SOW-OI-fTm"/>
+                                                    <constraint firstItem="KCn-Yg-MaA" firstAttribute="centerX" secondItem="weX-0W-Lsm" secondAttribute="centerX" id="ESs-0A-mck"/>
+                                                    <constraint firstItem="KCn-Yg-MaA" firstAttribute="top" secondItem="yE5-Pz-rso" secondAttribute="bottom" id="SOW-OI-fTm"/>
                                                     <constraint firstAttribute="top" secondItem="mMH-TM-Sxu" secondAttribute="bottom" constant="-300" id="Zh2-Ri-1bk"/>
                                                     <constraint firstAttribute="trailing" secondItem="mMH-TM-Sxu" secondAttribute="trailing" constant="10" id="hnF-7V-AW7"/>
                                                     <constraint firstAttribute="trailing" secondItem="QQs-Sl-amQ" secondAttribute="trailing" constant="30" id="jHK-rJ-mB6"/>
@@ -959,12 +1027,17 @@
     </scenes>
     <resources>
         <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="multiply" catalog="system" width="128" height="111"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <image name="삼성미술관리움.png" width="375" height="386"/>
         <namedColor name="Color1">
             <color red="0.54500001668930054" green="0.875" blue="0.86699998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color2">
+            <color red="0.47499999403953552" green="0.77999997138977051" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

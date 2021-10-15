@@ -404,7 +404,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cgw-ga-J4t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.985507246376812" y="797.54464285714278"/>
+            <point key="canvasLocation" x="251" y="763"/>
         </scene>
         <!--Book Mark Edit View Controller-->
         <scene sceneID="OQR-ll-3NL">
@@ -650,7 +650,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJp-Z7-wDn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="988" y="771"/>
+            <point key="canvasLocation" x="942" y="764"/>
         </scene>
         <!--List Search Tourist Spot View Controller-->
         <scene sceneID="Doy-Pg-ef3">

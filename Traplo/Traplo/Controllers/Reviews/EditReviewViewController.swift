@@ -141,6 +141,12 @@ class EditReviewViewController: UIViewController {
         
     }
     
+    @IBAction func onClickedCheckMark(_ sender: Any) {
+        let vcName = self.storyboard?.instantiateViewController(withIdentifier: "alertViewController")
+        vcName?.modalPresentationStyle = .overFullScreen
+        vcName?.modalPresentationStyle = .overCurrentContext
+        self.present(vcName!, animated: false, completion: nil)
+    }
 }
 
 // ---extension 영역---
