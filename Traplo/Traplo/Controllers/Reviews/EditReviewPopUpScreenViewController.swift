@@ -69,10 +69,23 @@ class activityCollectionViewCell : UICollectionViewCell{
     
     @IBOutlet weak var mapFrameView: UIView!
     
+    let isSelectedColor = UIColor(named: "isSelected")
+    let noneSelectedColor = UIColor(named: "noneSelected")
     
     func setCellUI() {
         self.contentView.layer.cornerRadius = 10
         mapFrameView.layer.cornerRadius = 10
     }
+    
+    override var isSelected: Bool {
+           didSet{
+               if isSelected {
+                self.contentView.backgroundColor = isSelectedColor
+               }
+               else {
+                self.contentView.backgroundColor = noneSelectedColor
+               }
+           }
+       }
     
 }

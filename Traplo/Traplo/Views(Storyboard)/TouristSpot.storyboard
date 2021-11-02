@@ -577,8 +577,9 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
+                                            <outlet property="cellSupplementaryView" destination="OK5-Bw-kCe" id="dUL-Z0-hLd"/>
                                             <outlet property="checkMark" destination="pBJ-Ru-qFz" id="hlv-Dz-A46"/>
-                                            <outlet property="describeTextView" destination="GbB-M4-HOl" id="rng-mc-r30"/>
+                                            <outlet property="describeTextView" destination="GbB-M4-HOl" id="6Mn-IZ-SAr"/>
                                             <outlet property="imageView" destination="Qmp-qd-qgN" id="4Uh-Tv-bZ8"/>
                                             <outlet property="ratings" destination="pYD-95-uLV" id="ECB-c0-Sv1"/>
                                             <outlet property="titleLabel" destination="eMl-cv-dyr" id="s2D-Fd-TjS"/>
@@ -613,6 +614,9 @@
                                 <state key="normal" title="    삭제    ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onDeleteBtnTouched:" destination="vOE-cK-P9T" eventType="touchUpInside" id="O1H-FB-OOy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k0H-lm-9J6"/>
@@ -812,7 +816,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbH-zH-nRo">
                                                     <rect key="frame" x="0.0" y="0.0" width="394" height="128"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kakaosymbol.png" translatesAutoresizingMaskIntoConstraints="NO" id="8Zk-9S-eRR">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kakaoSymbol.png" translatesAutoresizingMaskIntoConstraints="NO" id="8Zk-9S-eRR">
                                                             <rect key="frame" x="19.5" y="6.5" width="115.5" height="115"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="8Zk-9S-eRR" secondAttribute="height" multiplier="1:1" id="6w0-Gj-bJi"/>
@@ -1232,7 +1236,7 @@
         <image name="circle" catalog="system" width="128" height="121"/>
         <image name="clock" catalog="system" width="128" height="121"/>
         <image name="globe" catalog="system" width="128" height="121"/>
-        <image name="kakaosymbol.png" width="49" height="49"/>
+        <image name="kakaoSymbol.png" width="2226" height="2048"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
         <image name="삼성미술관리움.png" width="375" height="386"/>

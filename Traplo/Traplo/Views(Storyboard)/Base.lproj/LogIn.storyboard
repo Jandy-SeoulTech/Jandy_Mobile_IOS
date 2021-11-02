@@ -60,8 +60,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kakaosymbol.png" translatesAutoresizingMaskIntoConstraints="NO" id="DE3-P1-9F3">
-                                <rect key="frame" x="77" y="696" width="30.5" height="30.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kakaoSymbol.png" translatesAutoresizingMaskIntoConstraints="NO" id="DE3-P1-9F3">
+                                <rect key="frame" x="79" y="698.5" width="26" height="25.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="DE3-P1-9F3" secondAttribute="height" multiplier="1:1" id="JQT-dM-AcK"/>
                                 </constraints>
@@ -150,7 +150,7 @@
                             <constraint firstItem="io9-5h-Mrg" firstAttribute="top" secondItem="kz7-Ql-wB0" secondAttribute="centerY" multiplier="1.05" id="Wbd-JT-suv"/>
                             <constraint firstItem="cTd-BP-M81" firstAttribute="leading" secondItem="b0D-DC-Iua" secondAttribute="leading" id="Z1x-Ai-H0f"/>
                             <constraint firstItem="ZeR-3C-J6Z" firstAttribute="centerX" secondItem="dsT-Iz-uGk" secondAttribute="centerX" id="ZF9-bB-Pmw"/>
-                            <constraint firstItem="DE3-P1-9F3" firstAttribute="height" secondItem="bNk-Z5-Ki8" secondAttribute="height" multiplier="0.65" id="a3B-Xe-bhr"/>
+                            <constraint firstItem="DE3-P1-9F3" firstAttribute="height" secondItem="bNk-Z5-Ki8" secondAttribute="height" multiplier="0.55" id="a3B-Xe-bhr"/>
                             <constraint firstItem="jpM-Ie-lNl" firstAttribute="centerX" secondItem="bNk-Z5-Ki8" secondAttribute="centerX" id="cBS-oF-elw"/>
                             <constraint firstItem="DE3-P1-9F3" firstAttribute="centerX" secondItem="dsT-Iz-uGk" secondAttribute="centerX" id="k4Y-Px-Vqs"/>
                             <constraint firstItem="kz7-Ql-wB0" firstAttribute="width" secondItem="b0D-DC-Iua" secondAttribute="width" multiplier="0.68" id="kQ5-cV-ied"/>
@@ -183,7 +183,7 @@
         <image name="Google-Symbol.png" width="3840" height="2400"/>
         <image name="background.png" width="375" height="812"/>
         <image name="btnG_아이콘사각.png" width="200" height="200"/>
-        <image name="kakaosymbol.png" width="49" height="49"/>
+        <image name="kakaoSymbol.png" width="2226" height="2048"/>
         <image name="minus" catalog="system" width="128" height="24"/>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

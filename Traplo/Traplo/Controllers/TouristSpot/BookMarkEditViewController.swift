@@ -27,6 +27,12 @@ class BookMarkEditViewController: UIViewController {
     @IBOutlet weak var 완료Btn: UIButton!
     
     
+    
+    var selectedArray = Array(repeating: false, count: 15)
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,10 +72,11 @@ class BookMarkEditViewController: UIViewController {
         삭제Btn.layer.cornerRadius = 10
     }
 
+    @IBAction func onDeleteBtnTouched(_ sender: Any) {
+        
+    }
+    
 }
-
-
-
 
 extension BookMarkEditViewController: UICollectionViewDataSource{
     
@@ -82,13 +89,24 @@ extension BookMarkEditViewController: UICollectionViewDataSource{
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookMarkEditContent", for: indexPath) as? BookMarkEditContentCollectionViewCell else {
             return UICollectionViewCell()}
         
-        cell.setUI()
+        cell.setUI(isSelect: selectedArray[indexPath.item])
+        
         
         return cell
         
     }
+}
+
+extension BookMarkEditViewController:UICollectionViewDelegate {
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        selectedArray[indexPath.item].toggle()
+        
+        collectionView.reloadData()
+        
+    }
+
 }
 
 extension BookMarkEditViewController: UICollectionViewDelegateFlowLayout{
@@ -98,27 +116,31 @@ extension BookMarkEditViewController: UICollectionViewDelegateFlowLayout{
             let height = collectionView.bounds.height
         return CGSize(width: width, height: round(height/6.5))
         }
-    
 }
+
+
+
 
 class BookMarkEditContentCollectionViewCell:UICollectionViewCell{
     
-    
+    var isSelect : Bool = false
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var ratings: CosmosView!
     @IBOutlet weak var describeTextView: UITextView!
     @IBOutlet weak var checkMark: UIImageView!
+    @IBOutlet weak var cellSupplementaryView: UIView!
     
-    func setUI(){
+    func setUI(isSelect:Bool){
         // 테스트용 내용. 설정 필요!
         titleLabel.text = "dd"
         ratings.rating = 3
         describeTextView.text = "ddddddkdkdkdkdkdkdkdkkddkkddkkdkdkdkdkdkdkdkdkdkdkdkdkdkdk"
-        
+        cellSupplementaryView.isUserInteractionEnabled = false
         setBorder()
         setImageView()
         
+       selectionEvent(isSelect: isSelect)
     }
     func setBorder() {
         self.layer.addBorder([.bottom], color: UIColor.systemGray, width: 0.3)
@@ -126,16 +148,12 @@ class BookMarkEditContentCollectionViewCell:UICollectionViewCell{
     func setImageView() {
         imageView.layer.cornerRadius = 5
     }
-    
-    override var isSelected: Bool {
-      didSet {
-        if isSelected {
-            
-            checkMark.image = UIImage.init(systemName: "checkmark.circle.fill")
-          
-        } else {
-            checkMark.image = UIImage.init(systemName: "circle")
+    func selectionEvent(isSelect:Bool){
+        if isSelect == true {
+            self.checkMark.image = UIImage.init(systemName: "checkmark.circle.fill")
+        }else {
+            self.checkMark.image = UIImage.init(systemName: "circle")
         }
-      }
     }
+  
 }
