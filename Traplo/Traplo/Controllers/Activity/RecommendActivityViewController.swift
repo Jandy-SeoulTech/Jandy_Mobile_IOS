@@ -16,6 +16,7 @@ class RecommendActivityViewController : UIViewController {
     
     @IBOutlet weak var topDesignLayoutView: UIView!
     @IBOutlet weak var imageDescribeView: UIView!
+    @IBOutlet weak var eventCollectionView: UICollectionView!
     
     
     let topDesignColor1 = UIColor(named: "Color2")?.cgColor
@@ -39,6 +40,7 @@ class RecommendActivityViewController : UIViewController {
     func setUI() {
         
         imageDescribeView.layer.zPosition = 5
+        eventCollectionView.layer.addBorder([.top,.bottom], color: UIColor.systemGray, width: 1.5)
         setPagingScrollView()
     
     }
@@ -95,4 +97,35 @@ extension RecommendActivityViewController : UIScrollViewDelegate{
            setPageControlSelectedPage(currentPage: Int(round(value)))
        }
 
+}
+
+extension RecommendActivityViewController : UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "eventCell", for: indexPath) as? eventCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        
+        cell.setUI()
+        
+        return cell
+    }
+    
+    
+}
+
+extension RecommendActivityViewController : UICollectionViewDelegateFlowLayout{
+    
+}
+
+class eventCollectionViewCell : UICollectionViewCell {
+    
+    
+    
+    func setUI() {
+        
+    }
 }

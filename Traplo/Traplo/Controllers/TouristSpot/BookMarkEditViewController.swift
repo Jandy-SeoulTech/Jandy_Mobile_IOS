@@ -123,7 +123,6 @@ extension BookMarkEditViewController: UICollectionViewDelegateFlowLayout{
 
 class BookMarkEditContentCollectionViewCell:UICollectionViewCell{
     
-    var isSelect : Bool = false
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var ratings: CosmosView!
@@ -142,12 +141,15 @@ class BookMarkEditContentCollectionViewCell:UICollectionViewCell{
         
        selectionEvent(isSelect: isSelect)
     }
+    
     func setBorder() {
         self.layer.addBorder([.bottom], color: UIColor.systemGray, width: 0.3)
     }
+    
     func setImageView() {
         imageView.layer.cornerRadius = 5
     }
+    
     func selectionEvent(isSelect:Bool){
         if isSelect == true {
             self.checkMark.image = UIImage.init(systemName: "checkmark.circle.fill")
