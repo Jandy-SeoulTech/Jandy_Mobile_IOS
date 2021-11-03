@@ -17,6 +17,7 @@ class RecommendActivityViewController : UIViewController {
     @IBOutlet weak var topDesignLayoutView: UIView!
     @IBOutlet weak var imageDescribeView: UIView!
     @IBOutlet weak var eventCollectionView: UICollectionView!
+    @IBOutlet weak var eventView: UIView!
     
     
     let topDesignColor1 = UIColor(named: "Color2")?.cgColor
@@ -101,7 +102,7 @@ extension RecommendActivityViewController : UIScrollViewDelegate{
 
 extension RecommendActivityViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -109,8 +110,12 @@ extension RecommendActivityViewController : UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
-        cell.setUI()
-        
+        if indexPath.item == 4 {
+            cell.setLastBoarder()
+        }
+        else {
+            cell.setUI()
+        }
         return cell
     }
     
@@ -119,13 +124,19 @@ extension RecommendActivityViewController : UICollectionViewDataSource {
 
 extension RecommendActivityViewController : UICollectionViewDelegateFlowLayout{
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: eventView.bounds.width, height: eventView.bounds.height*1.2)
+    }
+    
 }
 
 class eventCollectionViewCell : UICollectionViewCell {
     
-    
+    func setLastBoarder(){
+        self.layer.addBorder([.bottom], color: UIColor.systemGray, width: 1.5)
+    }
     
     func setUI() {
-        
+        self.layer.addBorder([.bottom], color: UIColor.init(named: "7D7D7D")!, width: 0.5)
     }
 }
