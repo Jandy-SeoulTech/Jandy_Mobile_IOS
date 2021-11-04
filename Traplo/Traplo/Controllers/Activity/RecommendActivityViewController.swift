@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 class RecommendActivityViewController : UIViewController {
     
@@ -23,6 +24,13 @@ class RecommendActivityViewController : UIViewController {
     let topDesignColor1 = UIColor(named: "Color2")?.cgColor
     let topDesignColor2 = UIColor(named: "Color1")?.cgColor
     
+    let queue = DispatchQueue.main
+    
+
+    
+    var numOfEvent : Int = 5
+    var eventData : [Any] = [0,0,0,0,0]
+    
     var images = [#imageLiteral(resourceName: "경춘선숲길.png"),#imageLiteral(resourceName: "노들섬.png")]
     var imageViews = [UIImageView]()
     
@@ -31,7 +39,14 @@ class RecommendActivityViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        DispatchQueue.global().async {
+            DispatchQueue.main.sync {
+                self.AFGetEventList()
+            }
+        }
         setUI()
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,6 +64,30 @@ class RecommendActivityViewController : UIViewController {
         scrollView.delegate = self
               addContentScrollView()
               setPageControl()
+    }
+    
+    func AFGetEventList() {
+        let urlStr = "http://3.35.202.118:8080/api/v1/events"
+        let url = URL(string: urlStr)!
+
+        let req = AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
+               
+        req.responseJSON { response in
+            switch response.result {
+                        case .success:
+                            if let jsonObject = try! response.result.get() as? [String: Any] {
+                                
+                                self.numOfEvent = jsonObject["count"] as! Int
+                                self.eventData = jsonObject["data"] as! [Any]
+                            print(2)
+                                self.eventCollectionView.reloadData()
+                            }
+                        case .failure(let error):
+                            print(error)
+                            return
+                        }
+            
+            }
     }
     
     @IBAction func presentReviews(_ sender: Any) {
@@ -101,22 +140,29 @@ extension RecommendActivityViewController : UIScrollViewDelegate{
 }
 
 extension RecommendActivityViewController : UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        
+            if self.numOfEvent>5 {
+                self.numOfEvent = 5
+                }
+        return numOfEvent
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "eventCell", for: indexPath) as? eventCollectionViewCell else {
-            return UICollectionViewCell()
-        }
         
-        if indexPath.item == 4 {
-            cell.setLastBoarder()
-        }
-        else {
-            cell.setUI()
-        }
+        
+     
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "eventCell", for: indexPath) as? eventCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            
+                cell.setUI(index: indexPath.item, numOfEvent: self.numOfEvent, eventData: self.eventData[indexPath.item])
+
+       
         return cell
+        
     }
     
     
@@ -136,7 +182,24 @@ class eventCollectionViewCell : UICollectionViewCell {
         self.layer.addBorder([.bottom], color: UIColor.systemGray, width: 1.5)
     }
     
-    func setUI() {
+    func setBoarder(){
+        
         self.layer.addBorder([.bottom], color: UIColor.init(named: "7D7D7D")!, width: 0.5)
+    }
+    
+    func setUI(index : Int, numOfEvent : Int, eventData : Any) {
+        print(index)
+        print(numOfEvent)
+        if index == (numOfEvent-1) {
+            print(10)
+            setLastBoarder()
+        }
+        else {
+            print(5)
+            setBoarder()
+        }
+        
+        
+        
     }
 }

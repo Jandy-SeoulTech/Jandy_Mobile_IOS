@@ -46,6 +46,8 @@ class LoginViewController: UIViewController {
     }
     
     func setUI(){
+        
+        backGroundBtn.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
         backGroundBtn.layer.cornerRadius = 40
         btnNaverLogIn.layer.cornerRadius = 12
         btnKakaoLogIn.layer.cornerRadius = 12
