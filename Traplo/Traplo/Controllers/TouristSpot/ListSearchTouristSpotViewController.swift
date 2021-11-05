@@ -11,27 +11,8 @@ import Cosmos
 // 관광지 검색한 후 -list 페이지
 class ListSearchTouristSpotViewController: UIViewController {
     
-    let keyWordArray = ["   관광명소   ","   숙박   ","   음식점   ","   카페   ","   지하철역   ","   문화시설   ","   대형마트   ","   편의점   ","   학교   ","   공공기관   ","   병원   ","   약국   "]
-    let dic = ["   관광명소   ":"AT4", "   숙박   ":"AD5",
-               "   음식점   ":"FD6", "   카페   ":"CE7",
-               "   지하철역   ":"SW8", "   문화시설   ":"CT1",
-               "   대형마트   ":"MT1", "   편의점   ":"CS2",
-               "   학교   ":"SC4", "   공공기관   ":"PO3",
-               "   병원   ":"HP8", "   약국   ":"PM9"]
-/*
-     AT4    관광명소
-     AD5    숙박
-     FD6    음식점
-     CE7    카페
-     SW8    지하철역
-     CT1    문화시설
-    MT1    대형마트
-    CS2    편의점
-    SC4    학교
-    PO3    공공기관
-    HP8    병원
-    PM9    약국
-*/
+    let keyWordArray = ["   기본순   ","   둘레길   ","   문화 역사   ","   식당   ","   이색거리   ","   자연   "]
+
     //gradient
     var gradientLayer: CAGradientLayer!
     

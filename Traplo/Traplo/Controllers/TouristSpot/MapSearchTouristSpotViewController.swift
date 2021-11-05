@@ -10,13 +10,7 @@ import UIKit
 // 관광지 검색한 후 -map 페이지
 class MapSearchTouristSpotViewController: UIViewController {
 
-    let keyWordArray = ["   관광명소   ","   숙박   ","   음식점   ","   카페   ","   지하철역   ","   문화시설   ","   대형마트   ","   편의점   ","   학교   ","   공공기관   ","   병원   ","   약국   "]
-    let dic = ["   관광명소   ":"AT4", "   숙박   ":"AD5",
-               "   음식점   ":"FD6", "   카페   ":"CE7",
-               "   지하철역   ":"SW8", "   문화시설   ":"CT1",
-               "   대형마트   ":"MT1", "   편의점   ":"CS2",
-               "   학교   ":"SC4", "   공공기관   ":"PO3",
-               "   병원   ":"HP8", "   약국   ":"PM9"]
+    let keyWordArray = ["   기본순   ","   둘레길   ","   문화 역사   ","   식당   ","   이색거리   ","   자연   "]
     
     //gradient
     var gradientLayer: CAGradientLayer!
@@ -38,6 +32,9 @@ class MapSearchTouristSpotViewController: UIViewController {
         setUI()
 
     }
+    override func viewDidAppear(_ animated: Bool) {
+    
+    }
     
     // Btn 영역
     @IBAction func onToggleBtnClicked(_ sender: Any) {
@@ -54,7 +51,8 @@ class MapSearchTouristSpotViewController: UIViewController {
     }
   
     @IBAction func btnTraplo(_ sender: UIButton) {
-    performSegue(withIdentifier: "unwindRecommendActivityVC", sender: self)
+        performSegue(withIdentifier: "unwindRecommendActivityVC", sender: self)
+     
     }
     
     @IBAction func btn찜목록(_ sender: UIButton) {
@@ -141,12 +139,10 @@ class searchKeyWordCollectionViewCell : UICollectionViewCell {
     func setUI(title : String){
         
         keywordLabel.clipsToBounds = true
-        keywordLabel.layer.cornerRadius = 12.5
+        keywordLabel.layer.cornerRadius = 12
         keywordLabel.text = title
     
     }
-    
-    
     
    override var isSelected: Bool {
     didSet {
