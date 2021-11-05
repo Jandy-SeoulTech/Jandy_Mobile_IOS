@@ -205,8 +205,8 @@
                                                                             <color key="textColor" name="7D7D7D"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JAb-J3-tje">
-                                                                            <rect key="frame" x="303.5" y="86" width="69.5" height="13.5"/>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="완료.png" translatesAutoresizingMaskIntoConstraints="NO" id="JAb-J3-tje">
+                                                                            <rect key="frame" x="303.5" y="73.5" width="69.5" height="38.5"/>
                                                                         </imageView>
                                                                     </subviews>
                                                                     <constraints>
@@ -214,7 +214,7 @@
                                                                         <constraint firstAttribute="trailing" secondItem="JAb-J3-tje" secondAttribute="trailing" id="DIF-Lc-D1b"/>
                                                                         <constraint firstItem="0qw-u4-Mva" firstAttribute="leading" secondItem="MqB-D3-rNI" secondAttribute="leading" constant="5" id="SHg-bL-QJu"/>
                                                                         <constraint firstItem="JAb-J3-tje" firstAttribute="leading" secondItem="iLi-9v-Uzm" secondAttribute="trailing" id="Ssf-Wu-Uop"/>
-                                                                        <constraint firstItem="JAb-J3-tje" firstAttribute="height" secondItem="iLi-9v-Uzm" secondAttribute="height" id="UbD-Wt-rzT"/>
+                                                                        <constraint firstItem="JAb-J3-tje" firstAttribute="height" secondItem="MqB-D3-rNI" secondAttribute="height" multiplier="0.3" id="UbD-Wt-rzT"/>
                                                                         <constraint firstItem="0qw-u4-Mva" firstAttribute="centerY" secondItem="MqB-D3-rNI" secondAttribute="centerY" id="WXH-08-UUK"/>
                                                                         <constraint firstItem="JAb-J3-tje" firstAttribute="centerY" secondItem="iLi-9v-Uzm" secondAttribute="centerY" id="Xej-Ws-hSL"/>
                                                                         <constraint firstItem="iLi-9v-Uzm" firstAttribute="centerY" secondItem="PQr-yT-Euz" secondAttribute="centerY" id="sGg-S3-pPj"/>
@@ -232,6 +232,12 @@
                                                             </constraints>
                                                         </collectionViewCellContentView>
                                                         <size key="customSize" width="373" height="128"/>
+                                                        <connections>
+                                                            <outlet property="eventContinue" destination="JAb-J3-tje" id="hep-dw-EE8"/>
+                                                            <outlet property="eventDate" destination="tQc-U0-Y1f" id="Ejq-Q7-INr"/>
+                                                            <outlet property="eventHost" destination="iLi-9v-Uzm" id="vL4-VF-8MY"/>
+                                                            <outlet property="eventName" destination="PQr-yT-Euz" id="lRq-3m-CJ1"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                                 <connections>
@@ -377,6 +383,7 @@
     </scenes>
     <resources>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="완료.png" width="30" height="12"/>
         <namedColor name="7D7D7D">
             <color red="0.49000000953674316" green="0.49000000953674316" blue="0.49000000953674316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

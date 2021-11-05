@@ -20,17 +20,17 @@ class RecommendActivityViewController : UIViewController {
     @IBOutlet weak var eventCollectionView: UICollectionView!
     @IBOutlet weak var eventView: UIView!
     
-    
+    //color
     let topDesignColor1 = UIColor(named: "Color2")?.cgColor
     let topDesignColor2 = UIColor(named: "Color1")?.cgColor
     
     let queue = DispatchQueue.main
     
-
+    //event
+    var numOfEvent : Int = -1
+    var eventData : [NSDictionary] = []
     
-    var numOfEvent : Int = 5
-    var eventData : [Any] = [0,0,0,0,0]
-    
+    //image
     var images = [#imageLiteral(resourceName: "경춘선숲길.png"),#imageLiteral(resourceName: "노들섬.png")]
     var imageViews = [UIImageView]()
     
@@ -39,12 +39,7 @@ class RecommendActivityViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        DispatchQueue.global().async {
-            DispatchQueue.main.sync {
-                self.AFGetEventList()
-            }
-        }
+        self.AFGetEventList()
         setUI()
 
     }
@@ -78,9 +73,12 @@ class RecommendActivityViewController : UIViewController {
                             if let jsonObject = try! response.result.get() as? [String: Any] {
                                 
                                 self.numOfEvent = jsonObject["count"] as! Int
-                                self.eventData = jsonObject["data"] as! [Any]
-                            print(2)
-                                self.eventCollectionView.reloadData()
+                                self.eventData = jsonObject["data"] as! [NSDictionary]
+                
+                                DispatchQueue.main.async {
+
+                                self.eventCollectionView.reloadData() }
+                               
                             }
                         case .failure(let error):
                             print(error)
@@ -146,14 +144,15 @@ extension RecommendActivityViewController : UICollectionViewDataSource {
             if self.numOfEvent>5 {
                 self.numOfEvent = 5
                 }
+            if self.numOfEvent == -1{
+                return 0
+            }
         return numOfEvent
         
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        
-     
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "eventCell", for: indexPath) as? eventCollectionViewCell else {
                 return UICollectionViewCell()
             }
@@ -164,7 +163,6 @@ extension RecommendActivityViewController : UICollectionViewDataSource {
         return cell
         
     }
-    
     
 }
 
@@ -178,6 +176,12 @@ extension RecommendActivityViewController : UICollectionViewDelegateFlowLayout{
 
 class eventCollectionViewCell : UICollectionViewCell {
     
+    @IBOutlet weak var eventDate: UILabel!
+    @IBOutlet weak var eventName: UILabel!
+    @IBOutlet weak var eventHost: UILabel!
+    @IBOutlet weak var eventContinue: UIImageView!
+    
+    
     func setLastBoarder(){
         self.layer.addBorder([.bottom], color: UIColor.systemGray, width: 1.5)
     }
@@ -186,20 +190,50 @@ class eventCollectionViewCell : UICollectionViewCell {
         
         self.layer.addBorder([.bottom], color: UIColor.init(named: "7D7D7D")!, width: 0.5)
     }
-    
-    func setUI(index : Int, numOfEvent : Int, eventData : Any) {
-        print(index)
-        print(numOfEvent)
+    func setData(data : NSDictionary){
+      
+        let applicationStartDate : String = data["applicationStartDate"] as! String
+        let applicationEndDate :String = data["applicationEndDate"] as! String
+        let name : String = data["name"] as! String
+        let host : String = data["host"] as! String
+        
+        eventDate.text =
+        applicationEndDate + "~" + applicationStartDate
+        
+        eventHost.text = "| "+host
+        
+        eventName.text = name
+        
+        if isExpired(startDate: applicationEndDate, endDate: applicationStartDate) == true {
+            eventContinue.image = UIImage.init(named: "진행중")
+        }
+        
+    }
+    func setUI(index : Int, numOfEvent : Int, eventData : NSDictionary) {
         if index == (numOfEvent-1) {
-            print(10)
             setLastBoarder()
         }
         else {
-            print(5)
             setBoarder()
         }
-        
-        
+        setData(data: eventData)
         
     }
+    
+    func isExpired(startDate:String,endDate:String)->Bool{
+        var isep : Bool = false
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
+        
+        guard let startDate = dateFormatter.date(from: startDate)else{return false}
+        guard let endDate = dateFormatter.date(from: endDate)else {return false}
+        guard let currentDate = dateFormatter.date(from: dateFormatter.string(from: Date()))else {return false}
+
+        if startDate <= currentDate && currentDate <= endDate
+        {isep = true}
+
+        return isep
+       }
 }
