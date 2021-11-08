@@ -36,6 +36,7 @@
 		3F66718F26D22E0B00BA21D1 /* EditReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F66718E26D22E0B00BA21D1 /* EditReviewViewController.swift */; };
 		3F73E7F52705C45A00E2CAD6 /* Google-Symbol.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F73E7F42705C45A00E2CAD6 /* Google-Symbol.png */; };
 		3F75BDEA2709C463000D2AA6 /* reviewDetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75BDE92709C463000D2AA6 /* reviewDetailImageViewController.swift */; };
+		3F7862902738FA37003014B4 /* TouristSpotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F78628F2738FA37003014B4 /* TouristSpotModel.swift */; };
 		3F7977A3270D96370066A444 /* 찜목록.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F7977A2270D96370066A444 /* 찜목록.png */; };
 		3F7977A9270DA86A0066A444 /* 편집.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F7977A8270DA86A0066A444 /* 편집.png */; };
 		3F8805EE2734C1A8003F3B90 /* 진행중.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F8805EC2734C1A8003F3B90 /* 진행중.png */; };
@@ -111,6 +112,7 @@
 		3F66718E26D22E0B00BA21D1 /* EditReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReviewViewController.swift; sourceTree = "<group>"; };
 		3F73E7F42705C45A00E2CAD6 /* Google-Symbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google-Symbol.png"; sourceTree = "<group>"; };
 		3F75BDE92709C463000D2AA6 /* reviewDetailImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewDetailImageViewController.swift; sourceTree = "<group>"; };
+		3F78628F2738FA37003014B4 /* TouristSpotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristSpotModel.swift; sourceTree = "<group>"; };
 		3F7977A2270D96370066A444 /* 찜목록.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "찜목록.png"; sourceTree = "<group>"; };
 		3F7977A8270DA86A0066A444 /* 편집.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "편집.png"; sourceTree = "<group>"; };
 		3F8805EC2734C1A8003F3B90 /* 진행중.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "진행중.png"; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 			children = (
 				3FF1A71E26D62174001AD31F /* PloggingRecordModel.swift */,
 				3FF1A72026D62F9A001AD31F /* UserInfo.swift */,
+				3F78628F2738FA37003014B4 /* TouristSpotModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -667,6 +670,7 @@
 			files = (
 				3F66718F26D22E0B00BA21D1 /* EditReviewViewController.swift in Sources */,
 				3FF1A72D26DA13E7001AD31F /* SelectTouristSpotViewController.swift in Sources */,
+				3F7862902738FA37003014B4 /* TouristSpotModel.swift in Sources */,
 				3FF1A72B26DA13C1001AD31F /* ListSearchTouristSpotViewController.swift in Sources */,
 				3F440C0426C8E87900B641F7 /* RecommendActivityViewController.swift in Sources */,
 				3FF1A71F26D62174001AD31F /* PloggingRecordModel.swift in Sources */,
