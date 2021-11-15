@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 // 관광지 검색한 후 -map 페이지
 class MapSearchTouristSpotViewController: UIViewController {
@@ -25,6 +26,9 @@ class MapSearchTouristSpotViewController: UIViewController {
     @IBOutlet weak var toggleBtn: UIButton!
     @IBOutlet weak var keyWordCollectionView: UICollectionView!
     @IBOutlet weak var 검색창리스트버튼있는뷰: UIView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    let shared = TouristSpotManager.sharedTouristSpotManager
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,11 +68,10 @@ class MapSearchTouristSpotViewController: UIViewController {
         
     }
     
-    
     func setUI() {
        
         검색창리스트버튼있는뷰.setBorderShadow(borderWidth: 0, cornerRadius: 0, useShadowEffect: true, shadowRadius: 3.5)
-
+        setSearchBar()
         setTopGradationDesign()
     }
     
@@ -84,7 +87,14 @@ class MapSearchTouristSpotViewController: UIViewController {
 
         self.topDesignView.bringSubviewToFront(topDesignLayoutView)
     }
-   
+    // 검색창
+    func setSearchBar() {
+        
+        let hor = -(searchBar.bounds.width / 15)
+        
+        searchBar.searchTextField.leftViewMode = .never
+        UISearchBar.appearance().searchTextPositionAdjustment = UIOffset(horizontal: hor, vertical: 0)
+    }
 }
 
 extension MapSearchTouristSpotViewController:UICollectionViewDataSource {
@@ -161,4 +171,10 @@ class searchKeyWordCollectionViewCell : UICollectionViewCell {
     }
 
 }
+}
+extension MapSearchTouristSpotViewController : UISearchBarDelegate{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print(searchBar.text)
+        print(shared.searchData(category: nil, searchTerm: searchBar.text!))
+    }
 }

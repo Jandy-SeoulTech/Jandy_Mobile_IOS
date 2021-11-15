@@ -27,6 +27,7 @@ class ListSearchTouristSpotViewController: UIViewController {
     @IBOutlet weak var keyWordCollectionView: UICollectionView!
     
     @IBOutlet weak var contentCollectionView: UICollectionView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +58,7 @@ class ListSearchTouristSpotViewController: UIViewController {
     
     func setUI() {
         검색창맵있는뷰.setBorderShadow(borderWidth: 0, cornerRadius: 0, useShadowEffect: true, shadowRadius: 3.0)
-       
+        setSearchBar()
         setTopDesign()
     }
     // 상단 디자인
@@ -71,6 +72,13 @@ class ListSearchTouristSpotViewController: UIViewController {
         self.topDesignView.layer.addSublayer(self.gradientLayer)
 
         self.topDesignView.bringSubviewToFront(topDesignLayoutView)
+    }
+    func setSearchBar() {
+        
+        let hor = -(searchBar.bounds.width / 15)
+        
+        searchBar.searchTextField.leftViewMode = .never
+        UISearchBar.appearance().searchTextPositionAdjustment = UIOffset(horizontal: hor, vertical: 0)
     }
 }
 
@@ -206,4 +214,11 @@ extension CALayer {
             self.addSublayer(border)
         }
     }
+}
+
+extension ListSearchTouristSpotViewController: UISearchBarDelegate{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print(1)
+    }
+    
 }

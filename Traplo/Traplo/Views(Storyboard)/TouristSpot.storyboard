@@ -73,6 +73,9 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="cwp-68-tid"/>
+                                                </connections>
                                             </searchBar>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qD2-dZ-Bxa">
                                                 <rect key="frame" x="20" y="5" width="62.5" height="29.5"/>
@@ -175,6 +178,7 @@
                     </view>
                     <connections>
                         <outlet property="keyWordCollectionView" destination="L9S-5y-IvU" id="9bk-Ic-zBd"/>
+                        <outlet property="searchBar" destination="n39-bN-Aed" id="GCz-lT-tAJ"/>
                         <outlet property="toggleBtn" destination="qD2-dZ-Bxa" id="LxV-Bb-lDH"/>
                         <outlet property="topDesignLayoutView" destination="U3t-Hy-6De" id="rsm-YW-kMy"/>
                         <outlet property="topDesignView" destination="AXO-Kd-Mkm" id="MoU-hg-45G"/>
@@ -714,11 +718,18 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hwu-57-m4W">
                                         <rect key="frame" x="0.0" y="10" width="414" height="39.5"/>
                                         <subviews>
-                                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="3kc-0L-LU6">
+                                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="3kc-0L-LU6">
                                                 <rect key="frame" x="82.5" y="5" width="321.5" height="29.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <scopeButtonTitles>
+                                                    <string>Title</string>
+                                                    <string>Title</string>
+                                                </scopeButtonTitles>
+                                                <connections>
+                                                    <outlet property="delegate" destination="stK-SL-vdJ" id="MIh-Ml-NSE"/>
+                                                </connections>
                                             </searchBar>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2C-u3-fep">
                                                 <rect key="frame" x="20" y="5" width="62.5" height="29.5"/>
@@ -920,6 +931,7 @@
                     <connections>
                         <outlet property="contentCollectionView" destination="ViB-iU-G3U" id="E6Y-Wb-xxE"/>
                         <outlet property="keyWordCollectionView" destination="g6l-6p-LKi" id="f3w-cy-keM"/>
+                        <outlet property="searchBar" destination="3kc-0L-LU6" id="Fk8-Wv-ZXh"/>
                         <outlet property="topDesignLayoutView" destination="tYk-J1-I9B" id="eNm-dE-fdl"/>
                         <outlet property="topDesignView" destination="jA2-Ia-fBG" id="x2v-YR-EHO"/>
                         <outlet property="검색창맵있는뷰" destination="SnS-an-cXP" id="xze-aJ-sjb"/>
