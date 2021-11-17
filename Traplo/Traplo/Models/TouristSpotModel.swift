@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-struct TouristSpotModel{
+class TouristSpotModel{
     
     var id : Int
     var name : String
@@ -43,6 +43,13 @@ struct TouristSpotModel{
         return TouristSpotModel.init(id: dic1["id"]as! Int, name: dic1["name"] as! String, description: dic1["description"] as? String, rating: dic1["rating"] as? Int, ratingNumber: dic1["ratingNumber"] as? Int, imageName: dic1["imageName"] as? String, address: dic2["address"] as? String, category: dic2["category"] as? String, homepage: dic2["homepage"] as? String, operatingTime: dic2["operatingTime"] as? String, phoneNumber: dic2["phoneNumber"] as? String)
     }
     
+    func addData(dic : NSDictionary){
+        address = dic["address"] as? String
+        category = dic["category"] as? String
+        homepage = dic["homepage"] as? String
+        operatingTime = dic["operatingTime"] as? String
+        phoneNumber = dic["phoneNumber"] as? String
+    }
    
     //TouristSpotModel.init(id: dic["id"]as! Int, name: dic["name"] as! String, address: dic["address"] as? String, category: dic["category"] as? String, homepage: dic["homepage"] as? String, operatingTime: dic["operatingTime"] as? String, phoneNumber: dic["phoneNumber"] as? String)
     func searchData(searchTerm:String)->Bool{
@@ -58,42 +65,45 @@ class TouristSpotManager {
     static let sharedTouristSpotManager = TouristSpotManager()
     
     var touristSpotModelDic : [String:[TouristSpotModel]] = ["culture":[],"restaurant":[],"street":[],"nature":[],"dullegil":[]]
-
-    func updateData (category:String,dataArr:[NSDictionary]) {
-       // touristSpotModelDic?.updateValue(data, forKey: category)
+    
+    func updateData (category:String,dataArr:[NSDictionary])  {
+    
         for data in dataArr {
-            AF(id: data["id"] as! Int)
-            //let q = TouristSpotModel.updateModel(dic1: data,dic2: )
-            //touristSpotModelDic[category]?.append(q)
+           
+            let q = TouristSpotModel.updateModel(dic1: data,dic2: [:])
+            self.touristSpotModelDic[category]?.append(q)
+        }
+        
+        for data in touristSpotModelDic.values {
+            for q in data {
+                AF(model: q)
+            }
         }
         
     }
-    
-    func AF(id:Int)->NSDictionary{
+    func AF(model:TouristSpotModel) {
         let urlStr = "http://3.35.202.118:8080/api/v1/tourism/"
-        let queue = DispatchQueue.global(qos: .userInteractive)
-        var returnVal : NSDictionary = [:]
         
-            let url = URL(string: urlStr+String(id))!
-            let req = Alamofire.AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
-              req.responseJSON { response in
-                    switch response.result {
+        let url = URL(string: urlStr+String(model.id))!
+        let req = Alamofire.AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
+        
+     //   let group = DispatchGroup()
+        
+        req.responseJSON{ response in
+            switch response.result {
+            
                                 case .success:
-                                    returnVal = try! response.result.get() as? NSDictionary ?? [:]
-                                    print(1)
+                                if let jsonObject = try! response.result.get() as? NSDictionary  {
+                                    model.addData(dic: jsonObject as NSDictionary)
+                                        return}
+                                    
                                    return
                                     
                                 case .failure(let error):
                                     print(error)
                                     return
                                 }
-                    
-                }
-        
-        print(returnVal)
-        print(2)
-        return returnVal
-        
+       }
     }
     
     

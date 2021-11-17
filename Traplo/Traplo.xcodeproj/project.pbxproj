@@ -869,6 +869,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-Xfrontend -enable-experimental-concurrency";
 				PRODUCT_BUNDLE_IDENTIFIER = "---------.Traplo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
