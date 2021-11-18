@@ -107,16 +107,16 @@ class TouristSpotManager {
     }
     
     
-    func searchData (category:String?,searchTerm:String) -> [Int] {
+    func searchData (category:String?,searchTerm:String) -> [TouristSpotModel] {
         
-        var returnArr : [Int] = []
+        var returnArr : [TouristSpotModel] = []
         // category 유무 확인
         guard let str = category else {
             // 없을때
             for modelArray in touristSpotModelDic.values{
                 for dic in modelArray{
                     if dic.searchData(searchTerm: searchTerm) == true {
-                        returnArr.append(dic.id)
+                        returnArr.append(dic)
                     }
                 }
             }
@@ -125,7 +125,7 @@ class TouristSpotManager {
         // 있을때
         for dic in touristSpotModelDic[str]!{
             if dic.searchData(searchTerm: searchTerm) == true {
-                returnArr.append(dic.id)
+                returnArr.append(dic)
             }
         }
         return returnArr

@@ -174,7 +174,6 @@ class searchKeyWordCollectionViewCell : UICollectionViewCell {
 }
 extension MapSearchTouristSpotViewController : UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print(searchBar.text)
         print(shared.searchData(category: nil, searchTerm: searchBar.text!))
     }
 }

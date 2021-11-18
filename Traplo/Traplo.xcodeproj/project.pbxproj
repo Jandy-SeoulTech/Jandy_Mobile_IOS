@@ -55,6 +55,7 @@
 		3FF78D4727009595002F7DE6 /* 삼성미술관리움.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF78D4227009595002F7DE6 /* 삼성미술관리움.png */; };
 		3FF78D4827009595002F7DE6 /* 노들섬.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF78D4327009595002F7DE6 /* 노들섬.png */; };
 		3FF78D4927009595002F7DE6 /* 플로깅.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF78D4427009595002F7DE6 /* 플로깅.png */; };
+		3FFFE99C27467702009845D3 /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFFE99B27467702009845D3 /* UIExtension.swift */; };
 		560A8F2AA54DFC9BFA0BAF0C /* Pods_Traplo_TraploUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA55E18A5AADDEEDC860EC4 /* Pods_Traplo_TraploUITests.framework */; };
 		E93A6339A6423BEF26C67141 /* Pods_TraploTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB29A4510F38CDE48402DD4 /* Pods_TraploTests.framework */; };
 /* End PBXBuildFile section */
@@ -130,6 +131,7 @@
 		3FF78D4227009595002F7DE6 /* 삼성미술관리움.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "삼성미술관리움.png"; sourceTree = "<group>"; };
 		3FF78D4327009595002F7DE6 /* 노들섬.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "노들섬.png"; sourceTree = "<group>"; };
 		3FF78D4427009595002F7DE6 /* 플로깅.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "플로깅.png"; sourceTree = "<group>"; };
+		3FFFE99B27467702009845D3 /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
 		4734760EF9F75B9406EC99C1 /* Pods-Traplo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traplo.release.xcconfig"; path = "Target Support Files/Pods-Traplo/Pods-Traplo.release.xcconfig"; sourceTree = "<group>"; };
 		79C038F6126298E0A9A3B49D /* Pods-Traplo-TraploUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traplo-TraploUITests.debug.xcconfig"; path = "Target Support Files/Pods-Traplo-TraploUITests/Pods-Traplo-TraploUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		90B3C4135A860B57AD5D74CE /* Pods-Traplo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traplo.debug.xcconfig"; path = "Target Support Files/Pods-Traplo/Pods-Traplo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		3F14D35E26C112E600F27B1E /* Traplo */ = {
 			isa = PBXGroup;
 			children = (
+				3FFFE99A274676F0009845D3 /* Extension */,
 				3FF1A71D26D6214E001AD31F /* Models */,
 				3F440C0726C8FA1800B641F7 /* Views(Storyboard) */,
 				3F440C0626C8F9EB00B641F7 /* Controllers */,
@@ -339,6 +342,14 @@
 				3F086C85270B576D00734CBB /* BookMarkEditViewController.swift */,
 			);
 			path = TouristSpot;
+			sourceTree = "<group>";
+		};
+		3FFFE99A274676F0009845D3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3FFFE99B27467702009845D3 /* UIExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		56837C0F2FDAD0FBB24F13F1 /* Frameworks */ = {
@@ -679,6 +690,7 @@
 				3F75BDEA2709C463000D2AA6 /* reviewDetailImageViewController.swift in Sources */,
 				3F14D36426C112E600F27B1E /* LogInBackGroundViewController.swift in Sources */,
 				3F14D36026C112E600F27B1E /* AppDelegate.swift in Sources */,
+				3FFFE99C27467702009845D3 /* UIExtension.swift in Sources */,
 				3F599A4226D384560049FFE3 /* EditReviewPopUpScreenViewController.swift in Sources */,
 				3FF1A72126D62F9A001AD31F /* UserInfo.swift in Sources */,
 				3F086C86270B576D00734CBB /* BookMarkEditViewController.swift in Sources */,

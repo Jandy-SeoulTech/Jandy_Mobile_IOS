@@ -7,11 +7,14 @@
 
 import UIKit
 import Cosmos
+import Alamofire
 
 // 관광지 검색한 후 -list 페이지
 class ListSearchTouristSpotViewController: UIViewController {
     
+    let shared = TouristSpotManager.sharedTouristSpotManager
     let keyWordArray = ["   기본순   ","   둘레길   ","   문화 역사   ","   식당   ","   이색거리   ","   자연   "]
+    var touristSpotArray : [TouristSpotModel] = []
 
     //gradient
     var gradientLayer: CAGradientLayer!
@@ -88,7 +91,7 @@ extension ListSearchTouristSpotViewController:UICollectionViewDataSource {
         if collectionView.isEqual(keyWordCollectionView){
             return keyWordArray.count
         }else {
-        return 10
+            return touristSpotArray.count
         }
     }
     
@@ -105,7 +108,8 @@ extension ListSearchTouristSpotViewController:UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tourSpotContent", for: indexPath) as? tourSpotContentCollectionViewCell else {
                 return UICollectionViewCell()}
             
-            cell.setUI()
+            let val = touristSpotArray[indexPath.item]
+            cell.setUI(name: val.name, rating: val.rating ?? 0 , describe: val.description ?? "" , image: val.imageName ?? "")
             
             return cell
         }
@@ -147,78 +151,59 @@ class tourSpotContentCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var ratings: CosmosView!
     @IBOutlet weak var describeTextView: UITextView!
     
-    func setUI(){
+    func setUI(name: String,rating:Int,describe:String,image:String){
         // 테스트용 내용. 설정 필요!
-        titleLabel.text = "dd"
-        ratings.rating = 3
-        describeTextView.text = "ddddd"
+        titleLabel.text = name
+        ratings.rating = Double(rating)
+        describeTextView.text = describe
         
         self.clipsToBounds = true
+        ratings.settings.updateOnTouch = false
         
         setBorder()
-        setImageView()
+        setImageView(image: image)
         
     }
     func setBorder() {
         self.layer.addBorder([.bottom], color: UIColor.systemGray, width: 0.3)
     }
-    func setImageView() {
-        imageView.layer.cornerRadius = 5
-    }
-   
-}
-
-//extension 영역
-
-// 그림자 효과
-extension UIView {
-    func setBorderShadow(borderWidth : CGFloat,cornerRadius : CGFloat,borderColor : CGColor = UIColor.systemGray.cgColor, useShadowEffect boolean : Bool, shadowRadius : CGFloat){
+    func setImageView(image:String) {
+        let urlStr = "http://3.35.202.118:8080/api/v1/tourism/images/"
+        let url = URL(string: urlStr+image)!
         
-        //테두리 설정
-        self.layer.borderWidth = borderWidth
-        self.layer.cornerRadius = cornerRadius
-        self.layer.borderColor = borderColor
-        
-        
-        //테두리 그림자 효과 설정
-        self.layer.masksToBounds = !boolean
-        self.layer.shadowColor = UIColor.systemGray.cgColor // 그림자 색
-        self.layer.shadowOffset = CGSize(width: 3, height: 3) // 그림자를 이동시키는 정도
-        self.layer.shadowOpacity = 0.7 //그림자 투명도
-        self.layer.shadowRadius = shadowRadius //그림자 경계의 선명도 숫자가 클수록 그림자가 많이 퍼진다.
-    }
-}
-
-// layer -> 특정 부분만 선 추가
-extension CALayer {
-    func addBorder(_ arr_edge: [UIRectEdge], color: UIColor, width: CGFloat) {
-        for edge in arr_edge {
-            let border = CALayer()
-            switch edge {
-            case UIRectEdge.top:
-                border.frame = CGRect.init(x: 0, y: 0, width: frame.width, height: width)
-                break
-            case UIRectEdge.bottom:
-                border.frame = CGRect.init(x: 0, y: frame.height - width, width: frame.width, height: width)
-                break
-            case UIRectEdge.left:
-                border.frame = CGRect.init(x: 0, y: 0, width: width, height: frame.height)
-                break
-            case UIRectEdge.right:
-                border.frame = CGRect.init(x: frame.width - width, y: 0, width: width, height: frame.height)
-                break
-            default:
-                break
-            }
-            border.backgroundColor = color.cgColor;
-            self.addSublayer(border)
+        imageView.imageFromURL(urlString: urlStr+image, placeholder: imageView.image)
+            { image in self.imageView.image = image
+            print(image)
         }
+
+         
+        
+//        let req = AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
+//
+//            req.responseJSON { response in
+//
+//                switch response.result {
+//                        case .success:
+//
+//                        if let jsonObject = try! response.result.get() as? [String: Any] {
+//                             // print( jsonObject["file"])
+//                        }
+//                        case .failure(let error):
+//                                print(error)
+//                                return
+//                        }
+//                }
+//        print(req.data)
+        
+        imageView.layer.cornerRadius = 5
     }
 }
 
 extension ListSearchTouristSpotViewController: UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print(1)
+        touristSpotArray = shared.searchData(category: nil, searchTerm: searchBar.text!)
+        contentCollectionView.reloadData()
     }
     
 }
+
