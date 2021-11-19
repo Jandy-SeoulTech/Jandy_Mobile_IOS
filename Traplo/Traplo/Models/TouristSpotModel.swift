@@ -64,7 +64,7 @@ class TouristSpotManager {
     
     static let sharedTouristSpotManager = TouristSpotManager()
     
-    var touristSpotModelDic : [String:[TouristSpotModel]] = ["culture":[],"restaurant":[],"street":[],"nature":[],"dullegil":[]]
+    var touristSpotModelDic : [String:[TouristSpotModel]] = ["dullegil":[],"culture":[],"restaurant":[],"street":[],"nature":[]]
     
     func updateData (category:String,dataArr:[NSDictionary])  {
     

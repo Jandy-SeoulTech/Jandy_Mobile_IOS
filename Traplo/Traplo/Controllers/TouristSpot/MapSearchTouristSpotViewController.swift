@@ -11,7 +11,7 @@ import Alamofire
 // 관광지 검색한 후 -map 페이지
 class MapSearchTouristSpotViewController: UIViewController {
 
-    let keyWordArray = ["   기본순   ","   둘레길   ","   문화 역사   ","   식당   ","   이색거리   ","   자연   "]
+    let keyWordArray = ["기본순","둘레길","문화 역사","식당","이색거리","자연"]
     
     //gradient
     var gradientLayer: CAGradientLayer!
@@ -109,10 +109,14 @@ extension MapSearchTouristSpotViewController:UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "searchKeyWord", for: indexPath) as? searchKeyWordCollectionViewCell else {
             return UICollectionViewCell()
         }
+        let title = "   "+keyWordArray[indexPath.row]+"   "
+        cell.setUI(title: title)
         
-        
-        cell.setUI(title: keyWordArray[indexPath.row])
-        
+        if indexPath.item == 0 {
+           cell.isSelected = true
+           collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .init())
+         }
+                
         return cell
     }
 
@@ -121,12 +125,12 @@ extension MapSearchTouristSpotViewController:UICollectionViewDataSource {
 extension MapSearchTouristSpotViewController:UICollectionViewDelegateFlowLayout{
     
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
+            let title = "   "+keyWordArray[indexPath.item]+"   "
             //width 세팅에 사용됨
             let maxSize = CGSize(width: 250, height: 250)
             let heightOnFont = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
             //width
-            let collectionViewCellWidth = NSString(string: keyWordArray[indexPath.row]).boundingRect(with: maxSize, options: heightOnFont, attributes: [.font: UIFont.systemFont(ofSize: 13)], context: nil)
+            let collectionViewCellWidth = NSString(string: title).boundingRect(with: maxSize, options: heightOnFont, attributes: [.font: UIFont.systemFont(ofSize: 13)], context: nil)
             //height
             let collectionViewCellHeight = collectionView.bounds.height
             return CGSize(width: collectionViewCellWidth.width, height: collectionViewCellHeight)

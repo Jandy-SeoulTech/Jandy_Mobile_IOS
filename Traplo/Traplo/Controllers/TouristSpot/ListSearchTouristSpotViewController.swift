@@ -13,7 +13,8 @@ import Alamofire
 class ListSearchTouristSpotViewController: UIViewController {
     
     let shared = TouristSpotManager.sharedTouristSpotManager
-    let keyWordArray = ["   기본순   ","   둘레길   ","   문화 역사   ","   식당   ","   이색거리   ","   자연   "]
+    let keyWordArray = ["기본순","둘레길","문화 역사","식당","이색거리","자연"]
+    let keyWordEngArray = [nil,"dullegil","culture","restaurant","street","nature"]
     var touristSpotArray : [TouristSpotModel] = []
 
     //gradient
@@ -28,7 +29,6 @@ class ListSearchTouristSpotViewController: UIViewController {
     @IBOutlet weak var topDesignView: UIView!
     @IBOutlet weak var topDesignLayoutView: UIView!
     @IBOutlet weak var keyWordCollectionView: UICollectionView!
-    
     @IBOutlet weak var contentCollectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -38,7 +38,7 @@ class ListSearchTouristSpotViewController: UIViewController {
         setUI()
 
     }
-    
+   
     // Btn 영역
     @IBAction func onToggleBtnClicked(_ sender: Any) {
 //        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MapSearchTouristSpotViewController")
@@ -101,8 +101,14 @@ extension ListSearchTouristSpotViewController:UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "searchKeyWord", for: indexPath) as? searchKeyWordCollectionViewCell else {
             return UICollectionViewCell()}
       
-        cell.setUI(title: keyWordArray[indexPath.row])
-        
+            let title = "   "+keyWordArray[indexPath.item]+"   "
+            cell.setUI(title: title)
+            
+            if indexPath.item == 0 {
+               cell.isSelected = true
+               collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .init())
+             }
+
         return cell
         }else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tourSpotContent", for: indexPath) as? tourSpotContentCollectionViewCell else {
@@ -120,14 +126,15 @@ extension ListSearchTouristSpotViewController:UICollectionViewDataSource {
 extension ListSearchTouristSpotViewController:UICollectionViewDelegateFlowLayout{
     
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
+           
             // 키워드 셀 설정
             if collectionView.isEqual(keyWordCollectionView){
+            let title = "   "+keyWordArray[indexPath.item]+"   "
             //width 세팅에 사용됨
             let maxSize = CGSize(width: 250, height: 250)
             let heightOnFont = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
             //width
-            let collectionViewCellWidth = NSString(string: keyWordArray[indexPath.row]).boundingRect(with: maxSize, options: heightOnFont, attributes: [.font: UIFont.systemFont(ofSize: 13)], context: nil)
+            let collectionViewCellWidth = NSString(string: title).boundingRect(with: maxSize, options: heightOnFont, attributes: [.font: UIFont.systemFont(ofSize: 13)], context: nil)
             //height
             let collectionViewCellHeight = collectionView.bounds.height
             return CGSize(width: collectionViewCellWidth.width, height: collectionViewCellHeight)
@@ -139,6 +146,15 @@ extension ListSearchTouristSpotViewController:UICollectionViewDelegateFlowLayout
                 return CGSize(width: width, height: round(height/6))
             }
         }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView.isEqual(keyWordCollectionView){
+        guard let searchTerm = searchBar.text else { return }
+            touristSpotArray = shared.searchData(category: keyWordEngArray[indexPath.item], searchTerm: searchTerm)
+            contentCollectionView.reloadData()
+        }
+        
+    }
     
 }
 
@@ -168,40 +184,20 @@ class tourSpotContentCollectionViewCell: UICollectionViewCell {
         self.layer.addBorder([.bottom], color: UIColor.systemGray, width: 0.3)
     }
     func setImageView(image:String) {
-        let urlStr = "http://3.35.202.118:8080/api/v1/tourism/images/"
+        let urlStr = "http://3.35.202.118:8080/images/"
         let url = URL(string: urlStr+image)!
-        
         imageView.imageFromURL(urlString: urlStr+image, placeholder: imageView.image)
             { image in self.imageView.image = image
-            print(image)
         }
-
-         
-        
-//        let req = AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
-//
-//            req.responseJSON { response in
-//
-//                switch response.result {
-//                        case .success:
-//
-//                        if let jsonObject = try! response.result.get() as? [String: Any] {
-//                             // print( jsonObject["file"])
-//                        }
-//                        case .failure(let error):
-//                                print(error)
-//                                return
-//                        }
-//                }
-//        print(req.data)
-        
         imageView.layer.cornerRadius = 5
     }
 }
 
 extension ListSearchTouristSpotViewController: UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        touristSpotArray = shared.searchData(category: nil, searchTerm: searchBar.text!)
+        guard let searchTerm = searchBar.text else { return }
+        let category = keyWordEngArray[(keyWordCollectionView.indexPathsForSelectedItems?.first!.item)!]
+        touristSpotArray = shared.searchData(category: category , searchTerm: searchTerm)
         contentCollectionView.reloadData()
     }
     
