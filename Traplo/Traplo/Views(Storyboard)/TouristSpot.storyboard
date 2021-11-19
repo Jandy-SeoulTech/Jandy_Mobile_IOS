@@ -834,14 +834,14 @@
                                                             </constraints>
                                                         </imageView>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPa-a6-fOd">
-                                                            <rect key="frame" x="141.5" y="70.5" width="242.5" height="30.5"/>
+                                                            <rect key="frame" x="141.5" y="61" width="242.5" height="57.5"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <color key="textColor" systemColor="labelColor"/>
                                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="mc1-cc-vi7">
-                                                            <rect key="frame" x="148.5" y="13" width="226" height="57.5"/>
+                                                            <rect key="frame" x="148.5" y="14.5" width="226" height="46.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BD-Y3-ipy">
                                                                     <rect key="frame" x="0.0" y="0.0" width="226" height="20.5"/>
@@ -850,7 +850,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" id="0nz-Ny-hwR" customClass="CosmosView" customModule="Cosmos">
-                                                                    <rect key="frame" x="0.0" y="23.5" width="226" height="34"/>
+                                                                    <rect key="frame" x="0.0" y="23.5" width="226" height="23"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                     <userDefinedRuntimeAttributes>
@@ -873,15 +873,15 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="mc1-cc-vi7" firstAttribute="height" secondItem="8Zk-9S-eRR" secondAttribute="height" multiplier="0.5" id="6E2-2A-Ssi"/>
-                                                        <constraint firstItem="mc1-cc-vi7" firstAttribute="bottom" secondItem="8Zk-9S-eRR" secondAttribute="centerY" multiplier="1.1" id="AyY-2b-iYG"/>
+                                                        <constraint firstItem="mc1-cc-vi7" firstAttribute="height" secondItem="8Zk-9S-eRR" secondAttribute="height" multiplier="0.4" id="6E2-2A-Ssi"/>
+                                                        <constraint firstItem="mc1-cc-vi7" firstAttribute="bottom" secondItem="8Zk-9S-eRR" secondAttribute="centerY" multiplier="0.95" id="AyY-2b-iYG"/>
                                                         <constraint firstItem="8Zk-9S-eRR" firstAttribute="centerY" secondItem="lbH-zH-nRo" secondAttribute="centerY" id="CVf-o0-LSA"/>
                                                         <constraint firstItem="hPa-a6-fOd" firstAttribute="leading" secondItem="8Zk-9S-eRR" secondAttribute="trailing" multiplier="1.05" id="Osi-jD-npi"/>
                                                         <constraint firstItem="mc1-cc-vi7" firstAttribute="leading" secondItem="8Zk-9S-eRR" secondAttribute="trailing" multiplier="1.1" id="PEZ-CU-PBG"/>
                                                         <constraint firstItem="8Zk-9S-eRR" firstAttribute="height" secondItem="lbH-zH-nRo" secondAttribute="height" multiplier="0.9" id="be9-EX-6gp"/>
                                                         <constraint firstItem="hPa-a6-fOd" firstAttribute="top" secondItem="mc1-cc-vi7" secondAttribute="bottom" id="dSZ-lf-dhN"/>
                                                         <constraint firstAttribute="trailing" secondItem="hPa-a6-fOd" secondAttribute="trailing" constant="10" id="ej9-xr-By9"/>
-                                                        <constraint firstItem="hPa-a6-fOd" firstAttribute="height" secondItem="8Zk-9S-eRR" secondAttribute="height" multiplier="0.265217" id="gNv-nY-F1O"/>
+                                                        <constraint firstItem="hPa-a6-fOd" firstAttribute="height" secondItem="8Zk-9S-eRR" secondAttribute="height" multiplier="0.5" id="gNv-nY-F1O"/>
                                                         <constraint firstItem="mc1-cc-vi7" firstAttribute="trailing" secondItem="lbH-zH-nRo" secondAttribute="centerX" multiplier="1.9" id="kYR-Jb-cJT"/>
                                                         <constraint firstItem="8Zk-9S-eRR" firstAttribute="leading" secondItem="lbH-zH-nRo" secondAttribute="centerX" multiplier="0.1" id="pCz-sv-Odw"/>
                                                     </constraints>

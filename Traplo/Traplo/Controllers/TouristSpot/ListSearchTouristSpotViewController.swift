@@ -175,6 +175,9 @@ class tourSpotContentCollectionViewCell: UICollectionViewCell {
         
         self.clipsToBounds = true
         ratings.settings.updateOnTouch = false
+        describeTextView.textContainerInset = UIEdgeInsets(top: 10, left: 3, bottom: 3, right: 3);
+        describeTextView.textContainer.maximumNumberOfLines = 2
+        describeTextView.textContainer.lineBreakMode = .byTruncatingTail
         
         setBorder()
         setImageView(image: image)
@@ -196,7 +199,8 @@ class tourSpotContentCollectionViewCell: UICollectionViewCell {
 extension ListSearchTouristSpotViewController: UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchTerm = searchBar.text else { return }
-        let category = keyWordEngArray[(keyWordCollectionView.indexPathsForSelectedItems?.first!.item)!]
+        guard let selectedItem = keyWordCollectionView.indexPathsForSelectedItems?.first else { return }
+        let category = keyWordEngArray[selectedItem.item]
         touristSpotArray = shared.searchData(category: category , searchTerm: searchTerm)
         contentCollectionView.reloadData()
     }
