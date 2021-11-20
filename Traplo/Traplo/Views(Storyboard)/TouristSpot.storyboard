@@ -1229,10 +1229,15 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addressLabel" destination="cWb-X7-9Sh" id="Lx9-c6-a4N"/>
                         <outlet property="contentView" destination="LaU-66-14O" id="Wdj-al-mgv"/>
+                        <outlet property="operatingTimeLabel" destination="4oO-lK-fbZ" id="5YL-6T-zh0"/>
+                        <outlet property="phoneNumberLabel" destination="iAE-jR-rAr" id="D91-6X-fmH"/>
                         <outlet property="ratingView" destination="VYM-L5-w6D" id="zy8-eH-y7J"/>
                         <outlet property="reviewPicView" destination="Lge-k2-yeI" id="GjK-md-7Qp"/>
+                        <outlet property="titleLabel" destination="Ra5-1e-10H" id="k3F-Jy-PZT"/>
                         <outlet property="titleLabelView" destination="3fB-dJ-HHC" id="jVp-TX-bxO"/>
+                        <outlet property="websiteLabel" destination="cyO-cN-kFn" id="tpv-28-Yva"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EuC-EE-Sta" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

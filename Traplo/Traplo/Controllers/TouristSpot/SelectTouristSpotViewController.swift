@@ -14,6 +14,13 @@ class SelectTouristSpotViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var reviewPicView: UIView!
     @IBOutlet weak var ratingView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var operatingTimeLabel: UILabel!
+    @IBOutlet weak var phoneNumberLabel: UILabel!
+    @IBOutlet weak var websiteLabel: UILabel!
+    
+    var model : TouristSpotModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +36,15 @@ class SelectTouristSpotViewController: UIViewController {
         contentView.layer.addBorder([.bottom], color: UIColor.systemGray3, width: 0.3)
         reviewPicView.layer.addBorder([.bottom], color: UIColor.systemGray3, width: 0.3)
         ratingView.layer.addBorder([.bottom], color: UIColor.systemGray3, width: 0.3)
-        
+        setModel()
     }
-   
+    func setModel() {
+        titleLabel.text = model?.name
+        addressLabel.text = model?.address
+        operatingTimeLabel.text = model?.operatingTime
+        phoneNumberLabel.text = model?.phoneNumber
+        websiteLabel.text = model?.homepage
+    }
+    
+    
 }

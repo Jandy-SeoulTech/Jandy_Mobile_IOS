@@ -153,6 +153,15 @@ extension ListSearchTouristSpotViewController:UICollectionViewDelegateFlowLayout
             touristSpotArray = shared.searchData(category: keyWordEngArray[indexPath.item], searchTerm: searchTerm)
             contentCollectionView.reloadData()
         }
+        else {
+            let val = touristSpotArray[indexPath.item]
+            guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SelectTouristSpotViewController") as? SelectTouristSpotViewController else {
+                return}
+            vc.modalPresentationStyle = .overFullScreen
+            vc.model = val
+            self.present(vc, animated: false, completion: nil)
+            
+        }
         
     }
     
