@@ -10,13 +10,16 @@ import UIKit
 class reviewDetailImageViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
+    var modelImage : UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUI()
         // Do any additional setup after loading the view.
     }
     func setUI() {
         imageView.layer.zPosition = 5
+        imageView.image = modelImage
     }
     
     @IBAction func onXBtnTouched(_ sender: Any) {

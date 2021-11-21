@@ -159,10 +159,22 @@ extension ListSearchTouristSpotViewController:UICollectionViewDelegateFlowLayout
                 return}
             vc.modalPresentationStyle = .overFullScreen
             vc.model = val
+            vc.modelImage = (collectionView.cellForItem(at: indexPath) as? tourSpotContentCollectionViewCell)?.imageView.image
             self.present(vc, animated: false, completion: nil)
             
         }
         
+    }
+    
+}
+
+extension ListSearchTouristSpotViewController: UISearchBarDelegate{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchTerm = searchBar.text else { return }
+        guard let selectedItem = keyWordCollectionView.indexPathsForSelectedItems?.first else { return }
+        let category = keyWordEngArray[selectedItem.item]
+        touristSpotArray = shared.searchData(category: category , searchTerm: searchTerm)
+        contentCollectionView.reloadData()
     }
     
 }
@@ -199,20 +211,9 @@ class tourSpotContentCollectionViewCell: UICollectionViewCell {
         let urlStr = "http://3.35.202.118:8080/images/"
         let url = URL(string: urlStr+image)!
         imageView.imageFromURL(urlString: urlStr+image, placeholder: imageView.image)
-            { image in self.imageView.image = image
-        }
+            { image in self.imageView.image = image}
         imageView.layer.cornerRadius = 5
     }
 }
 
-extension ListSearchTouristSpotViewController: UISearchBarDelegate{
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let searchTerm = searchBar.text else { return }
-        guard let selectedItem = keyWordCollectionView.indexPathsForSelectedItems?.first else { return }
-        let category = keyWordEngArray[selectedItem.item]
-        touristSpotArray = shared.searchData(category: category , searchTerm: searchTerm)
-        contentCollectionView.reloadData()
-    }
-    
-}
 

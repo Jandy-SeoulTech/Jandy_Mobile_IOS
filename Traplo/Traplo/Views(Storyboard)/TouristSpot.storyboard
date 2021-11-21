@@ -960,6 +960,29 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="삼성미술관리움.png" translatesAutoresizingMaskIntoConstraints="NO" id="sgV-2d-fKz">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="358.5"/>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ZC-zR-k0H">
+                                                <rect key="frame" x="20.5" y="88" width="23.5" height="23.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="4ZC-zR-k0H" secondAttribute="height" multiplier="1:1" id="O4f-sg-WUH"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="arrow.backward" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onClickedBackward:" destination="ptu-la-MVE" eventType="touchUpInside" id="3io-On-gNF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9G-ZP-ZeX">
+                                                <rect key="frame" x="369.5" y="88" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="O9G-ZP-ZeX" secondAttribute="height" multiplier="1:1" id="TRY-SU-BNV"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="bookmark" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
+                                                </state>
+                                            </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3fB-dJ-HHC">
                                                 <rect key="frame" x="20.5" y="358.5" width="373" height="76"/>
                                                 <subviews>
@@ -1087,25 +1110,43 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lge-k2-yeI">
                                                 <rect key="frame" x="20.5" y="658.5" width="373" height="134.5"/>
                                                 <subviews>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="a2s-1C-6hH">
-                                                        <rect key="frame" x="0.0" y="7" width="373" height="120.5"/>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="a2s-1C-6hH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="134.5"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fr8-Qp-CvL">
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="Fr8-Qp-CvL">
                                                             <size key="itemSize" width="128" height="128"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="HwL-eZ-6Jm">
-                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="modelImageCollectionViewCell" id="HwL-eZ-6Jm" customClass="modelImageCollectionViewCell" customModule="Traplo" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="3.5" width="128" height="128"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="EGb-S6-Kop">
                                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LQo-jG-ZvF">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="LQo-jG-ZvF" firstAttribute="top" secondItem="EGb-S6-Kop" secondAttribute="top" id="FP8-xu-72X"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="LQo-jG-ZvF" secondAttribute="trailing" id="YPr-sB-Ovi"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="LQo-jG-ZvF" secondAttribute="bottom" id="ZE4-6n-0kb"/>
+                                                                        <constraint firstItem="LQo-jG-ZvF" firstAttribute="leading" secondItem="EGb-S6-Kop" secondAttribute="leading" id="ieY-qZ-Brj"/>
+                                                                    </constraints>
                                                                 </collectionViewCellContentView>
+                                                                <connections>
+                                                                    <outlet property="modelImage" destination="LQo-jG-ZvF" id="cli-9i-K6z"/>
+                                                                </connections>
                                                             </collectionViewCell>
                                                         </cells>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="ptu-la-MVE" id="Vjd-yC-c9W"/>
+                                                            <outlet property="delegate" destination="ptu-la-MVE" id="5a7-5I-WU9"/>
+                                                        </connections>
                                                     </collectionView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1113,7 +1154,7 @@
                                                     <constraint firstItem="a2s-1C-6hH" firstAttribute="leading" secondItem="Lge-k2-yeI" secondAttribute="leading" id="GMg-gP-TWM"/>
                                                     <constraint firstAttribute="trailing" secondItem="a2s-1C-6hH" secondAttribute="trailing" id="dFV-vZ-9B7"/>
                                                     <constraint firstItem="a2s-1C-6hH" firstAttribute="centerY" secondItem="Lge-k2-yeI" secondAttribute="centerY" id="qNk-TU-IuZ"/>
-                                                    <constraint firstItem="a2s-1C-6hH" firstAttribute="height" secondItem="Lge-k2-yeI" secondAttribute="height" multiplier="0.9" id="x8L-bw-nb1"/>
+                                                    <constraint firstItem="a2s-1C-6hH" firstAttribute="height" secondItem="Lge-k2-yeI" secondAttribute="height" id="x8L-bw-nb1"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VYM-L5-w6D">
@@ -1142,7 +1183,13 @@
                                                                 <color key="value" name="Color1"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
-                                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="value" name="C4C4C4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                                                <color key="value" name="C4C4C4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                                                <color key="value" name="Color1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
@@ -1197,7 +1244,6 @@
                                             <constraint firstItem="LaU-66-14O" firstAttribute="top" secondItem="3fB-dJ-HHC" secondAttribute="bottom" id="b89-Zc-ox4"/>
                                             <constraint firstItem="iNz-K3-xpc" firstAttribute="centerX" secondItem="BX3-UI-Z1Y" secondAttribute="centerX" id="eGP-NP-LnJ"/>
                                             <constraint firstItem="iNz-K3-xpc" firstAttribute="width" secondItem="BX3-UI-Z1Y" secondAttribute="width" multiplier="0.9" id="i0a-jU-sxf"/>
-                                            <constraint firstItem="sgV-2d-fKz" firstAttribute="top" secondItem="BX3-UI-Z1Y" secondAttribute="top" id="jDk-Bg-B2N"/>
                                             <constraint firstItem="VYM-L5-w6D" firstAttribute="top" secondItem="Lge-k2-yeI" secondAttribute="bottom" id="zfW-ER-kYZ"/>
                                         </constraints>
                                     </view>
@@ -1222,15 +1268,23 @@
                         <viewLayoutGuide key="safeArea" id="aCA-Tw-ar4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="BX3-UI-Z1Y" firstAttribute="top" secondItem="sgV-2d-fKz" secondAttribute="top" id="37J-q4-2Gz"/>
                             <constraint firstAttribute="bottom" secondItem="pyU-xz-tMp" secondAttribute="bottom" id="6x3-hO-h36"/>
                             <constraint firstItem="pyU-xz-tMp" firstAttribute="top" secondItem="Qbw-SJ-f4f" secondAttribute="top" id="MGK-HL-gS1"/>
+                            <constraint firstItem="O9G-ZP-ZeX" firstAttribute="top" secondItem="aCA-Tw-ar4" secondAttribute="top" id="NHJ-7T-xSm"/>
                             <constraint firstItem="aCA-Tw-ar4" firstAttribute="trailing" secondItem="pyU-xz-tMp" secondAttribute="trailing" id="Shx-SB-Enb"/>
+                            <constraint firstItem="4ZC-zR-k0H" firstAttribute="leading" secondItem="aCA-Tw-ar4" secondAttribute="centerX" multiplier="0.1" id="d0I-eM-D8Q"/>
+                            <constraint firstItem="O9G-ZP-ZeX" firstAttribute="trailing" secondItem="aCA-Tw-ar4" secondAttribute="centerX" multiplier="1.9" id="rXv-qP-HJd"/>
                             <constraint firstItem="pyU-xz-tMp" firstAttribute="leading" secondItem="aCA-Tw-ar4" secondAttribute="leading" id="wOJ-0v-NIS"/>
+                            <constraint firstItem="aCA-Tw-ar4" firstAttribute="top" secondItem="4ZC-zR-k0H" secondAttribute="top" id="xPl-4o-9CQ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="cWb-X7-9Sh" id="Lx9-c6-a4N"/>
+                        <outlet property="contentImageView" destination="sgV-2d-fKz" id="5lO-cu-Ztj"/>
                         <outlet property="contentView" destination="LaU-66-14O" id="Wdj-al-mgv"/>
+                        <outlet property="cosmosView" destination="x95-zP-xKK" id="0yN-kx-DFJ"/>
+                        <outlet property="modelImageCollectionView" destination="a2s-1C-6hH" id="SMU-Hk-gch"/>
                         <outlet property="operatingTimeLabel" destination="4oO-lK-fbZ" id="5YL-6T-zh0"/>
                         <outlet property="phoneNumberLabel" destination="iAE-jR-rAr" id="D91-6X-fmH"/>
                         <outlet property="ratingView" destination="VYM-L5-w6D" id="zy8-eH-y7J"/>
@@ -1248,7 +1302,9 @@
     <resources>
         <image name="Group 10.png" width="70" height="33"/>
         <image name="Group 11.png" width="70" height="33"/>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="bookmark" catalog="system" width="112" height="128"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="circle" catalog="system" width="128" height="121"/>
         <image name="clock" catalog="system" width="128" height="121"/>
