@@ -58,6 +58,11 @@ class TouristSpotModel{
         }
         return false
     }
+    func searchData(searchId: Int)->Bool{
+        if id == searchId {
+            return true
+        }
+    }
 }
 
 class TouristSpotManager {
@@ -126,6 +131,17 @@ class TouristSpotManager {
         for dic in touristSpotModelDic[str]!{
             if dic.searchData(searchTerm: searchTerm) == true {
                 returnArr.append(dic)
+            }
+        }
+        return returnArr
+    }
+    func searchId (Id:Int) ->[TouristSpotModel] {
+        var returnArr : [TouristSpotModel] = []
+        for modelArray in touristSpotModelDic.values{
+            for dic in modelArray{
+                if dic.searchData(searchId: Id) == true {
+                    returnArr.append(dic)
+                }
             }
         }
         return returnArr

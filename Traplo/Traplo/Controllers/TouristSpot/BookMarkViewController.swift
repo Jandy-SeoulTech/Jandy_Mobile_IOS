@@ -7,6 +7,7 @@
 
 import UIKit
 import Cosmos
+import Alamofire
 
 class BookMarkViewController: UIViewController {
 
@@ -24,6 +25,8 @@ class BookMarkViewController: UIViewController {
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var midView: UIView!
     @IBOutlet weak var numLabel: NSLayoutConstraint!
+    
+    var wishList : [Int] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,6 +83,30 @@ class BookMarkViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    func afGetList() {
+        let shared = UserInfo.shared
+        let urlStr = "http://3.35.202.118:8080/api/v1/wishlist/" + String(shared.userId)
+        let url = URL(string: urlStr)!
+        
+        let req = Alamofire.AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
+        
+        
+        req.responseJSON{ response in
+            switch response.result {
+            
+                                case .success:
+                                if let jsonObject = try! response.result.get() as? NSDictionary  {
+                                    let q = jsonObject["data"] as! [NSDictionary]
+                                    return}
+                                                            
+                                    return
+                                    
+                                case .failure(let error):
+                                    print(error)
+                                    return
+                                }
+       }
+    }
     
 }
 

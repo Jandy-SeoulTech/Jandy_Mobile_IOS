@@ -26,17 +26,15 @@ class BookMarkEditViewController: UIViewController {
     @IBOutlet weak var 삭제Btn: UIButton!
     @IBOutlet weak var 완료Btn: UIButton!
     
-    
-    
-    var selectedArray = Array(repeating: false, count: 15)
-    
-    
-    
+    let shared = TouristSpotManager.sharedTouristSpotManager
+    var wishList : [Int] = []
+    var selectedArray : [Bool] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUI()
+        selectedArray = Array(repeating: false, count: wishList.count)
     }
     
     func setUI() {
@@ -89,7 +87,7 @@ extension BookMarkEditViewController: UICollectionViewDataSource{
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookMarkEditContent", for: indexPath) as? BookMarkEditContentCollectionViewCell else {
             return UICollectionViewCell()}
         
-        cell.setUI(isSelect: selectedArray[indexPath.item])
+        cell.setUI(isSelect: selectedArray[indexPath.item],model: <#T##TouristSpotModel#>)
         
         
         return cell
@@ -130,7 +128,7 @@ class BookMarkEditContentCollectionViewCell:UICollectionViewCell{
     @IBOutlet weak var checkMark: UIImageView!
     @IBOutlet weak var cellSupplementaryView: UIView!
     
-    func setUI(isSelect:Bool){
+    func setUI(isSelect:Bool,model : TouristSpotModel){
         // 테스트용 내용. 설정 필요!
         titleLabel.text = "dd"
         ratings.rating = 3
