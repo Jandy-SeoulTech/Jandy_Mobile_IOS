@@ -32,6 +32,7 @@ class BookMarkViewController: UIViewController {
         super.viewDidLoad()
         
         setUI()
+        afGetList()
     }
     
     func setUI() {
@@ -85,6 +86,7 @@ class BookMarkViewController: UIViewController {
     
     func afGetList() {
         let shared = UserInfo.shared
+        print(shared.userId)
         let urlStr = "http://3.35.202.118:8080/api/v1/wishlist/" + String(shared.userId)
         let url = URL(string: urlStr)!
         
@@ -96,7 +98,13 @@ class BookMarkViewController: UIViewController {
             
                                 case .success:
                                 if let jsonObject = try! response.result.get() as? NSDictionary  {
+                                    let count = jsonObject["count"] as! Int
                                     let q = jsonObject["data"] as! [NSDictionary]
+                                    for a in 1...count {
+                                        let tourismDic = q[a]["tourism"] as! NSDictionary
+                                        let id = tourismDic["id"]as!Int
+                                        self.wishList.append(id)
+                                    }
                                     return}
                                                             
                                     return
@@ -111,13 +119,9 @@ class BookMarkViewController: UIViewController {
 }
 
 
-
-
-
-
 extension BookMarkViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+        return wishList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -125,7 +129,7 @@ extension BookMarkViewController: UICollectionViewDataSource{
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookMarkContent", for: indexPath) as? BookMarkContentCollectionViewCell else {
             return UICollectionViewCell()}
         
-        cell.setUI()
+        cell.setUI(id : wishList[indexPath.item])
         
         return cell
         
@@ -151,8 +155,9 @@ class BookMarkContentCollectionViewCell:UICollectionViewCell{
     @IBOutlet weak var ratings: CosmosView!
     @IBOutlet weak var describeTextView: UITextView!
     
-    func setUI(){
+    func setUI(id:Int){
         // 테스트용 내용. 설정 필요!
+        print(id)
         titleLabel.text = "dd"
         ratings.rating = 3
         describeTextView.text = "ddddd"

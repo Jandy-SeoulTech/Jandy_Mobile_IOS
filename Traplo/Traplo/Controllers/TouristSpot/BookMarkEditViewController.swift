@@ -27,14 +27,14 @@ class BookMarkEditViewController: UIViewController {
     @IBOutlet weak var 완료Btn: UIButton!
     
     let shared = TouristSpotManager.sharedTouristSpotManager
-    var wishList : [Int] = []
+    var wishListModel : [TouristSpotModel] = []
     var selectedArray : [Bool] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUI()
-        selectedArray = Array(repeating: false, count: wishList.count)
+        selectedArray = Array(repeating: false, count: wishListModel.count)
     }
     
     func setUI() {
@@ -87,7 +87,7 @@ extension BookMarkEditViewController: UICollectionViewDataSource{
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookMarkEditContent", for: indexPath) as? BookMarkEditContentCollectionViewCell else {
             return UICollectionViewCell()}
         
-        cell.setUI(isSelect: selectedArray[indexPath.item],model: <#T##TouristSpotModel#>)
+        cell.setUI(isSelect: selectedArray[indexPath.item], model: wishListModel[indexPath.item] )
         
         
         return cell
